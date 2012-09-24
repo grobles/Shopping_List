@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f89ebfc-5f21-4e48-b434-5bdfc8d0ccb0" name="Default" comment="Adding Category and Shop classes along with corresponding test classes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5_rc1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping List.docx" afterPath="$PROJECT_DIR$/Shopping List.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Category.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/InterfaceItems.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/InterfaceItems.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Item.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Lists.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Lists.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Shop.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Shop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Shopping_List/com/ItemTest.class" afterPath="$PROJECT_DIR$/out/test/Shopping_List/com/ItemTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Shopping_List/com/ListsTest.class" afterPath="$PROJECT_DIR$/out/test/Shopping_List/com/ListsTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/DataContainersTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/DataContainers.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/DataContainers.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping_List.iml" afterPath="$PROJECT_DIR$/Shopping_List.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Category.java" afterPath="$PROJECT_DIR$/src/main/com/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/InterfaceItems.java" afterPath="$PROJECT_DIR$/src/main/com/InterfaceItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/InterfaceList.java" afterPath="$PROJECT_DIR$/src/main/com/InterfaceList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Item.java" afterPath="$PROJECT_DIR$/src/main/com/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Lists.java" afterPath="$PROJECT_DIR$/src/main/com/Lists.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Shop.java" afterPath="$PROJECT_DIR$/src/main/com/Shop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/ItemTest.java" afterPath="$PROJECT_DIR$/src/test/com/ItemTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/DataContainers.java" afterPath="$PROJECT_DIR$/src/main/com/DataContainers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/ListsTest.java" afterPath="$PROJECT_DIR$/src/test/com/ListsTest.java" />
     </list>
     <ignored path="Shopping_List.iws" />
@@ -90,10 +76,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/com/CategoryTest1.java" />
-        <option value="$PROJECT_DIR$/src/main/com/MasterList.java" />
         <option value="$PROJECT_DIR$/src/main/com/List.java" />
-        <option value="$PROJECT_DIR$/src/main/com/DataContainers.java" />
         <option value="$PROJECT_DIR$/src/test/com/ShopTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/CategoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/InterfaceList.java" />
@@ -101,11 +84,14 @@
         <option value="$PROJECT_DIR$/src/main/com/Shop.java" />
         <option value="$PROJECT_DIR$/src/main/com/InterfaceItems.java" />
         <option value="$PROJECT_DIR$/src/main/com/Lists.java" />
-        <option value="$PROJECT_DIR$/src/test/com/ListsTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/i.java" />
         <option value="$PROJECT_DIR$/src/main/com/Item.java" />
         <option value="$PROJECT_DIR$/src/test/com/t.java" />
         <option value="$PROJECT_DIR$/src/test/com/ItemTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/DataConatinersTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/DataContainers.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ListsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/DataContainersTest.java" />
       </list>
     </option>
   </component>
@@ -175,6 +161,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -197,20 +197,6 @@
             <PATH_ELEMENT USER_OBJECT="Shopping_List">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -329,29 +315,7 @@
       <recent name="com" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ListsTest">
-    <configuration default="false" name="CategoryTest1" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.CategoryTest1" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ShopTest">
     <configuration default="false" name="ShopTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="Shopping_List" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -424,6 +388,28 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com" />
       <option name="MAIN_CLASS_NAME" value="com.CategoryTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DataContainersTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.DataContainersTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -558,11 +544,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CategoryTest1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ShopTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ItemTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ListsTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ShopTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ItemTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ListsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DataContainersTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -628,16 +614,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24857838" sideWeight="0.24175824" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24820513" sideWeight="0.6734007" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24820513" sideWeight="0.6734007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32659933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24242425" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -727,16 +713,6 @@
         <state line="46" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="1.8486998" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ListsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="54" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.41018766" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../90.308/src/test/java/com/origamisoftware/teach/effective/junit/SubscriptionPeriodTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="75" selection-start="1318" selection-end="1396" vertical-scroll-proportion="-0.9916667" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/junit-4.11-SNAPSHOT-20120805-1225.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="0" selection-start="5404" selection-end="5404" vertical-scroll-proportion="0.35820895" />
@@ -759,30 +735,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Lists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="260" selection-end="291" vertical-scroll-proportion="-0.329806">
-          <folding />
-        </state>
+        <state line="13" column="34" selection-start="260" selection-end="291" vertical-scroll-proportion="-0.329806" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/InterfaceItems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="450" selection-end="461" vertical-scroll-proportion="0.38628158">
-          <folding />
-        </state>
+        <state line="26" column="28" selection-start="450" selection-end="461" vertical-scroll-proportion="0.38628158" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../90.308/src/test/java/com/origamisoftware/teach/effective/junit/SubscriptionPeriodTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="71" selection-start="2135" selection-end="2280" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/InterfaceList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="24" selection-start="427" selection-end="773" vertical-scroll-proportion="0.28042328">
-          <folding />
-        </state>
+        <state line="37" column="24" selection-start="427" selection-end="773" vertical-scroll-proportion="0.28150135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ListsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="-0.95710456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/DataContainersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="21" selection-start="984" selection-end="984" vertical-scroll-proportion="0.66944444" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/DataContainers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="1470" selection-end="1470" vertical-scroll-proportion="1.0126354">
-          <folding />
-        </state>
+        <state line="23" column="55" selection-start="715" selection-end="715" vertical-scroll-proportion="-0.80277777" />
       </provider>
     </entry>
   </component>

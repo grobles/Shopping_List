@@ -12,40 +12,40 @@ import java.util.Collection;
  */
 public class DataContainers implements Serializable {
 
-    private Lists masterItemLists;
-    private Lists categoryLists;
-    private Lists shopLists;
+    private Lists masterItemList;
+    private Lists categoryList;
+    private Lists shopList;
     private Collection<Lists> shoppingLists;
 
     public DataContainers(Lists masterItemLists, Lists categoryLists, Lists shopLists, Collection<Lists> shoppingLists) {
-        this.masterItemLists = masterItemLists;
-        this.categoryLists = categoryLists;
-        this.shopLists = shopLists;
+        this.masterItemList = masterItemLists;
+        this.categoryList = categoryLists;
+        this.shopList = shopLists;
         this.shoppingLists = shoppingLists;
     }
 
-    public Lists getMasterItemLists() {
-        return masterItemLists;
+    public Lists getMasterItemList() {
+        return masterItemList;
     }
 
-    public void setMasterItemLists(Lists masterItemLists) {
-        this.masterItemLists = masterItemLists;
+    public void setMasterItemList(Lists masterItemList) {
+        this.masterItemList = masterItemList;
     }
 
-    public Lists getCategoryLists() {
-        return categoryLists;
+    public Lists getCategoryList() {
+        return categoryList;
     }
 
-    public void setCategoryLists(Lists categoryLists) {
-        this.categoryLists = categoryLists;
+    public void setCategoryList(Lists categoryList) {
+        this.categoryList = categoryList;
     }
 
-    public Lists getShopLists() {
-        return shopLists;
+    public Lists getShopList() {
+        return shopList;
     }
 
-    public void setShopLists(Lists shopLists) {
-        this.shopLists = shopLists;
+    public void setShopList(Lists shopList) {
+        this.shopList = shopList;
     }
 
     public Collection<Lists> getShoppingLists() {

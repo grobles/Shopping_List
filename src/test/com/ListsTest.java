@@ -16,8 +16,7 @@ import static org.mockito.Mockito.mock;
  * To change this template use File | Settings | File Templates.
  */
 
-/*  TODO the test , this is not the test I still have to work on it.
-    */
+
 
 public class ListsTest {
     //private data members
