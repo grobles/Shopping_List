@@ -16,8 +16,8 @@ public class ItemTest {
     private String itemName, categoryName, shopName;
     private int itemQuantity;
     private Item myItem;
-    private Category aCategory = new Category();
-    private Shop aShop = new Shop();
+    private Category aCategory;
+    private Shop aShop;
 
     /**
      * setup the Item to test
@@ -28,8 +28,8 @@ public class ItemTest {
         categoryName = "A Category";
         shopName = "New Shop";
         itemQuantity = 10;
-        aShop.setShopName(shopName);
-        aCategory.setCategory(categoryName, shopName);
+        aShop = new Shop(shopName);
+        aCategory= new Category(categoryName, aShop);
         //use the Builder to create a new Item
         myItem = new Item.Builder(itemName, aCategory, aShop).quantity(itemQuantity).build();
     }
@@ -40,8 +40,9 @@ public class ItemTest {
     @Test
     public void testItem() {
         assertEquals("Item Name", itemName, myItem.getItemName());
-        assertEquals("Item Category Name", categoryName, myItem.getItemCategory());
-        assertEquals("Item Shop Name", shopName, myItem.getItemShop());
+        assertEquals("Item Category Name", categoryName, myItem.getItemCategory().getItemName());
+        assertEquals("Item Shop Name", shopName, myItem.getItemShop().getItemName());
         assertEquals("Item Quantity", itemQuantity, myItem.getItemQuantity());
     }
 }
+

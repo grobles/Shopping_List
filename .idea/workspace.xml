@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f89ebfc-5f21-4e48-b434-5bdfc8d0ccb0" name="Default" comment="Adding Category and Shop classes along with corresponding test classes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/java.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jmock_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Shop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/CategoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/ShopTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5_rc1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping List.docx" afterPath="$PROJECT_DIR$/Shopping List.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Category.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Category.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/InterfaceItems.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/InterfaceItems.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Item.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Item.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Lists.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Lists.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Shopping_List/com/Shop.class" afterPath="$PROJECT_DIR$/out/production/Shopping_List/com/Shop.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Shopping_List/com/ItemTest.class" afterPath="$PROJECT_DIR$/out/test/Shopping_List/com/ItemTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Shopping_List/com/ListsTest.class" afterPath="$PROJECT_DIR$/out/test/Shopping_List/com/ListsTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.~lock.Shopping List.docx#" afterPath="$PROJECT_DIR$/.~lock.Shopping List.docx#" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping_List.iml" afterPath="$PROJECT_DIR$/Shopping_List.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Category.java" afterPath="$PROJECT_DIR$/src/main/com/Category.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/InterfaceItems.java" afterPath="$PROJECT_DIR$/src/main/com/InterfaceItems.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/InterfaceList.java" afterPath="$PROJECT_DIR$/src/main/com/InterfaceList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Item.java" afterPath="$PROJECT_DIR$/src/main/com/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Lists.java" afterPath="$PROJECT_DIR$/src/main/com/Lists.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Shop.java" afterPath="$PROJECT_DIR$/src/main/com/Shop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/ItemTest.java" afterPath="$PROJECT_DIR$/src/test/com/ItemTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/ListsTest.java" afterPath="$PROJECT_DIR$/src/test/com/ListsTest.java" />
     </list>
     <ignored path="Shopping_List.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,68 +77,7 @@
     <favorites_list name="Shopping_List" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Item.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/com/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="18" selection-start="882" selection-end="882" vertical-scroll-proportion="0.21858864">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/ItemTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="32" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="87" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/CategoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="5" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shop.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="36" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/ShopTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="3" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -143,20 +90,33 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/com/CategoryTest1.java" />
+        <option value="$PROJECT_DIR$/src/main/com/MasterList.java" />
+        <option value="$PROJECT_DIR$/src/main/com/List.java" />
+        <option value="$PROJECT_DIR$/src/main/com/DataContainers.java" />
         <option value="$PROJECT_DIR$/src/test/com/ShopTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/CategoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/InterfaceList.java" />
         <option value="$PROJECT_DIR$/src/main/com/Category.java" />
         <option value="$PROJECT_DIR$/src/main/com/Shop.java" />
+        <option value="$PROJECT_DIR$/src/main/com/InterfaceItems.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Lists.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ListsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/i.java" />
         <option value="$PROJECT_DIR$/src/main/com/Item.java" />
+        <option value="$PROJECT_DIR$/src/test/com/t.java" />
         <option value="$PROJECT_DIR$/src/test/com/ItemTest.java" />
       </list>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.6" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="153" />
-    <option name="width" value="1152" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1040" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -166,7 +126,19 @@
             <id />
           </State>
           <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
+          </State>
+          <State>
             <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>TestNG</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -241,20 +213,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="ProjectPane">
@@ -263,6 +221,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Shopping_List" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -338,29 +300,130 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/com" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../90.308/src/test/java/com/origamisoftware/teach/effective/junit" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ShopTest">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ListsTest">
+    <configuration default="false" name="CategoryTest1" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.CategoryTest1" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="ShopTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="Shopping_List" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com" />
       <option name="MAIN_CLASS_NAME" value="com.ShopTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ItemTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.ItemTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListsTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.ListsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CategoryTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.CategoryTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -400,6 +463,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -425,24 +506,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -494,8 +557,12 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ShopTest" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CategoryTest1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ShopTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ItemTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ListsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -529,30 +596,50 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="153" y="0" width="1152" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1040" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939074" sideWeight="0.6703297" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992674" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24857838" sideWeight="0.24175824" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24931003" sideWeight="0.67105263" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24820513" sideWeight="0.6734007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24242425" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -617,62 +704,83 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/ant.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="49" selection-start="757" selection-end="757" vertical-scroll-proportion="0.4047619">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="87" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ShopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="13" column="49" selection-start="757" selection-end="757" vertical-scroll-proportion="0.4047619" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/CategoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="38" column="77" selection-start="961" selection-end="961" vertical-scroll-proportion="1.0764706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ShopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="63" selection-start="715" selection-end="715" vertical-scroll-proportion="1.1264706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="1.8486998" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ListsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="54" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.41018766" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../90.308/src/test/java/com/origamisoftware/teach/effective/junit/SubscriptionPeriodTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="75" selection-start="1318" selection-end="1396" vertical-scroll-proportion="-0.9916667" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.11-SNAPSHOT-20120805-1225.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="0" selection-start="5404" selection-end="5404" vertical-scroll-proportion="0.35820895" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/ItemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="48" column="48" selection-start="1347" selection-end="1347" vertical-scroll-proportion="2.1722221" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1157" selection-end="1157" vertical-scroll-proportion="3.0080428" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="882" selection-end="882" vertical-scroll-proportion="0.21858864">
+        <state line="21" column="12" selection-start="485" selection-end="485" vertical-scroll-proportion="0.45576409" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Lists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="260" selection-end="291" vertical-scroll-proportion="-0.329806">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/InterfaceItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="28" selection-start="450" selection-end="461" vertical-scroll-proportion="0.38628158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/InterfaceList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="24" selection-start="427" selection-end="773" vertical-scroll-proportion="0.28042328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/DataContainers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="48" selection-start="1470" selection-end="1470" vertical-scroll-proportion="1.0126354">
           <folding />
         </state>
       </provider>
@@ -753,7 +861,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>java</last-edited>
+          <last-edited>mockito-all-1.9.5-rc1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

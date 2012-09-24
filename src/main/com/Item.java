@@ -14,12 +14,12 @@ package com;
  *
  * @author Lupe Robles, Brian Arnold
  */
-public class Item {
+public class Item implements InterfaceItems {
     //private members of an Item object
-    private final String itemName;
-    private final Category itemCategory;
-    private final Shop itemShop;
-    private final int itemQuantity;
+    private String itemName;
+    private Category itemCategory;
+    private Shop itemShop;
+    private int itemQuantity;
     /**
      * Class: Builder.
      * Purpose: Builder used to instantiate Items
@@ -46,7 +46,7 @@ public class Item {
          * @return
          */
         public Builder quantity(int val)
-            { quantityOfItem = val; return this; }
+        { quantityOfItem = val; return this; }
 
         /**
          * Item object created and returned.
@@ -71,6 +71,11 @@ public class Item {
      * method: getItemName.
      * @return
      */
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
     public String getItemName() {
         return itemName;
     }

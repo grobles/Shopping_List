@@ -14,33 +14,53 @@ package com;
  *
  * @author Lupe Robles, Brian Arnold
  */
-public class Category {
+public class Category implements InterfaceItems {
     private String categoryName;
-    private Shop someShop = new Shop();
+    private Shop someShop;
 
     /**
-     * method: setCategory.
+     *
      * @param categoryName
-     * @param shopName
+     * @param someShop
      */
-    public void setCategory(String categoryName, String shopName) {
+    public Category(String categoryName, Shop someShop) {
         this.categoryName = categoryName;
-        someShop.setShopName(shopName);
+        this.someShop = someShop;
     }
 
     /**
      * method: getCategory.
      * @return
      */
-    public String getCategory() {
+    public String getItemName() {
         return categoryName;
     }
+
+    /**
+     *
+     * @param categoryName
+     */
+    public void setItemName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    /**
+     *
+     * @param someShop
+     */
+    public void setSomeShop(Shop someShop) {
+        this.someShop = someShop;
+    }
+
+
 
     /**
      * method: getShop.
      * @return
      */
-    public String getShop() {
-        return someShop.getShopName();
+    public Shop getShop() {
+        return someShop;
     }
+
+
 }
