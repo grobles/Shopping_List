@@ -2,8 +2,7 @@ package com;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,10 +28,10 @@ public class ItemTest {
         categoryName = "A Category";
         shopName = "New Shop";
         itemQuantity = 10;
-        aShop= new Shop(shopName);
+        aShop = new Shop(shopName);
         aCategory= new Category(categoryName, aShop);
         //use the Builder to create a new Item
-        myItem = new Item(itemName, aCategory, aShop ,itemQuantity);
+        myItem = new Item.Builder(itemName, aCategory, aShop).quantity(itemQuantity).build();
     }
 
     /**
@@ -40,12 +39,10 @@ public class ItemTest {
      */
     @Test
     public void testItem() {
-
-        assertEquals("Item Name" ,itemName, myItem.getItemName());
+        assertEquals("Item Name", itemName, myItem.getItemName());
         assertEquals("Item Category Name", categoryName, myItem.getItemCategory().getItemName());
         assertEquals("Item Shop Name", shopName, myItem.getItemShop().getItemName());
         assertEquals("Item Quantity", itemQuantity, myItem.getItemQuantity());
     }
-
-
 }
+

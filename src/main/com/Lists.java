@@ -11,24 +11,32 @@ import java.util.Collection;
  */
 public class Lists implements InterfaceList {
 
-    private Collection<InterfaceItems> list;
+    private Collection<InterfaceItems> List;
+
+    public Lists(Collection list){
+      this.setList(list);
+    }
 
     public Collection getList() {
-        return list;
+        return List;
     }
 
     public void setList(Collection list) {
-        this.list = list;
+        this.List = list;
     }
 
     public void addItem(InterfaceItems item){
-        list.add(item);
+        List.add(item);
     }
 
     public void removeItem(InterfaceItems item){
-        list.remove(item) ;
+        List.remove(item) ;
 
     }
+    public int getSize(){
+        return List.size();
+    }
+
 
 
     /*  TODO add functionality to this method using comparators.

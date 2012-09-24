@@ -18,6 +18,11 @@ public class Category implements InterfaceItems {
     private String categoryName;
     private Shop someShop;
 
+    /**
+     *
+     * @param categoryName
+     * @param someShop
+     */
     public Category(String categoryName, Shop someShop) {
         this.categoryName = categoryName;
         this.someShop = someShop;
@@ -31,10 +36,18 @@ public class Category implements InterfaceItems {
         return categoryName;
     }
 
+    /**
+     *
+     * @param categoryName
+     */
     public void setItemName(String categoryName) {
         this.categoryName = categoryName;
     }
 
+    /**
+     *
+     * @param someShop
+     */
     public void setSomeShop(Shop someShop) {
         this.someShop = someShop;
     }

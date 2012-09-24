@@ -3,7 +3,10 @@ package com;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,38 +21,57 @@ import static junit.framework.Assert.assertEquals;
 
 public class ListsTest {
     //private data members
-    private String itemName, categoryName, shopName;
-    private int itemQuantity;
-    private Item myItem;
-    private Category aCategory;
-    private Shop aShop;
+    InterfaceItems mockItem1 = mock(InterfaceItems.class);
+    InterfaceItems mockItem2 = mock(InterfaceItems.class);
+    InterfaceItems mockItem3 = mock(InterfaceItems.class);
+    ArrayList<InterfaceItems> someArray = new ArrayList<InterfaceItems>();
+
+
 
     /**
      * setup the Item to test
      */
     @Before
     public void setup() {
-        itemName = "a new item";
-        categoryName = "A Category";
-        shopName = "New Shop";
-        itemQuantity = 10;
-        aShop= new Shop(shopName);
-        aCategory= new Category(categoryName, aShop);
-        //use the Builder to create a new Item
-        myItem = new Item(itemName, aCategory, aShop ,itemQuantity);
+        someArray.add(mockItem1);
+        someArray.add(mockItem2);
+        someArray.add(mockItem3);
+
     }
 
-    /**
-     * exercise the Item methods
+
+        /**
+     * exercise the Lists methods
      */
     @Test
-    public void testItem() {
 
-        assertEquals("Item Name" ,itemName, myItem.getItemName());
-        assertEquals("Item Category Name", categoryName, myItem.getItemCategory().getItemName());
-        assertEquals("Item Shop Name", shopName, myItem.getItemShop().getItemName());
-        assertEquals("Item Quantity", itemQuantity, myItem.getItemQuantity());
+    public void testConstruction() {
+
+        Lists someLists = new Lists(someArray);
+        int arraySize = someArray.size();
+        int ListsSize = someLists.getSize();
+
+        assertEquals("size ", arraySize, ListsSize);
     }
+    @Test
+    public void testRemoveItem(){
 
+        Lists someLists = new Lists(someArray);
+        someLists.removeItem(mockItem1);
+        int ListsSize = someLists.getSize();
+
+        assertEquals("size ", 2, ListsSize);
+
+    }
+    @Test
+    public void testAddItem(){
+
+        Lists someLists = new Lists(someArray);
+        someLists.addItem(mockItem1);
+        int ListsSize = someLists.getSize();
+
+        assertEquals("size ", 4, ListsSize);
+
+    }
 
 }

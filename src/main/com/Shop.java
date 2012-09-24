@@ -18,6 +18,10 @@ package com;
 public class Shop implements InterfaceItems {
     private String shopName;
 
+    /**
+     *
+     * @param shopName
+     */
     public Shop(String shopName) {
         this.shopName = shopName;
     }
