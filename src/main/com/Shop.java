@@ -15,21 +15,28 @@ package com;
  * @author Lupe Robles, Brian Arnold
  *
  */
-public class Shop {
+public class Shop implements InterfaceItems {
     private String shopName;
+
+    public Shop(String shopName) {
+        this.shopName = shopName;
+    }
 
     /**
      * method: setShopName.
      * @param shopName
+     *
      */
-    public void setShopName(String shopName) {
+
+
+    public void setItemName(String shopName) {
         this.shopName = shopName;
     }
     /**
      * method: getShopName.
      * @return
      */
-    public String getShopName() {
+    public String getItemName() {
         return shopName;
     }
 }

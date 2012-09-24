@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class ShopTest {
     //private data members
     private String testShop;
-    private Shop myShop = new Shop();
+    private Shop myShop;
 
     /**
      * setup the test case.
@@ -23,7 +23,7 @@ public class ShopTest {
     public void setup() {
         //set the shop name
         testShop = "Some Shop Name";
-        myShop.setShopName(testShop);
+        myShop = new Shop(testShop);
     }
 
     /**
@@ -31,7 +31,7 @@ public class ShopTest {
      */
     @Test
     public void testShop() {
-        assertEquals("Shop name test", testShop, myShop.getShopName());
+        assertEquals("Shop name test", testShop, myShop.getItemName());
 
     }
 }

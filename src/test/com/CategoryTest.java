@@ -2,7 +2,8 @@ package com;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,8 +15,8 @@ import static org.junit.Assert.*;
 public class CategoryTest {
     //private data members
     private String categoryName, shopName;
-    private Category aCategory = new Category();
-    private Shop aShop = new Shop();
+    private Category aCategory;
+    private Shop aShop;
 
     /**
      * set up test case
@@ -25,7 +26,8 @@ public class CategoryTest {
         //set the category and shop
         categoryName = "Category 1";
         shopName = "Some Shop Name";
-        aCategory.setCategory(categoryName, shopName);
+        aShop = new Shop(shopName);
+        aCategory= new Category(categoryName, aShop);
     }
 
     /**
@@ -33,7 +35,7 @@ public class CategoryTest {
      */
     @Test
     public void testCategory() {
-        assertEquals("Category Name", categoryName, aCategory.getCategory());
-        assertEquals("Shop Name", shopName, aCategory.getShop());
+        assertEquals("Category Name", categoryName, aCategory.getItemName());
+        assertEquals("Shop Name", shopName, aCategory.getShop().getItemName());
     }
 }

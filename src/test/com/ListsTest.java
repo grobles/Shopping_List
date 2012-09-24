@@ -12,7 +12,11 @@ import static junit.framework.Assert.assertEquals;
  * Time: 10:12 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ItemTest {
+
+/*  TODO the test , this is not the test I still have to work on it.
+    */
+
+public class ListsTest {
     //private data members
     private String itemName, categoryName, shopName;
     private int itemQuantity;
