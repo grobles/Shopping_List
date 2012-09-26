@@ -16,7 +16,7 @@ package com;
  *
  */
 
-public interface InterfaceItems {
+public interface InterfaceItems {         // todo - this is a bad name. Just use the word Item. then concrete classes can be called StoreItem or something else specific
 
 
 

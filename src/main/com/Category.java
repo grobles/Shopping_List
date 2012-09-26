@@ -1,5 +1,7 @@
 package com;
 
+// to this is redundant. only have one comment block
+
 /**
  * Created with IntelliJ IDEA.
  * User: Brian

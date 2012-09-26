@@ -1,0 +1,144 @@
+1) Not a huge deal, but don't use .doc files in code. Txt is better, easier to read and so on.
+
+2) Overall I like your ideas a lot.
+
+
+
+Shopping List
+Application that helps you make shopping list from a pre-defined list. Divided in categories and shops that carry that Item
+Gui
+	•	 Swing
+ Business Logic
+	•	Add a new item to the list, something you sometimes buy.
+	•	Remove an item from the list, something you no longer ever buy.
+	•	Move an item to a different slot. You might allow reordering by allowing the user to assign priority/category numbers, and you keep the list sorted by priority/category. Or you keep it sorted alphabetically.
+	•	Check an item to put it on your list the next time you go shopping.
+	•	Uncheck an item to remove it from your list the next time you go shopping.
+	•	Print a list of just the checked items. You can take this to the store.
+	•	Print a list of all items. You can use this to take a manual inventory of what you are out of.
+	•	Save different Lists
+	•	Send an email of your shopping list
+
+ Persistence
+	•	Data saved will be the different lists.
+	•	Item List
+	•	Category List
+	•	Shop List
+	•	And the different shopping Lists
+	•	We will use a serialize object to save the data in a file
+
+>>> .
+	Perhaps you knew this and that is why you picked it, but Basic serialization is pretty straight forward.
+	If  that is why you picked you where smart to do so. Java serialization is a good initial way to do persistence.
+	However, I am little concerned that your  Persistence layer will be to light (easy). How about this.
+	Get it working with serialization and for extra credit get it working XML too. All your interfaces should stay the
+	same just the code that reads and writes the actual data should change. If you could pull this off, it would be great.
+
+
+The text below is not that helpful.
+It might help if you drew class diagrams. Do you know what they are? Basically boxes for each class with lines that show their
+relationships. You can keep this very simple or use UML. If you don't know what UML is, don' worried about (universal modeling language).
+However, I see that you have written some classes too (as I asked) this make it clearer.
+
+Here are some comments.
+
+Use packages for each layer of your program.
+
+I gave you a outline for that.
+
+after looking at your classes, I think you are basically on track, but your data access classes need to worked out a little better.
+Try to use an metaphor that describes what you are trying to do in english and then map java classes to english nouns.
+You are doing this OK with category and item, and shop, you just need to extend the metaphor to how you keep the records.
+Perhaps, some thing as simple RecordKeeper that returns a list of your items, can search for specific items etc.
+
+Let me know is my comments help or make it more confusing.
+
+
+Objects
+	•	InterfaceItems  <<-- what is this?
+	•	Items
+	•	Category
+	•	Shops
+	•	InterfaceLists  <<-- what is this?
+	•	Lists
+	•	DataContainers
+
+Implementations
+
+	•	InterfaceItems
+Methods
+	•	setItemName
+	•	getItemName
+	•	toString
+
+
+Classes  that implements  InterfaceItems
+	•	Items
+      Private
+	•	Name
+	•	Category
+	•	Quantity
+
+       Methods
+	•	getCategory
+	•	getQuantity
+	•	setCategory
+	•	setQuantity
+	•	toString
+
+	•	Category
+           Private
+	•	CategoryName
+	•	Shop
+
+          Methods
+	•	getCategoryName
+	•	getShop
+	•	setCategoryName
+	•	setShop
+	•	toString
+
+	•	Shop
+           Private
+	•	ShopName
+	•
+          Methods
+	•	getShopName
+	•	setShopName
+	•	toString
+
+
+	•	Interface Lists
+
+Methods
+	•	setList
+	•	getList
+	•	getItem
+	•	addItem
+	•	removeItem
+	•	sortList
+	•	printList
+
+
+
+
+Classes  that implements  InterfaceList
+
+	•	Lists
+Private
+	•	Collection<InterfaceItems> List
+Methods
+	•	The same as Interface
+
+
+	•	DataContainers
+
+     Private
+	•	Collection ItemList;
+	•	Collection CategoryList;
+	•	Collection ShopList;
+	•	Collection ShoppingList;
+
+                  Methods
+	•	GetMethods
+	•	SetMethods
