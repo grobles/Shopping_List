@@ -7,56 +7,64 @@ import java.util.Collection;
 //todo provide documentation here
 
 /**
- * Created with IntelliJ IDEA.
- * User: grobles
+ * Class: DataContainers
+ * Description: This class will hold all the list from each of the Items.
+ * It will later help to write the information
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 23/09/12
- * Time: 09:51 PM
- * To change this template use File | Settings | File Templates.
+ * Time: 09:51 PM *
  */
 public class DataContainers implements Serializable {
 
-    private Lists masterItemList;
-    private Lists categoryList;
-    private Lists shopList;
-    private Collection<Lists> shoppingLists;
+    private Collection<Item> productList;
+    private Collection<Item> categoryList;
+    private Collection<Item> shopList;
+    private static String[] unitsList ;
+    private Collection<Collection> shoppingLists;
 
-    public DataContainers(Lists masterItemLists, Lists categoryLists, Lists shopLists, Collection<Lists> shoppingLists) {
-        this.masterItemList = masterItemLists;
-        this.categoryList = categoryLists;
-        this.shopList = shopLists;
+    public DataContainers(Collection productList, Collection categoryList, Collection shopList, Collection<Collection> shoppingLists) {
+        this.productList = productList;
+        this.categoryList = categoryList;
+        this.shopList = shopList;
         this.shoppingLists = shoppingLists;
+        String[] unitsList={"Pieces" , "lb"};
+
     }
 
-    public Lists getMasterItemList() {
-        return masterItemList;
+    public Collection getProductList() {
+        return productList;
     }
 
-    public void setMasterItemList(Lists masterItemList) {
-        this.masterItemList = masterItemList;
+    public void setProductList(Collection productList) {
+        this.productList = productList;
     }
 
-    public Lists getCategoryList() {
+    public Collection getCategoryList() {
         return categoryList;
     }
 
-    public void setCategoryList(Lists categoryList) {
+    public void setCategoryList(Collection category) {
         this.categoryList = categoryList;
     }
 
-    public Lists getShopList() {
+    public Collection getShopList() {
         return shopList;
     }
 
-    public void setShopList(Lists shopList) {
+    public void setShopList(Collection shopList) {
         this.shopList = shopList;
     }
 
-    public Collection<Lists> getShoppingLists() {
+    public Collection<Collection> getShoppingLists() {
         return shoppingLists;
     }
 
-    public void setShoppingLists(Collection<Lists> shoppingLists) {
+    public void setShoppingLists(Collection<Collection> shoppingLists) {
         this.shoppingLists = shoppingLists;
+    }
+
+    public String[] getunitsLists() {
+        return unitsList;
     }
 }
 

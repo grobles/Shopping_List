@@ -2,14 +2,15 @@ package com;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Brian
+ * Class: ShopTest
+ * Description: Helps test the Shop class
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 9/22/12
- * Time: 12:53 PM
- * To change this template use File | Settings | File Templates.
+ * Time: 12:53 PM *
  */
 public class ShopTest {
     //private data members

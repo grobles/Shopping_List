@@ -4,40 +4,39 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
- * Created with IntelliJ IDEA.
- * User: grobles
+ * Class: DataContainersTest
+ * Description: Helps test the DataContainers class
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 20/09/12
- * Time: 10:12 PM
- * To change this template use File | Settings | File Templates.
+ * Time: 10:12 PM *
  */
-
-/*  TODO more methods
+/*
     */
 
 public class DataContainersTest {
     //private data members
-    Lists mockListsItems = mock(Lists.class);
-    Lists mockListsCategory = mock(Lists.class);
-    Lists mockListsShops = mock(Lists.class);
-    Lists mockListsShopping1 = mock(Lists.class);
-    Lists mockListsShopping2 = mock(Lists.class);
-    ArrayList<Lists> someArray = new ArrayList<Lists>();
-
+    private final Collection<Item> mockCollectionItems = mock(Collection.class);
+    private final Collection mockCollectionCategory = mock(Collection.class);
+    private final Collection mockCollectionShops = mock(Collection.class);
+    private final Collection mockCollectionShopping1 = mock(Collection.class);
+    private final Collection mockCollectionShopping2 = mock(Collection.class);
+    ArrayList<Collection> someArray = new ArrayList<Collection>();
 
 
     /**
-     * setup the Item to test
+     * setup the Product to test
      */
     @Before
     public void setup() {
-        someArray.add(mockListsShopping1);
-        someArray.add(mockListsShopping2);
+        someArray.add(mockCollectionShopping1);
+        someArray.add(mockCollectionShopping2);
 
 
     }
@@ -50,11 +49,9 @@ public class DataContainersTest {
 
     public void testConstruction() {
 
-        when(mockListsItems.getSize()).thenReturn(2);
-        DataContainers someDc = new DataContainers(mockListsItems,mockListsCategory,mockListsShops,someArray);
-        int arraySize = someDc.getMasterItemList().getSize();
-
-
+        when(mockCollectionItems.size()).thenReturn(2);
+        DataContainers someDc = new DataContainers(mockCollectionItems, mockCollectionCategory, mockCollectionShops, someArray);
+        int arraySize = someDc.getProductList().size();
         assertEquals("size ", arraySize, 2);
     }
 

@@ -4,16 +4,16 @@
 
 
 
-Shopping List
-Application that helps you make shopping list from a pre-defined list. Divided in categories and shops that carry that Item
+Shopping list
+Application that helps you make shopping list from a pre-defined list. Divided in categories and shops that carry that ListItem
 Gui
-	•	 Swing
+	•	 com.graphics
  Business Logic
-	•	Add a new item to the list, something you sometimes buy.
-	•	Remove an item from the list, something you no longer ever buy.
-	•	Move an item to a different slot. You might allow reordering by allowing the user to assign priority/category numbers, and you keep the list sorted by priority/category. Or you keep it sorted alphabetically.
-	•	Check an item to put it on your list the next time you go shopping.
-	•	Uncheck an item to remove it from your list the next time you go shopping.
+	•	Add a new ListItem to the list, something you sometimes buy.
+	•	Remove an ListItem from the list, something you no longer ever buy.
+	•	Move an ListItem to a different slot. You might allow reordering by allowing the user to assign priority/category numbers, and you keep the list sorted by priority/category. Or you keep it sorted alphabetically.
+	•	Check an ListItem to put it on your list the next time you go shopping.
+	•	Uncheck an ListItem to remove it from your list the next time you go shopping.
 	•	Print a list of just the checked items. You can take this to the store.
 	•	Print a list of all items. You can use this to take a manual inventory of what you are out of.
 	•	Save different Lists
@@ -21,9 +21,9 @@ Gui
 
  Persistence
 	•	Data saved will be the different lists.
-	•	Item List
-	•	Category List
-	•	Shop List
+	•	ListItem list
+	•	Category list
+	•	Shop list
 	•	And the different shopping Lists
 	•	We will use a serialize object to save the data in a file
 
@@ -48,7 +48,7 @@ I gave you a outline for that.
 
 after looking at your classes, I think you are basically on track, but your data access classes need to worked out a little better.
 Try to use an metaphor that describes what you are trying to do in english and then map java classes to english nouns.
-You are doing this OK with category and item, and shop, you just need to extend the metaphor to how you keep the records.
+You are doing this OK with category and ListItem, and shop, you just need to extend the metaphor to how you keep the records.
 Perhaps, some thing as simple RecordKeeper that returns a list of your items, can search for specific items etc.
 
 Let me know is my comments help or make it more confusing.
@@ -126,7 +126,7 @@ Classes  that implements  InterfaceList
 
 	•	Lists
 Private
-	•	Collection<InterfaceItems> List
+	•	Collection<InterfaceItems> list
 Methods
 	•	The same as Interface
 

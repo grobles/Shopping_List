@@ -1,27 +1,18 @@
 package com;
 
-// to this is redundant. only have one comment block
-
 /**
- * Created with IntelliJ IDEA.
- * User: Brian
+ * Class: Category
+ * Description: holds data describing a Category object. Each Product will have a shop and a Category
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 9/22/12
- * Time: 12:51 PM
- * To change this template use File | Settings | File Templates.
+ * Time: 12:51 PM *
  */
 
-/**
- *             Class: Category
- * Purpose: holds data describing a Category object.
- *
- * @author Lupe Robles, Brian Arnold
- */
-public class Category implements InterfaceItems {
+public class Category implements Item {
     private String categoryName;
     private Shop someShop;
 
     /**
-     *
      * @param categoryName
      * @param someShop
      */
@@ -32,6 +23,7 @@ public class Category implements InterfaceItems {
 
     /**
      * method: getCategory.
+     *
      * @return
      */
     public String getItemName() {
@@ -39,7 +31,6 @@ public class Category implements InterfaceItems {
     }
 
     /**
-     *
      * @param categoryName
      */
     public void setItemName(String categoryName) {
@@ -47,7 +38,6 @@ public class Category implements InterfaceItems {
     }
 
     /**
-     *
      * @param someShop
      */
     public void setSomeShop(Shop someShop) {
@@ -55,9 +45,9 @@ public class Category implements InterfaceItems {
     }
 
 
-
     /**
      * method: getShop.
+     *
      * @return
      */
     public Shop getShop() {

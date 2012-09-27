@@ -1,25 +1,17 @@
 package com;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Brian
+ * Class: Product
+ * Description: holds data describing a Shop object. Each Product will have a shop and a Category
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 9/22/12
- * Time: 12:53 PM
- * To change this template use File | Settings | File Templates.
+ * Time: 12:53 PM *
  */
 
-/**
- *             Class: Shop
- * Purpose: holds data describing a shop object
- *
- * @author Lupe Robles, Brian Arnold
- *
- */
-public class Shop implements InterfaceItems {
+public class Shop implements Item {
     private String shopName;
 
     /**
-     *
      * @param shopName
      */
     public Shop(String shopName) {
@@ -28,16 +20,18 @@ public class Shop implements InterfaceItems {
 
     /**
      * method: setShopName.
-     * @param shopName
      *
+     * @param shopName
      */
 
 
     public void setItemName(String shopName) {
         this.shopName = shopName;
     }
+
     /**
      * method: getShopName.
+     *
      * @return
      */
     public String getItemName() {

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MEX_DIROP_86" name="com.com.ShopTest" tests="1" time="0.045" timestamp="2012-09-26T05:06:44">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant" />
+    <property name="java.runtime.version" value="1.7.0_04-b22" />
+    <property name="user.name" value="grobles" />
+    <property name="build.dir" value="build" />
+    <property name="user.language" value="es" />
+    <property name="ant.file.File IO" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build.xml" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin" />
+    <property name="ant.project.default-target" value="all" />
+    <property name="ant.project.name" value="File IO" />
+    <property name="java.version" value="1.7.0_04" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="build\classes" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="MX" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_04\jre" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="ant.file" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="23.0-b21" />
+    <property name="report.dir" value="build\report" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.script" value="" />
+    <property name="user.home" value="C:\Users\grobles" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test.dir" value="src\test" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.com.ShopTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\repocom.objects.ShopTestShopTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher6793819988030690317.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit5580350483914199764.properties" />
+    <property name="java.class.path" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="java.io.tmpdir" value="C:\Users\grobles\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="x86" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="basedir" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.file.type.File IO" value="file" />
+    <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.invoked-targets" value="all" />
+  </properties>
+  <testcase classname="com.com.ShopTest" name="testShop" time="0.001" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
