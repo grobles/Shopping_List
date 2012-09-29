@@ -22,12 +22,14 @@ import static org.mockito.Mockito.when;
 
 public class DataContainersTest {
     //private data members
-    private final Collection<Item> mockCollectionItems = mock(Collection.class);
-    private final Collection mockCollectionCategory = mock(Collection.class);
-    private final Collection mockCollectionShops = mock(Collection.class);
+    private final Item mockProduct = mock(Product.class);
+    private final Item mockProduct2 = mock(Product.class);
+    private final Item mockCategory = mock(Category.class);
+    private final Item mockShop = mock(Shop.class);
     private final Collection mockCollectionShopping1 = mock(Collection.class);
     private final Collection mockCollectionShopping2 = mock(Collection.class);
     ArrayList<Collection> someArray = new ArrayList<Collection>();
+    DataContainers someDc = DataContainers.getInstance();
 
 
     /**
@@ -35,9 +37,12 @@ public class DataContainersTest {
      */
     @Before
     public void setup() {
-        someArray.add(mockCollectionShopping1);
-        someArray.add(mockCollectionShopping2);
-
+        someDc.getShoppingLists().add(mockCollectionShopping1);
+        someDc.getShoppingLists().add(mockCollectionShopping2);
+        someDc.getProductList().add(mockProduct);
+        someDc.getProductList().add(mockProduct2);
+        someDc.getCategoryList().add(mockCategory);
+        someDc.getShopList().add(mockShop);
 
     }
 
@@ -48,11 +53,17 @@ public class DataContainersTest {
     @Test
 
     public void testConstruction() {
+        DataContainers anotherDc = DataContainers.getInstance();
 
-        when(mockCollectionItems.size()).thenReturn(2);
-        DataContainers someDc = new DataContainers(mockCollectionItems, mockCollectionCategory, mockCollectionShops, someArray);
-        int arraySize = someDc.getProductList().size();
-        assertEquals("size ", arraySize, 2);
+        when(mockProduct.getItemName()).thenReturn("Alpha");
+        int productSize = anotherDc.getProductList().size();
+        assertEquals("size ", productSize, 2);
+        int categorySize = anotherDc.getCategoryList().size();
+        assertEquals("size ", categorySize, 1);
+        int shopSize = anotherDc.getShopList().size();
+        assertEquals("size ", shopSize, 1);
+        int shoppinglistSize = anotherDc.getShoppingLists().size();
+        assertEquals("size ", shoppinglistSize, 2);
     }
 
 

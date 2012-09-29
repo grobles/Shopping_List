@@ -1,5 +1,7 @@
 package com;
 
+import java.io.Serializable;
+
 /**
  * Class: Product
  * Description: holds data describing a Shop object. Each Product will have a shop and a Category
@@ -8,7 +10,7 @@ package com;
  * Time: 12:53 PM *
  */
 
-public class Shop implements Item {
+public class Shop implements Item, Serializable {
     private String shopName;
 
     /**

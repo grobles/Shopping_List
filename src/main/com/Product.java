@@ -1,5 +1,7 @@
 package com;
 
+import java.io.Serializable;
+
 /**
  * Class: Product
  * Description: holds data describing a Product object.
@@ -9,7 +11,7 @@ package com;
  * Time: 10:12 PM *
  */
 
-public class Product implements Item {
+public class Product implements Item, Serializable {
     //private members of an Product object
     private String itemName;
     private Category itemCategory;
@@ -145,8 +147,6 @@ public class Product implements Item {
     public String getItemUnit() {
         return itemUnit;
     }
-
-
 
 
 }

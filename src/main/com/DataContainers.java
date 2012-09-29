@@ -1,69 +1,66 @@
 package com;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 
-
-//todo provide documentation here
-
 /**
- * Class: DataContainers
- * Description: This class will hold all the list from each of the Items.
- * It will later help to write the information
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 23/09/12
- * Time: 09:51 PM *
+ * Class: DataContainers Description: This class will hold all the list from
+ * each of the Items. It is a singleton. It will later help to write the
+ * information Author: Brian Arnold & Guadalupe Robles Gil Date: 23/09/12 Time:
+ * 09:51 PM *
  */
 public class DataContainers implements Serializable {
 
-    private Collection<Item> productList;
-    private Collection<Item> categoryList;
-    private Collection<Item> shopList;
-    private static String[] unitsList ;
-    private Collection<Collection> shoppingLists;
+    private static DataContainers ourInstance = new DataContainers();
+    private Collection<Product> productList = new ArrayList<Product>();
+    private Collection<Category> categoryList = new ArrayList<Category>();
+    private Collection<Shop> shopList = new ArrayList<Shop>();
+    private static String[] unitsList = new String[]{"", "Pieces", "lb"};
+    private Collection<Collection> shoppingLists = new ArrayList<Collection>();
 
-    public DataContainers(Collection productList, Collection categoryList, Collection shopList, Collection<Collection> shoppingLists) {
-        this.productList = productList;
-        this.categoryList = categoryList;
-        this.shopList = shopList;
-        this.shoppingLists = shoppingLists;
-        String[] unitsList={"Pieces" , "lb"};
-
+    private DataContainers() {
     }
 
+    /**
+     * @return
+     */
+    public static DataContainers getInstance() {
+        return ourInstance;
+    }
+
+    /**
+     * @return
+     */
     public Collection getProductList() {
         return productList;
     }
 
-    public void setProductList(Collection productList) {
-        this.productList = productList;
-    }
-
+    /**
+     * @return
+     */
     public Collection getCategoryList() {
         return categoryList;
     }
 
-    public void setCategoryList(Collection category) {
-        this.categoryList = categoryList;
-    }
-
+    /**
+     * @return
+     */
     public Collection getShopList() {
         return shopList;
     }
 
-    public void setShopList(Collection shopList) {
-        this.shopList = shopList;
-    }
-
+    /**
+     * @return
+     */
     public Collection<Collection> getShoppingLists() {
         return shoppingLists;
     }
 
-    public void setShoppingLists(Collection<Collection> shoppingLists) {
-        this.shoppingLists = shoppingLists;
-    }
-
-    public String[] getunitsLists() {
+    /**
+     * @return
+     */
+    public String[] getUnitsList() {
         return unitsList;
     }
 }
