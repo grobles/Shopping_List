@@ -37,6 +37,28 @@ public class WriteToFile {
     }
 
     /**
+     * method: writeSerializeFile  It writes to a file the DataConatinersTest . this is just for the test
+     *
+     * @param object
+     */
+
+    public static void writeSerializeFileTest(Object object) {
+        try {
+            if (object instanceof DataContainers) {
+                DataContainers container = (DataContainers) object;
+                String fileName = "DataContainersTest.ser";
+                FileOutputStream file = new FileOutputStream(fileName);
+                ObjectOutputStream stream = new ObjectOutputStream(file);
+                stream.writeObject(container);
+                stream.flush();
+            }
+        } catch (Exception e) {
+            // Problem writing file!
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /**
      * method: readSerializeFile  It from the file the DataContainer object
      *
      * @return
@@ -48,6 +70,28 @@ public class WriteToFile {
         try {
 
             ObjectInputStream input1 = new ObjectInputStream(new FileInputStream("DataContainers.ser"));
+
+            object = (DataContainers) input1.readObject();
+
+
+            input1.close();
+            return object;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        }
+
+    }
+
+    public static DataContainers readSerializeFileTest() {
+
+        DataContainers object = null;
+
+        try {
+
+            ObjectInputStream input1 = new ObjectInputStream(new FileInputStream("DataContainersTest.ser"));
 
             object = (DataContainers) input1.readObject();
 

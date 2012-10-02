@@ -2,10 +2,7 @@ package com.Utilities;
 
 import com.*;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Class: Product
@@ -23,72 +20,88 @@ import java.util.TreeSet;
  */
 public class RecordSeeker {
 
-    private static DataContainers dc = DataContainers.getInstance();
-    private static Collection<Product> productList = dc.getProductList();
-    private static Collection<Category> categoryList = dc.getCategoryList();
-    private static Collection<Shop> shopList = dc.getShopList();
+    private Collection<Item> List;
+    String ItemClass;
+    DataContainers dc;
 
+    public RecordSeeker(String itemClass) {
+        dc = WriteToFile.readSerializeFile();
+        ItemClass = itemClass;
+        if (itemClass.equals("Shop"))
+            List = dc.getShopList();
+        else if (itemClass.equals("Category"))
+            List = dc.getCategoryList();
+        else if (itemClass.equals("Product"))
+            List = dc.getProductList();
+    }
     /**
-     * method: findProduct  Given the name it returns an Item
+     * method: findItem  Given the name it returns an Item
      *
-     * @param itemName
+     * @param
      *
      * @return
      */
-    public static Product findProduct(String itemName) {
-        Product itemFound = null;
+    public DataContainers getDc(){
+        return dc;
+    }
 
-        for (Product item : productList) {
+    public void addItem(Item item){
+        List.add(item);
+    }
+
+    public void writToFile(){
+        WriteToFile.writeSerializeFile(dc);
+    }
+
+    public Collection<Item> getList() {
+        return List;
+    }
+
+
+    public  Item findItem(String itemName) {
+
+         Item itemFound = null;
+
+        for (Item item : List) {
             if (item.getItemName().equals(itemName)) {
                 itemFound = item;
+
             }
 
         }
         return itemFound;
     }
-
     /**
+     * method: findItem  Given the name it returns an Item
+     *
      * @param itemName
      *
      * @return
      */
-    public static Category findCategory(String itemName) {
-        Category itemFound = null;
+    public  boolean deleteProduct(String itemName ) {
 
-        for (Category item : categoryList) {
+        Item itemFound;
+        boolean result;
+
+        for (Item item : List) {
             if (item.getItemName().equals(itemName)) {
                 itemFound = item;
+                List.remove(itemFound);
+                return true;
             }
 
         }
-        return itemFound;
+        return false;
     }
 
-    /**
-     * @param itemName
-     *
-     * @return
-     */
-    public static Shop findShop(String itemName) {
-        Shop itemFound = null;
-
-        for (Shop item : shopList) {
-            if (item.getItemName().equals(itemName)) {
-                itemFound = item;
-            }
-
-        }
-        return itemFound;
-    }
-
-    /**
+     /**
      * method: makeCombo It helps make the String[] needed for the combos in the different forms
      *
-     * @param List
+     * @param
      *
      * @return
      */
-    public static String[] makeCombo(Collection<Item> List) {
+    public  String[] makeCombo() {
         int size = List.size();
         String[] comboArray = new String[size];
         int i = 0;
@@ -102,17 +115,19 @@ public class RecordSeeker {
         return comboArray;
     }
 
+
     /**
      * method: sort This method will help sort by Name the different lists
      *
-     * @param list
+     *
+     * @param
      *
      * @return
      */
-    public static Collection<Item> Sort(Collection<Item> list) {
+    public  Collection Sort(Collection<Item> listToSort) {
 
         Collection ListSorted = new TreeSet(new ByName());
-        for (Item item : list) {
+        for (Item item : listToSort) {
             ListSorted.add(item);
         }
 

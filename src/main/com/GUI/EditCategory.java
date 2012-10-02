@@ -1,73 +1,49 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.GUI;
 
 import com.Category;
-import com.DataContainers;
-import com.Item;
 import com.Shop;
 import com.Utilities.RecordSeeker;
-import com.Utilities.WriteToFile;
 
 import javax.swing.*;
-import java.util.Collection;
 
 /**
- * @author grobles
+ * Class: Category  Form
+ * Description: In this for you can edit or add a new Category
+ * Author: Brian Arnold & Guadalupe Robles Gil
+ * Date: 9/22/12
+ * Time: 12:51 PM *
  */
 public class EditCategory extends javax.swing.JFrame {
 
-    private Collection<Category> categoryList;
-    private Collection<Item> shopList;
-    private DataContainers dc = DataContainers.getInstance();
     private String[] comboShop;
-
+    RecordSeeker recordSeekerShop;
+    RecordSeeker recordSeekerCategory;
     /**
      * Creates new form NewJFrame
      */
     public EditCategory() {
 
-        dc = WriteToFile.readSerializeFile();
-        categoryList = dc.getCategoryList();
-        shopList = dc.getShopList();
-        int size = shopList.size();
-        comboShop = RecordSeeker.makeCombo(shopList);
-
+        recordSeekerShop = new RecordSeeker("Shop");
+        recordSeekerCategory = new RecordSeeker("Category");
+        comboShop = recordSeekerShop.makeCombo();
         initComponents();
-    }
-
-    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        String shopName = new String();
-        shopName = jComboBoxShop.getSelectedItem().toString();
-        Shop shopSelected;
-        shopSelected = RecordSeeker.findShop(shopName);
-        String categoryName;
-        categoryName = jTextFieldCategoryName.getText();
-        Category newCategory = new Category(categoryName, shopSelected);
-        categoryList.add(newCategory);
-        WriteToFile.writeSerializeFile(dc);
-        JOptionPane.showMessageDialog(new JFrame(), "Category has been added");
-        jTextFieldCategoryName.setText("");
-        jTextFieldCategoryName.requestFocus();
 
     }
 
-    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
-        jTextFieldCategoryName.setText("");
-    }
-
-    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {
-        this.dispose();
-    }
-
+    /**
+     * This method is called from within the constructor to initialize the form.
+     *
+     */
     @SuppressWarnings("unchecked")
-
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        jLabelCategoryName = new javax.swing.JLabel();
+        jLabelproductName = new javax.swing.JLabel();
         jTextFieldCategoryName = new javax.swing.JTextField();
         jButtonSearch = new javax.swing.JButton();
         jLabelShop = new javax.swing.JLabel();
@@ -75,6 +51,7 @@ public class EditCategory extends javax.swing.JFrame {
         jButtonSave = new javax.swing.JButton();
         jButtonClear = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
+        jButtonDelete = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -93,7 +70,7 @@ public class EditCategory extends javax.swing.JFrame {
         setTitle("Edit Product");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
-        jLabelCategoryName.setText("Category Name");
+        jLabelproductName.setText("Category Name");
 
         jButtonSearch.setText("Search");
         jButtonSearch.setName("JButtonSearch");
@@ -122,9 +99,17 @@ public class EditCategory extends javax.swing.JFrame {
         });
 
         jButtonCancel.setText("Cancel");
+        jButtonCancel.setToolTipText("");
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelActionPerformed(evt);
+            }
+        });
+
+        jButtonDelete.setText("Delete");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteActionPerformed(evt);
             }
         });
 
@@ -135,48 +120,170 @@ public class EditCategory extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabelCategoryName)
+                                        .addComponent(jLabelproductName)
                                         .addComponent(jLabelShop)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jTextFieldCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jComboBoxShop, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(34, 34, 34)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(layout.createSequentialGroup()
+                                                                .addGap(12, 12, 12)
+                                                                .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jButtonSearch)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jButtonCancel)))))
-                                .addContainerGap(39, Short.MAX_VALUE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jButtonDelete)))
+                                                .addGap(6, 6, 6)
+                                                .addComponent(jButtonCancel))
+                                        .addComponent(jComboBoxShop, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabelCategoryName)
-                                .addGap(2, 2, 2)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTextFieldCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButtonSearch)
-                                        .addComponent(jButtonClear))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelproductName)
+                                .addGap(3, 3, 3)
+                                .addComponent(jTextFieldCategoryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelShop)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jComboBoxShop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(23, 23, 23)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jButtonSave)
-                                        .addComponent(jButtonCancel))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jButtonCancel)
+                                        .addComponent(jButtonClear)
+                                        .addComponent(jButtonSearch)
+                                        .addComponent(jButtonDelete))
+                                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>
 
+    /**
+     * method: jButtonClearActionPerformed : Clear the form
+     *
+     *
+     */
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldCategoryName.setText("");
+        jTextFieldCategoryName.requestFocus();
+    }
+    /**
+     * method: jButtonSearchActionPerformed : Search for category
+     *
+     *
+     */
+
+    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
+        String name = jTextFieldCategoryName.getText();
+        Category category = (Category)recordSeekerCategory.findItem(name);
+        String message = "Category not found";
+        if (category != null)  {
+            message = "Category found";
+            String shopName = category.getShop().getItemName();
+            jComboBoxShop.setSelectedItem(shopName);
+        }
+        JOptionPane.showMessageDialog(new JFrame(), message);
+        jTextFieldCategoryName.requestFocus();
+
+    }
+
+    /**
+     * method: jButtonSaveActionPerformed : save a Shop
+     *
+     *
+     */
+
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
+
+        JFrame frame = new JFrame();
+        String categoryName = jTextFieldCategoryName.getText();
+        Category categoryFound = (Category)recordSeekerCategory.findItem(categoryName);
+        if (categoryName.equals("")|| categoryFound != null)    {
+            int n = JOptionPane.showConfirmDialog(
+                    frame,
+                    "That Category already exists.Would you like to edi this Category?",
+                    "Confirm Edit Category",
+                    JOptionPane.YES_NO_OPTION
+            );
+            if (n == 0){
+                String shopName = jComboBoxShop.getSelectedItem().toString();
+                Shop shop = (Shop)recordSeekerShop.findItem(shopName);
+                categoryFound.setSomeShop(shop);
+                JOptionPane.showMessageDialog(new JFrame(), "Category edited");
+                jTextFieldCategoryName.setText("");
+                jTextFieldCategoryName.requestFocus();
+            }
+            else if (n == 1)
+                jTextFieldCategoryName.setText("");
+                jTextFieldCategoryName.requestFocus();
+        }
+
+        else {
+            int n = JOptionPane.showConfirmDialog(
+                    frame,
+                    "Would you like to save this Category?",
+                    "Confirm Save Category",
+                    JOptionPane.YES_NO_OPTION
+            );
+            if (n == 0){
+
+                String shopName = jComboBoxShop.getSelectedItem().toString();
+                Shop shop = (Shop)recordSeekerShop.findItem(shopName);
+                Category newCategory = new Category(categoryName,shop);
+                recordSeekerCategory.addItem(newCategory);
+                JOptionPane.showMessageDialog(new JFrame(), "Category saved");
+                jTextFieldCategoryName.setText("");
+                jTextFieldCategoryName.requestFocus();
+            }
+            else if (n == 1)
+                jTextFieldCategoryName.setText("");
+                jTextFieldCategoryName.requestFocus();
+        }
+    }
+    /**
+     * method: jButtonDeleteActionPerformed : delete a category
+     *
+     *
+     */
+    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
+        JFrame frame = new JFrame();
+        String name = jTextFieldCategoryName.getText();
+        if (recordSeekerCategory.findItem(name)== null)    {
+            JOptionPane.showMessageDialog(new JFrame(), "Category not found");
+            jTextFieldCategoryName.requestFocus();
+        }
+        else {
+            int n = JOptionPane.showConfirmDialog(
+                    frame,
+                    "Would you like to Delete this Category?",
+                    "Confirm Delete Category",
+                    JOptionPane.YES_NO_OPTION
+            );
+            if (n == 0){
+                recordSeekerCategory.deleteProduct(name);
+                JOptionPane.showMessageDialog(new JFrame(), "Category Deleted");
+                jTextFieldCategoryName.setText("");
+                jTextFieldCategoryName.requestFocus();
+            }
+            else if (n == 1)
+                jTextFieldCategoryName.setText("");
+            jTextFieldCategoryName.requestFocus();
+        }
+    }
+    /**
+     * method: jButtonCancelActionPerformed : Exit and save to file
+     *
+     *
+     */
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {
+        recordSeekerCategory.writToFile();
+        this.dispose();
+    }
 
     /**
      * @param args the command line arguments
@@ -219,16 +326,16 @@ public class EditCategory extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonClear;
+    private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JButton jButtonSearch;
     private javax.swing.JComboBox jComboBoxShop;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabelShop;
-    private javax.swing.JLabel jLabelCategoryName;
+    private javax.swing.JLabel jLabelproductName;
     private javax.swing.JTextField jTextFieldCategoryName;
     // End of variables declaration
 }

@@ -27,7 +27,6 @@ public class WriteToFileTest implements Serializable {
     private final Item mockCategory2 = mock(Category.class);
     private final Item mockShop = mock(Shop.class);
     private final Item mockShop2 = mock(Shop.class);
-    private final WriteToFile mockwriteToFile = mock(WriteToFile.class);
     DataContainers someDc = DataContainers.getInstance();
 
 
@@ -55,8 +54,8 @@ public class WriteToFileTest implements Serializable {
     public void testWriteAndRead() {
 
         DataContainers someDc = DataContainers.getInstance();
-        mockwriteToFile.writeSerializeFile(someDc);
-        someDc = mockwriteToFile.readSerializeFile();
+        WriteToFile.writeSerializeFileTest(someDc);
+        someDc = WriteToFile.readSerializeFileTest();
 
         int arraySize = someDc.getProductList().size();
         assertEquals("size ", arraySize, 2);

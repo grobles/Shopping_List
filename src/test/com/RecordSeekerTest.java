@@ -21,21 +21,27 @@ import static org.mockito.Mockito.when;
 public class RecordSeekerTest {
     //private data members
 
-    private final Item mockItem1 = mock(Item.class);
-    private final Item mockItem2 = mock(Item.class);
-    private final Item mockItem3 = mock(Item.class);
-    private final Item mockProduct = mock(Product.class);
-    private final Item mockProduct2 = mock(Product.class);
-    private final ArrayList<Item> someArray = new ArrayList<Item>();
+    private final Product mockItem1 = mock(Product.class);
+    private final Product mockItem2 = mock(Product.class);
+    private final Product mockItem3 = mock(Product.class);
+    private ArrayList<Item> someArray = new ArrayList<Item>();
+    RecordSeeker recordSeekerProduct ;
+    DataContainers dc;
+    Collection<Item> arrayToSort;
+
+
 
     /**
      * setup the Product to test
      */
     @Before
     public void setup() {
-        someArray.add(mockItem1);
-        someArray.add(mockItem2);
-        someArray.add(mockItem3);
+        someArray = new ArrayList<Item>();
+        arrayToSort = new ArrayList<Item>();
+        recordSeekerProduct = new RecordSeeker("Product");
+
+
+
 
     }
 
@@ -45,11 +51,13 @@ public class RecordSeekerTest {
     @Test
     public void testSortList() {
 
-        Collection<Item> arrayToSort = new ArrayList<Item>(someArray);
+        someArray.add(mockItem1);
+        someArray.add(mockItem2);
+        someArray.add(mockItem3);
         when(mockItem3.getItemName()).thenReturn("Alpha");
         when(mockItem2.getItemName()).thenReturn("Beta");
         when(mockItem1.getItemName()).thenReturn("Gamma");
-        arrayToSort = RecordSeeker.Sort(arrayToSort);
+        arrayToSort = recordSeekerProduct.Sort(someArray);
         String first = arrayToSort.iterator().next().getItemName();
         assertEquals("size ", "Alpha", first);
 
@@ -59,17 +67,48 @@ public class RecordSeekerTest {
      *
      */
     @Test
-    public void testSortListFromDC() {
-
-        DataContainers someDc = DataContainers.getInstance();
-        someDc.getProductList().add(mockProduct);
-        someDc.getProductList().add(mockProduct2);
-        Collection<Item> arrayToSort = someDc.getProductList();
-        when(mockProduct2.getItemName()).thenReturn("Alpha");
-        when(mockProduct.getItemName()).thenReturn("Beta");
-        arrayToSort = RecordSeeker.Sort(arrayToSort);
+    public void testSortListFromDc() {
+        dc = DataContainers.getInstance();
+        recordSeekerProduct.addItem(mockItem1);
+        recordSeekerProduct.addItem(mockItem2);
+        Collection<Item> arrayToSort2 = recordSeekerProduct.getList();
+        when(mockItem2.getItemName()).thenReturn("Alpha");
+        when(mockItem1.getItemName()).thenReturn("Beta");
+        arrayToSort = recordSeekerProduct.Sort(arrayToSort2);
         String first = arrayToSort.iterator().next().getItemName();
         assertEquals("size ", "Alpha", first);
 
     }
+
+    @Test
+    public void testFindProduct() {
+        dc = DataContainers.getInstance();
+        recordSeekerProduct.addItem(mockItem1);
+        recordSeekerProduct.addItem(mockItem2);
+        when(mockItem2.getItemName()).thenReturn("Alpha");
+        when(mockItem1.getItemName()).thenReturn("Beta");
+        String nameOfItem = recordSeekerProduct.findItem("Alpha").getItemName();
+        assertEquals("Name ", "Alpha", nameOfItem);
+
+}
+
+    @Test
+    public void testDeleteProduct() {
+        dc = DataContainers.getInstance();
+        recordSeekerProduct.addItem(mockItem1);
+        recordSeekerProduct.addItem(mockItem2);
+        when(mockItem2.getItemName()).thenReturn("Alpha");
+        when(mockItem1.getItemName()).thenReturn("Beta");
+        int productsize = recordSeekerProduct.getList().size();
+        assertEquals("Size ", 2, productsize);
+        recordSeekerProduct.deleteProduct("Alpha");
+        productsize = recordSeekerProduct.getList().size();
+        assertEquals("Size ", 1, productsize);
+
+
+
+
+         }
+
+
 }

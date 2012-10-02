@@ -4,11 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 /**
  * Class: DataContainersTest
@@ -26,9 +24,8 @@ public class DataContainersTest {
     private final Item mockProduct2 = mock(Product.class);
     private final Item mockCategory = mock(Category.class);
     private final Item mockShop = mock(Shop.class);
-    private final Collection mockCollectionShopping1 = mock(Collection.class);
-    private final Collection mockCollectionShopping2 = mock(Collection.class);
-    ArrayList<Collection> someArray = new ArrayList<Collection>();
+    private final ArrayList mockCollectionShopping1 = mock(ArrayList.class);
+    private final ArrayList mockCollectionShopping2 = mock(ArrayList.class);
     DataContainers someDc = DataContainers.getInstance();
 
 
@@ -55,7 +52,6 @@ public class DataContainersTest {
     public void testConstruction() {
         DataContainers anotherDc = DataContainers.getInstance();
 
-        when(mockProduct.getItemName()).thenReturn("Alpha");
         int productSize = anotherDc.getProductList().size();
         assertEquals("size ", productSize, 2);
         int categorySize = anotherDc.getCategoryList().size();

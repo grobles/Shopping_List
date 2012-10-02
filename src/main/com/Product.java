@@ -15,7 +15,6 @@ public class Product implements Item, Serializable {
     //private members of an Product object
     private String itemName;
     private Category itemCategory;
-    private Shop itemShop;
     private int itemQuantity;
     private String itemUnit;
 
@@ -27,7 +26,6 @@ public class Product implements Item, Serializable {
     public static class Builder {
         private final String nameOfItem;
         private final Category categoryOfItem;
-        private final Shop shopOfItem;
 
         private int quantityOfItem = 0;
         private String unitOfItem = "";
@@ -38,10 +36,10 @@ public class Product implements Item, Serializable {
          * @param nameOfItem
          * @param categoryOfItem
          */
-        public Builder(String nameOfItem, Category categoryOfItem, Shop shopOfItem) {
+        public Builder(String nameOfItem, Category categoryOfItem) {
             this.nameOfItem = nameOfItem;
             this.categoryOfItem = categoryOfItem;
-            this.shopOfItem = shopOfItem;
+
         }
 
         /**
@@ -79,7 +77,6 @@ public class Product implements Item, Serializable {
     private Product(Builder builder) {
         itemName = builder.nameOfItem;
         itemCategory = builder.categoryOfItem;
-        itemShop = builder.shopOfItem;
         itemQuantity = builder.quantityOfItem;
         itemUnit = builder.unitOfItem;
     }
@@ -119,13 +116,9 @@ public class Product implements Item, Serializable {
      *
      * @return
      */
-    public Shop getItemShop() {
-        return itemShop;
-    }
 
-    public void setItemShop(Shop itemShop) {
-        this.itemShop = itemShop;
-    }
+
+
 
     /**
      * method: getItemQuantity.
@@ -140,7 +133,7 @@ public class Product implements Item, Serializable {
         this.itemQuantity = itemQuantity;
     }
 
-    private void setItemUnit(String itemUnit) {
+    public void setItemUnit(String itemUnit) {
         this.itemUnit = itemUnit;
     }
 

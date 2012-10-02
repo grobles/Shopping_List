@@ -1,75 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.GUI;
 
-import com.DataContainers;
 import com.Shop;
-import com.Utilities.WriteToFile;
-
-import java.util.Collection;
+import com.Utilities.RecordSeeker;
+import javax.swing.*;
 
 /**
- * @author grobles
+ * Class: Category
+ * Description: In this for you can edit or add a new Shop
+ * Author: Brian Arnold & Guadalupe Robles Gil
+ * Date: 9/22/12
+ * Time: 12:51 PM *
  */
 public class EditShop extends javax.swing.JFrame {
 
-    private Collection<Shop> shopList;
-    private DataContainers dc = DataContainers.getInstance();
 
+        RecordSeeker recordSeekerShop;
 
+     /**
+     * Creates new form EditShop
+     */
     public EditShop() {
-        WriteToFile.writeSerializeFile(dc);
-        dc = WriteToFile.readSerializeFile();
-        shopList = dc.getShopList();
+
+        recordSeekerShop = new RecordSeeker("Shop");
         initComponents();
     }
 
+    /**
+     * This method is called from within the constructor to initialize the form.
+     *
+     */
     @SuppressWarnings("unchecked")
-
-    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        String productName = jTextFieldProductName.getText();
-        Shop newShop = new Shop(productName);
-        shopList.add(newShop);
-        WriteToFile.writeSerializeFile(dc);
-        jTextFieldProductName.setText("");
-    }
-
 
     private void initComponents() {
 
-        jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabelShopName = new javax.swing.JLabel();
-        jTextFieldProductName = new javax.swing.JTextField();
+        jTextFieldShopName = new javax.swing.JTextField();
+        jButtonClear = new javax.swing.JButton();
         jButtonSearch = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
-        jButtonClear = new javax.swing.JButton();
+        jButtonDelete = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Add Shop");
-        setAlwaysOnTop(true);
-        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setTitle("Add/Edit Shop");
 
         jLabelShopName.setText("Shop Name");
 
+        jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
 
         jButtonSearch.setText("Search");
-        jButtonSearch.setName("JButtonSearch");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSearchActionPerformed(evt);
@@ -83,62 +71,202 @@ public class EditShop extends javax.swing.JFrame {
             }
         });
 
-        jButtonClear.setText("Clear");
+        jButtonDelete.setText("Delete");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteActionPerformed(evt);
+            }
+        });
 
         jButtonCancel.setText("Cancel");
-
+        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jTextFieldProductName, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addComponent(jButtonSearch))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(203, 203, 203)
-                                                                .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jButtonCancel)
-                                                        .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(jLabelShopName, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(39, Short.MAX_VALUE))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelShopName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextFieldShopName, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jButtonClear)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSearch)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSave)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonDelete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonCancel)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addComponent(jLabelShopName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTextFieldProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButtonSearch)
-                                        .addComponent(jButtonClear))
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButtonSave)
-                                        .addComponent(jButtonCancel))
-                                .addContainerGap(30, Short.MAX_VALUE))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabelShopName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextFieldShopName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonClear)
+                    .addComponent(jButtonSearch)
+                    .addComponent(jButtonSave)
+                    .addComponent(jButtonDelete)
+                    .addComponent(jButtonCancel))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
-    }// </editor-fold>
+    }
 
+    /**
+     * method: jButtonClearActionPerformed : Clear the form
+     *
+     *
+     */
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+        jTextFieldShopName.setText("");
+        jTextFieldShopName.requestFocus();
+    }
+
+    /**
+     * method: jButtonSearchActionPerformed : Search for shop
+     *
+     *
+     */
+
+    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
+
+        String name = jTextFieldShopName.getText();
+        Shop shop = (Shop)recordSeekerShop.findItem(name);
+        String message = "Shop not found";
+        if (shop != null)
+            message = "Shop found";
+        JOptionPane.showMessageDialog(new JFrame(), message);
+        jTextFieldShopName.requestFocus();
+
+
+    }
+    /**
+     * method: jButtonSaveActionPerformed : save a Shop
+     *
+     *
+     */
+
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
+        JFrame frame = new JFrame();
+        String shopName = jTextFieldShopName.getText();
+        Shop shopFound = (Shop)recordSeekerShop.findItem(shopName);
+        if (shopName.equals("")|| shopFound != null)    {
+            JOptionPane.showMessageDialog(new JFrame(), "That Shop already exists ");
+            jTextFieldShopName.requestFocus();
+        }
+        else {
+        int n = JOptionPane.showConfirmDialog(
+                frame,
+                "Would you like to save this Shop?",
+                "Confirm Save Shop",
+                JOptionPane.YES_NO_OPTION
+        );
+        if (n == 0){
+
+            Shop newShop = new Shop(shopName);
+            recordSeekerShop.addItem(newShop);
+            JOptionPane.showMessageDialog(new JFrame(), "Shop saved");
+            jTextFieldShopName.setText("");
+            jTextFieldShopName.requestFocus();
+        }
+        else if (n == 1)
+            jTextFieldShopName.setText("");
+            jTextFieldShopName.requestFocus();
+        }
+    }
+
+    /**
+     * method: jButtonDeleteActionPerformed : delete a Shop
+     *
+     *
+     */
+
+    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+        JFrame frame = new JFrame();
+        String name = jTextFieldShopName.getText();
+        if (recordSeekerShop.findItem(name)== null)    {
+            JOptionPane.showMessageDialog(new JFrame(), "Shop not found");
+            jTextFieldShopName.requestFocus();
+        }
+        else {
+            int n = JOptionPane.showConfirmDialog(
+                    frame,
+                    "Would you like to Delete this Shop?",
+                    "Confirm Delete Shop",
+                    JOptionPane.YES_NO_OPTION
+            );
+            if (n == 0){
+                recordSeekerShop.deleteProduct(name);
+                JOptionPane.showMessageDialog(new JFrame(), "Shop Deleted");
+                jTextFieldShopName.setText("");
+                jTextFieldShopName.requestFocus();
+            }
+            else if (n == 1)
+                jTextFieldShopName.setText("");
+            jTextFieldShopName.requestFocus();
+        }
+    }
+    /**
+     * method: jButtonCancelActionPerformed : Exit and save to file
+     *
+     *
+     */
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+        recordSeekerShop.writToFile();
+        this.dispose();
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /*
-        * Create and display the form
-        */
+         * Set the Nimbus look and feel
+         */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the
+         * default look and feel. For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /*
+         * Create and display the form
+         */
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
@@ -146,15 +274,13 @@ public class EditShop extends javax.swing.JFrame {
             }
         });
     }
-
-    // Variables declaration - do not modify
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonClear;
+    private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JButton jButtonSearch;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabelShopName;
-    private javax.swing.JTextField jTextFieldProductName;
-    // End of variables declaration
+    private javax.swing.JTextField jTextFieldShopName;
+    // End of variables declaration//GEN-END:variables
 }
-

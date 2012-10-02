@@ -20,7 +20,7 @@ public class DataContainers implements Serializable {
     private Collection<Collection> shoppingLists = new ArrayList<Collection>();
 
     private DataContainers() {
-    }
+      }
 
     /**
      * @return

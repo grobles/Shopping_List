@@ -32,7 +32,7 @@ public class ProductTest {
         aShop = new Shop(shopName);
         Category aCategory = new Category(categoryName, aShop);
         //use the Builder to create a new Product
-        myMasterShopProduct = new Product.Builder(itemName, aCategory, aShop).quantity(itemQuantity).build();
+        myMasterShopProduct = new Product.Builder(itemName, aCategory).quantity(itemQuantity).build();
     }
 
     /**
@@ -42,7 +42,6 @@ public class ProductTest {
     public void testItem() {
         assertEquals("Product Name", itemName, myMasterShopProduct.getItemName());
         assertEquals("Product Category Name", categoryName, myMasterShopProduct.getItemCategory().getItemName());
-        assertEquals("Product Shop Name", shopName, myMasterShopProduct.getItemShop().getItemName());
         assertEquals("Product Quantity", itemQuantity, myMasterShopProduct.getItemQuantity());
     }
 
