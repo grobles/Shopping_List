@@ -21,12 +21,13 @@ import java.util.*;
 public class RecordSeeker {
 
     private Collection<Item> List;
-    String ItemClass;
-    DataContainers dc;
+    private DataContainers dc;
+    private WriteXMLFile xml;
 
     public RecordSeeker(String itemClass) {
+
         dc = WriteToFile.readSerializeFile();
-        ItemClass = itemClass;
+        xml = new WriteXMLFile(dc);
         if (itemClass.equals("Shop"))
             List = dc.getShopList();
         else if (itemClass.equals("Category"))
@@ -53,6 +54,10 @@ public class RecordSeeker {
         WriteToFile.writeSerializeFile(dc);
     }
 
+    public void writToXml(){
+       xml.writeFile();
+    }
+
     public Collection<Item> getList() {
         return List;
     }
@@ -63,7 +68,7 @@ public class RecordSeeker {
          Item itemFound = null;
 
         for (Item item : List) {
-            if (item.getItemName().equals(itemName)) {
+            if (item.getItemName().equalsIgnoreCase(itemName)) {
                 itemFound = item;
 
             }
@@ -78,19 +83,16 @@ public class RecordSeeker {
      *
      * @return
      */
-    public  boolean deleteProduct(String itemName ) {
+    public  boolean deleteProduct(Item itemToDelete ) {
 
-        Item itemFound;
         boolean result;
 
         for (Item item : List) {
-            if (item.getItemName().equals(itemName)) {
-                itemFound = item;
-                List.remove(itemFound);
+                List.remove(itemToDelete);
                 return true;
             }
 
-        }
+
         return false;
     }
 

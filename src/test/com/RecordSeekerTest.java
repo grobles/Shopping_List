@@ -43,6 +43,7 @@ public class RecordSeekerTest {
 
 
 
+
     }
 
     /**
@@ -94,16 +95,18 @@ public class RecordSeekerTest {
 
     @Test
     public void testDeleteProduct() {
+
         dc = DataContainers.getInstance();
         recordSeekerProduct.addItem(mockItem1);
         recordSeekerProduct.addItem(mockItem2);
         when(mockItem2.getItemName()).thenReturn("Alpha");
         when(mockItem1.getItemName()).thenReturn("Beta");
         int productsize = recordSeekerProduct.getList().size();
-        assertEquals("Size ", 2, productsize);
-        recordSeekerProduct.deleteProduct("Alpha");
+        assertEquals("Size ", 5, productsize);
+        Product product = (Product)recordSeekerProduct.findItem("Alpha");
+        recordSeekerProduct.deleteProduct(product);
         productsize = recordSeekerProduct.getList().size();
-        assertEquals("Size ", 1, productsize);
+        assertEquals("Size ", 4, productsize);
 
 
 

@@ -6,6 +6,7 @@ package com.GUI;
 
 import com.Shop;
 import com.Utilities.RecordSeeker;
+
 import javax.swing.*;
 
 /**
@@ -200,7 +201,8 @@ public class EditShop extends javax.swing.JFrame {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JFrame frame = new JFrame();
         String name = jTextFieldShopName.getText();
-        if (recordSeekerShop.findItem(name)== null)    {
+        Shop shopFound = (Shop)recordSeekerShop.findItem(name);
+        if (shopFound== null)    {
             JOptionPane.showMessageDialog(new JFrame(), "Shop not found");
             jTextFieldShopName.requestFocus();
         }
@@ -212,7 +214,7 @@ public class EditShop extends javax.swing.JFrame {
                     JOptionPane.YES_NO_OPTION
             );
             if (n == 0){
-                recordSeekerShop.deleteProduct(name);
+                recordSeekerShop.deleteProduct(shopFound);
                 JOptionPane.showMessageDialog(new JFrame(), "Shop Deleted");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -230,6 +232,7 @@ public class EditShop extends javax.swing.JFrame {
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         recordSeekerShop.writToFile();
+        recordSeekerShop.writToXml();
         this.dispose();
     }
 

@@ -12,15 +12,14 @@ import java.io.Serializable;
 
 public class Category implements Item, Serializable {
     private String categoryName;
-    private Shop someShop;
 
     /**
      * @param categoryName
-     * @param someShop
+     * @param
      */
-    public Category(String categoryName, Shop someShop) {
+    public Category(String categoryName) {
         this.categoryName = categoryName;
-        this.someShop = someShop;
+
     }
 
     /**
@@ -42,19 +41,10 @@ public class Category implements Item, Serializable {
     /**
      * @param someShop
      */
-    public void setSomeShop(Shop someShop) {
-        this.someShop = someShop;
-    }
-
-
-    /**
+        /**
      * method: getShop.
      *
      * @return
      */
-    public Shop getShop() {
-        return someShop;
-    }
-
 
 }

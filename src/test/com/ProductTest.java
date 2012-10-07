@@ -30,9 +30,9 @@ public class ProductTest {
         shopName = "New Shop";
         itemQuantity = 10;
         aShop = new Shop(shopName);
-        Category aCategory = new Category(categoryName, aShop);
+        Category aCategory = new Category(categoryName);
         //use the Builder to create a new Product
-        myMasterShopProduct = new Product.Builder(itemName, aCategory).quantity(itemQuantity).build();
+        myMasterShopProduct = new Product.Builder(itemName, aCategory , aShop).quantity(itemQuantity).build();
     }
 
     /**
@@ -61,7 +61,7 @@ public class ProductTest {
 
     @Test
     public void testSetItemCategory() {
-        Category anotherCategory = new Category("a new category Name", aShop);
+        Category anotherCategory = new Category("a new category Name");
         myMasterShopProduct.setItemCategory(anotherCategory);
         assertNotEquals("Product Category Name", categoryName, myMasterShopProduct.getItemCategory().getItemName());
     }

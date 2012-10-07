@@ -17,6 +17,7 @@ public class Product implements Item, Serializable {
     private Category itemCategory;
     private int itemQuantity;
     private String itemUnit;
+    private Shop itemShop;
 
 
     /**
@@ -26,7 +27,7 @@ public class Product implements Item, Serializable {
     public static class Builder {
         private final String nameOfItem;
         private final Category categoryOfItem;
-
+        private final Shop shopOfItem;
         private int quantityOfItem = 0;
         private String unitOfItem = "";
 
@@ -35,10 +36,12 @@ public class Product implements Item, Serializable {
          *
          * @param nameOfItem
          * @param categoryOfItem
+         * @param shopItem
          */
-        public Builder(String nameOfItem, Category categoryOfItem) {
+        public Builder(String nameOfItem, Category categoryOfItem , Shop shopItem) {
             this.nameOfItem = nameOfItem;
             this.categoryOfItem = categoryOfItem;
+            this.shopOfItem = shopItem;
 
         }
 
@@ -79,6 +82,7 @@ public class Product implements Item, Serializable {
         itemCategory = builder.categoryOfItem;
         itemQuantity = builder.quantityOfItem;
         itemUnit = builder.unitOfItem;
+        itemShop = builder.shopOfItem;
     }
 
     /**
@@ -116,9 +120,13 @@ public class Product implements Item, Serializable {
      *
      * @return
      */
+    public Shop getItemShop() {
+        return itemShop;
+    }
 
-
-
+    public void setItemShop(Shop itemShop) {
+        this.itemShop = itemShop;
+    }
 
     /**
      * method: getItemQuantity.
