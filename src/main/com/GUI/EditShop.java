@@ -4,8 +4,8 @@
  */
 package com.GUI;
 
+import com.Persistance.RecordSeeker;
 import com.Shop;
-import com.Utilities.RecordSeeker;
 
 import javax.swing.*;
 
@@ -191,7 +191,8 @@ public class EditShop extends JFrame {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JFrame frame = new JFrame();
         String name = jTextFieldShopName.getText();
-        if (recordSeekerShop.findItem(name) == null) {
+        Shop shopFound = (Shop) recordSeekerShop.findItem(name);
+        if (shopFound == null) {
             JOptionPane.showMessageDialog(new JFrame(), "Shop not found");
             jTextFieldShopName.requestFocus();
         } else {
@@ -202,7 +203,8 @@ public class EditShop extends JFrame {
                     JOptionPane.YES_NO_OPTION
             );
             if (n == 0) {
-                recordSeekerShop.deleteProduct(name);
+                recordSeekerShop.deleteProduct(shopFound);
+                recordSeekerShop.writToXml();
                 JOptionPane.showMessageDialog(new JFrame(), "Shop Deleted");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -217,7 +219,6 @@ public class EditShop extends JFrame {
      */
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
-        recordSeekerShop.writToFile();
         this.dispose();
     }
 

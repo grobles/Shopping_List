@@ -5,9 +5,9 @@
 package com.GUI;
 
 import com.Category;
-import com.DataContainers;
+import com.Persistance.RecordSeeker;
 import com.Product;
-import com.Utilities.RecordSeeker;
+import com.Shop;
 
 import javax.swing.*;
 
@@ -19,7 +19,7 @@ import javax.swing.*;
  * Time: 12:51 PM *
  */
 public class EditProduct extends JFrame {
-    DataContainers dc;
+
     private String[] comboCategory;
     private String[] comboShop;
     private String[] comboUnit;
@@ -42,23 +42,13 @@ public class EditProduct extends JFrame {
 
 
     /**
-     * method: jComboBoxCategoryActionPerformed : Sets the right Category for the selected shop
-     */
-
-    private void jComboBoxCategoryActionPerformed(java.awt.event.ActionEvent evt) {
-        String categoryName = jComboBoxCategory.getSelectedItem().toString();
-        Category category = (Category) recordSeekerCategory.findItem(categoryName);
-        jTextFieldShop.setText(category.getShop().getItemName());
-    }
-
-    /**
      * method: jButtonClearActionPerformed : Clear the form
      */
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
         jTextFieldProductName.setText("");
         jTextFieldQuantity.setText("");
-        jTextFieldShop.setText("");
+        jComboBoxUnits.setSelectedItem("");
         jTextFieldProductName.requestFocus();
     }
 
@@ -68,17 +58,12 @@ public class EditProduct extends JFrame {
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
         String name = jTextFieldProductName.getText();
         Product product = (Product) recordSeekerProduct.findItem(name);
-        String message = "Product not found";
+        String message = "";
         if (product != null) {
+            Search(product);
             message = "Product found";
-            Category category = product.getItemCategory();
-            jComboBoxCategory.setSelectedItem(category.getItemName());
-            String shopName = category.getShop().getItemName();
-            jTextFieldShop.setText(shopName);
-            String quantity = Integer.toString(product.getItemQuantity());
-            jTextFieldQuantity.setText(quantity);
-            jComboBoxUnits.setSelectedItem(product.getItemUnit());
         }
+
         JOptionPane.showMessageDialog(new JFrame(), message);
         jTextFieldProductName.requestFocus();
 
@@ -88,79 +73,134 @@ public class EditProduct extends JFrame {
      * method: jButtonSaveActionPerformed : save a Shop
      */
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
+        String message = "";
         JFrame frame = new JFrame();
         String productName = jTextFieldProductName.getText();
-        Product productFound = (Product) recordSeekerCategory.findItem(productName);
-        if (productName.equals("") || productFound != null) {
-            int n = JOptionPane.showConfirmDialog(
-                    frame,
-                    "That product already exists.Would you like to edit this Product?",
-                    "Confirm Edit Category",
-                    JOptionPane.YES_NO_OPTION
-            );
-            if (n == 0) {
-                String categoryName = jComboBoxCategory.getSelectedItem().toString();
-                Category category = (Category) recordSeekerShop.findItem(categoryName);
-                productFound.setItemCategory(category);
-                int qty = Integer.parseInt(jTextFieldQuantity.getText().toString());
-                productFound.setItemQuantity(qty);
-                productFound.setItemUnit(jComboBoxUnits.getSelectedItem().toString());
-                JOptionPane.showMessageDialog(new JFrame(), "Product edited");
-                jTextFieldProductName.setText("");
-                jTextFieldProductName.requestFocus();
-            } else if (n == 1)
-                jTextFieldProductName.requestFocus();
+        Product productFound = (Product) recordSeekerProduct.findItem(productName);
+        if (productName.equals(""))
+            message = "Not a valid name";
+        else if (productFound != null) {
+            editProduct(productFound);
+            message = "Product edited";
         } else {
-            int n = JOptionPane.showConfirmDialog(
-                    frame,
-                    "Would you like to save this Product?",
-                    "Confirm Save Category",
-                    JOptionPane.YES_NO_OPTION
-            );
-            if (n == 0) {
-                int quantity = Integer.parseInt(jTextFieldQuantity.getText());
-                String categoryName = jComboBoxCategory.getSelectedItem().toString();
-                Category category = (Category) recordSeekerCategory.findItem(categoryName);
-                Product newProduct = new Product.Builder(productName, category).quantity(quantity).build();
-                recordSeekerProduct.addItem(newProduct);
-                JOptionPane.showMessageDialog(new JFrame(), "Product saved");
-                jTextFieldProductName.setText("");
-                jTextFieldProductName.requestFocus();
-            } else if (n == 1)
-                jTextFieldProductName.setText("");
-            jTextFieldProductName.requestFocus();
+            saveProduct(productFound);
+            message = "Product Saved";
         }
+
+        JOptionPane.showMessageDialog(new JFrame(), message);
+        jTextFieldProductName.setText("");
+        jComboBoxUnits.setSelectedItem("");
+        jTextFieldQuantity.setText("");
+        jTextFieldProductName.requestFocus();
     }
 
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
         JFrame frame = new JFrame();
+        String message = "";
         String name = jTextFieldProductName.getText();
+        Product productFound = (Product) recordSeekerProduct.findItem(name);
         if (recordSeekerProduct.findItem(name) == null) {
-            JOptionPane.showMessageDialog(new JFrame(), "Product not found");
-            jTextFieldProductName.requestFocus();
+            message = "Product not found";
         } else {
-            int n = JOptionPane.showConfirmDialog(
-                    frame,
-                    "Would you like to Delete this Product?",
-                    "Confirm Delete Product",
-                    JOptionPane.YES_NO_OPTION
-            );
-            if (n == 0) {
-                recordSeekerProduct.deleteProduct(name);
-                JOptionPane.showMessageDialog(new JFrame(), "Product Deleted");
-                jTextFieldProductName.setText("");
-                jTextFieldProductName.requestFocus();
-            } else if (n == 1)
-                jTextFieldProductName.setText("");
-            jTextFieldProductName.requestFocus();
+            delete(productFound);
+            message = "Product Deleted";
+        }
+
+        jTextFieldProductName.setText("");
+        jComboBoxUnits.setSelectedItem("");
+        jTextFieldQuantity.setText("");
+        jTextFieldProductName.requestFocus();
+    }
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+    }
+
+    private void Search(Product product) {
+
+        Category category = product.getItemCategory();
+        Shop shop = product.getItemShop();
+        jComboBoxCategory.setSelectedItem(category.getItemName());
+        jComboBoxShops.setSelectedItem(shop.getItemName());
+        try {
+            String quantity = Integer.toString(product.getItemQuantity());
+            jTextFieldQuantity.setText(quantity);
+            jComboBoxUnits.setSelectedItem(product.getItemUnit());
+        } catch (Exception e) {
+
         }
     }
 
 
-    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {
-        recordSeekerProduct.writToFile();
-        this.dispose();
+    private void editProduct(Product productFound) {
+        JFrame frame = new JFrame();
+        int n = JOptionPane.showConfirmDialog(
+                frame,
+                "That product already exists.Would you like to edit this Product?",
+                "Confirm Edit Category",
+                JOptionPane.YES_NO_OPTION
+        );
+        if (n == 0) {
+            String categoryName = jComboBoxCategory.getSelectedItem().toString();
+            Category category = (Category) recordSeekerCategory.findItem(categoryName);
+            productFound.setItemCategory(category);
+            String shopName = jComboBoxShops.getSelectedItem().toString();
+            Shop shop = (Shop) recordSeekerShop.findItem(shopName);
+            productFound.setItemShop(shop);
+            try {
+                int quantity = Integer.parseInt(jTextFieldQuantity.getText());
+                System.out.println("Product Name : ");
+                productFound.setItemQuantity(quantity);
+                productFound.setItemUnit(jComboBoxUnits.getSelectedItem().toString());
+            } catch (Exception e) {
+                System.out.println("catch : ");
+            }
+
+            recordSeekerProduct.writToXml();
+        }
+    }
+
+    private void saveProduct(Product productFound) {
+        JFrame frame = new JFrame();
+        int n = JOptionPane.showConfirmDialog(
+                frame,
+                "Would you like to save this Product?",
+                "Confirm Save Category",
+                JOptionPane.YES_NO_OPTION
+        );
+        if (n == 0) {
+            String productName = jTextFieldProductName.getText().toString();
+            String categoryName = jComboBoxCategory.getSelectedItem().toString();
+            Category category = (Category) recordSeekerCategory.findItem(categoryName);
+            String shopName = jComboBoxShops.getSelectedItem().toString();
+            Shop shop = (Shop) recordSeekerShop.findItem(shopName);
+            Product newProduct = new Product.Builder(productName, category, shop).build();
+            try {
+                int quantity = Integer.parseInt(jTextFieldQuantity.getText());
+                newProduct.setItemQuantity(quantity);
+                newProduct.setItemUnit(jComboBoxUnits.getSelectedItem().toString());
+            } catch (Exception e) {
+
+            }
+            recordSeekerProduct.addItem(newProduct);
+            recordSeekerProduct.writToXml();
+        }
+    }
+
+    private void delete(Product productFound) {
+        JFrame frame = new JFrame();
+        int n = JOptionPane.showConfirmDialog(
+                frame,
+                "Would you like to Delete this Product?",
+                "Confirm Delete Product",
+                JOptionPane.YES_NO_OPTION
+        );
+        if (n == 0) {
+            recordSeekerProduct.deleteProduct(productFound);
+            recordSeekerProduct.writToXml();
+
+        }
     }
 
 
@@ -222,7 +262,7 @@ public class EditProduct extends JFrame {
     private JLabel jLabelproductName;
     private JTextField jTextFieldProductName;
     private JTextField jTextFieldQuantity;
-    private JTextField jTextFieldShop;
+    private JComboBox jComboBoxShops;
     // End of variables declaration
 
     /**
@@ -247,7 +287,7 @@ public class EditProduct extends JFrame {
         jLabelUnits = new JLabel();
         jComboBoxUnits = new JComboBox();
         jButtonDelete = new JButton();
-        jTextFieldShop = new JTextField();
+        jComboBoxShops = new JComboBox();
 
         jInternalFrame1.setVisible(true);
 
@@ -279,13 +319,9 @@ public class EditProduct extends JFrame {
         jLabelCategory.setText("Category");
 
         jComboBoxCategory.setModel(new DefaultComboBoxModel(comboCategory));
-        jComboBoxCategory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxCategoryActionPerformed(evt);
-            }
-        });
 
         jLabelShop.setText("Shop");
+        jComboBoxShops.setModel(new DefaultComboBoxModel(comboShop));
 
 
         jButtonSave.setText("Save");
@@ -358,7 +394,7 @@ public class EditProduct extends JFrame {
                                                                 .addComponent(jButtonDelete)))
                                                 .addGap(6, 6, 6)
                                                 .addComponent(jButtonCancel))
-                                        .addComponent(jTextFieldShop, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jComboBoxShops, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -383,7 +419,7 @@ public class EditProduct extends JFrame {
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelShop)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldShop, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxShops, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jButtonClear)
