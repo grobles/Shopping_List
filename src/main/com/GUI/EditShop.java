@@ -4,8 +4,8 @@
  */
 package com.GUI;
 
-import com.Persistance.RecordSeeker;
 import com.Shop;
+import com.Utilities.RecordSeeker;
 
 import javax.swing.*;
 
@@ -16,7 +16,7 @@ import javax.swing.*;
  * Date: 9/22/12
  * Time: 12:51 PM *
  */
-public class EditShop extends javax.swing.JFrame {
+public class EditShop extends JFrame {
 
 
     RecordSeeker recordSeekerShop;
@@ -37,15 +37,15 @@ public class EditShop extends javax.swing.JFrame {
 
     private void initComponents() {
 
-        jLabelShopName = new javax.swing.JLabel();
-        jTextFieldShopName = new javax.swing.JTextField();
-        jButtonClear = new javax.swing.JButton();
-        jButtonSearch = new javax.swing.JButton();
-        jButtonSave = new javax.swing.JButton();
-        jButtonDelete = new javax.swing.JButton();
-        jButtonCancel = new javax.swing.JButton();
+        jLabelShopName = new JLabel();
+        jTextFieldShopName = new JTextField();
+        jButtonClear = new JButton();
+        jButtonSearch = new JButton();
+        jButtonSave = new JButton();
+        jButtonDelete = new JButton();
+        jButtonCancel = new JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add/Edit Shop");
 
         jLabelShopName.setText("Shop Name");
@@ -85,38 +85,38 @@ public class EditShop extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabelShopName, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelShopName, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(jTextFieldShopName, javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(jTextFieldShopName, GroupLayout.Alignment.LEADING)
+                                                        .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                                                 .addComponent(jButtonClear)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jButtonSearch)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jButtonSave)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jButtonDelete)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jButtonCancel)))
                                 .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(jLabelShopName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldShopName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldShopName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jButtonClear)
                                         .addComponent(jButtonSearch)
                                         .addComponent(jButtonSave)
@@ -175,7 +175,6 @@ public class EditShop extends javax.swing.JFrame {
 
                 Shop newShop = new Shop(shopName);
                 recordSeekerShop.addItem(newShop);
-                recordSeekerShop.writToXml();
                 JOptionPane.showMessageDialog(new JFrame(), "Shop saved");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -192,8 +191,7 @@ public class EditShop extends javax.swing.JFrame {
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JFrame frame = new JFrame();
         String name = jTextFieldShopName.getText();
-        Shop shopFound = (Shop) recordSeekerShop.findItem(name);
-        if (shopFound == null) {
+        if (recordSeekerShop.findItem(name) == null) {
             JOptionPane.showMessageDialog(new JFrame(), "Shop not found");
             jTextFieldShopName.requestFocus();
         } else {
@@ -204,8 +202,7 @@ public class EditShop extends javax.swing.JFrame {
                     JOptionPane.YES_NO_OPTION
             );
             if (n == 0) {
-                recordSeekerShop.deleteProduct(shopFound);
-                recordSeekerShop.writToXml();
+                recordSeekerShop.deleteProduct(name);
                 JOptionPane.showMessageDialog(new JFrame(), "Shop Deleted");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -220,7 +217,7 @@ public class EditShop extends javax.swing.JFrame {
      */
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
-
+        recordSeekerShop.writToFile();
         this.dispose();
     }
 
@@ -238,9 +235,9 @@ public class EditShop extends javax.swing.JFrame {
          * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -250,9 +247,10 @@ public class EditShop extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EditShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+
         //</editor-fold>
 
         /*
@@ -267,12 +265,12 @@ public class EditShop extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancel;
-    private javax.swing.JButton jButtonClear;
-    private javax.swing.JButton jButtonDelete;
-    private javax.swing.JButton jButtonSave;
-    private javax.swing.JButton jButtonSearch;
-    private javax.swing.JLabel jLabelShopName;
-    private javax.swing.JTextField jTextFieldShopName;
+    private JButton jButtonCancel;
+    private JButton jButtonClear;
+    private JButton jButtonDelete;
+    private JButton jButtonSave;
+    private JButton jButtonSearch;
+    private JLabel jLabelShopName;
+    private JTextField jTextFieldShopName;
     // End of variables declaration//GEN-END:variables
 }
