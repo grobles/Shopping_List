@@ -1,6 +1,6 @@
 package com;
 
-import com.Utilities.RecordSeeker;
+import com.Persistance.RecordSeeker;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,10 +25,8 @@ public class RecordSeekerTest {
     private final Product mockItem2 = mock(Product.class);
     private final Product mockItem3 = mock(Product.class);
     private ArrayList<Item> someArray = new ArrayList<Item>();
-    RecordSeeker recordSeekerProduct ;
-    DataContainers dc;
+    RecordSeeker recordSeekerProduct;
     Collection<Item> arrayToSort;
-
 
 
     /**
@@ -39,9 +37,6 @@ public class RecordSeekerTest {
         someArray = new ArrayList<Item>();
         arrayToSort = new ArrayList<Item>();
         recordSeekerProduct = new RecordSeeker("Product");
-
-
-
 
 
     }
@@ -69,7 +64,7 @@ public class RecordSeekerTest {
      */
     @Test
     public void testSortListFromDc() {
-        dc = DataContainers.getInstance();
+
         recordSeekerProduct.addItem(mockItem1);
         recordSeekerProduct.addItem(mockItem2);
         Collection<Item> arrayToSort2 = recordSeekerProduct.getList();
@@ -83,7 +78,7 @@ public class RecordSeekerTest {
 
     @Test
     public void testFindProduct() {
-        dc = DataContainers.getInstance();
+
         recordSeekerProduct.addItem(mockItem1);
         recordSeekerProduct.addItem(mockItem2);
         when(mockItem2.getItemName()).thenReturn("Alpha");
@@ -91,27 +86,24 @@ public class RecordSeekerTest {
         String nameOfItem = recordSeekerProduct.findItem("Alpha").getItemName();
         assertEquals("Name ", "Alpha", nameOfItem);
 
-}
+    }
 
     @Test
     public void testDeleteProduct() {
 
-        dc = DataContainers.getInstance();
         recordSeekerProduct.addItem(mockItem1);
         recordSeekerProduct.addItem(mockItem2);
         when(mockItem2.getItemName()).thenReturn("Alpha");
         when(mockItem1.getItemName()).thenReturn("Beta");
         int productsize = recordSeekerProduct.getList().size();
-        assertEquals("Size ", 5, productsize);
-        Product product = (Product)recordSeekerProduct.findItem("Alpha");
+        assertEquals("Size ", 3, productsize);
+        Product product = (Product) recordSeekerProduct.findItem("Alpha");
         recordSeekerProduct.deleteProduct(product);
         productsize = recordSeekerProduct.getList().size();
-        assertEquals("Size ", 4, productsize);
+        assertEquals("Size ", 2, productsize);
 
 
-
-
-         }
+    }
 
 
 }

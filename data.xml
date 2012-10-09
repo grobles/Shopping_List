@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Item-Lists><Shops><Shop>Walmart</Shop><Shop>Walgreens</Shop><Shop>Best Buy</Shop></Shops><Categories><Category>Vegetables</Category><Category>Medicines</Category><Category>Aplliances</Category></Categories><Products/></Item-Lists>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Item-Lists>
+    <Shops>
+        <Shop>
+            <ShopName>Walmart</ShopName>
+        </Shop>
+        <Shop>
+            <ShopName>Walgreens</ShopName>
+        </Shop>
+    </Shops>
+    <Categories>
+        <Category>
+            <CategoryName>Vegetables</CategoryName>
+        </Category>
+        <Category>
+            <CategoryName>Medicines</CategoryName>
+        </Category>
+    </Categories>
+    <Products>
+        <Product>
+            <ProductName>Onions</ProductName>
+            <ProductCategory>Vegetables</ProductCategory>
+            <ProductShop>Walmart</ProductShop>
+            <ProductQuantity>0</ProductQuantity>
+            <ProductUnit/>
+        </Product>
+    </Products>
+</Item-Lists>

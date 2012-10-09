@@ -1,4 +1,8 @@
-package com;
+package com.Persistance;
+
+import com.Category;
+import com.Product;
+import com.Shop;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,12 +24,14 @@ public class DataContainers implements Serializable {
     private Collection<Collection> shoppingLists = new ArrayList<Collection>();
 
     private DataContainers() {
-      }
+    }
 
     /**
      * @return
      */
     public static DataContainers getInstance() {
+
+
         return ourInstance;
     }
 
@@ -63,6 +69,28 @@ public class DataContainers implements Serializable {
     public String[] getUnitsList() {
         return unitsList;
     }
+
+    public void setProductList(Collection<Product> productList) {
+        this.productList = productList;
+    }
+
+    public void setCategoryList(Collection<Category> categoryList) {
+        this.categoryList = categoryList;
+    }
+
+    public void setShopList(Collection<Shop> shopList) {
+        this.shopList = shopList;
+    }
+
+    public static void setUnitsList(String[] unitsList) {
+        DataContainers.unitsList = unitsList;
+    }
+
+    public void setShoppingLists(Collection<Collection> shoppingLists) {
+        this.shoppingLists = shoppingLists;
+    }
+
+
 }
 
 

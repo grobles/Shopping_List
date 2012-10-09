@@ -1,8 +1,11 @@
-package com.Utilities;
+package com.Persistance;
 
-import com.*;
+import com.Comparators.ByName;
+import com.Item;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /**
  * Class: Product
@@ -22,12 +25,18 @@ public class RecordSeeker {
 
     private Collection<Item> List;
     private DataContainers dc;
-    private WriteXMLFile xml;
+    private WriteXMLFile wxml;
+    private ReadXMLFile rxml;
+    String filename = "data.xml";
+
 
     public RecordSeeker(String itemClass) {
 
-        dc = WriteToFile.readSerializeFile();
-        xml = new WriteXMLFile(dc);
+        rxml = new ReadXMLFile(filename);
+        dc = rxml.readDC();
+        wxml = new WriteXMLFile(filename, dc);
+
+
         if (itemClass.equals("Shop"))
             List = dc.getShopList();
         else if (itemClass.equals("Category"))
@@ -35,6 +44,7 @@ public class RecordSeeker {
         else if (itemClass.equals("Product"))
             List = dc.getProductList();
     }
+
     /**
      * method: findItem  Given the name it returns an Item
      *
@@ -42,20 +52,17 @@ public class RecordSeeker {
      *
      * @return
      */
-    public DataContainers getDc(){
+    public DataContainers getDc() {
         return dc;
     }
 
-    public void addItem(Item item){
+    public void addItem(Item item) {
         List.add(item);
     }
 
-    public void writToFile(){
-        WriteToFile.writeSerializeFile(dc);
-    }
 
-    public void writToXml(){
-       xml.writeFile();
+    public void writToXml() {
+        wxml.writeFile();
     }
 
     public Collection<Item> getList() {
@@ -63,9 +70,9 @@ public class RecordSeeker {
     }
 
 
-    public  Item findItem(String itemName) {
+    public Item findItem(String itemName) {
 
-         Item itemFound = null;
+        Item itemFound = null;
 
         for (Item item : List) {
             if (item.getItemName().equalsIgnoreCase(itemName)) {
@@ -76,34 +83,26 @@ public class RecordSeeker {
         }
         return itemFound;
     }
+
     /**
      * method: findItem  Given the name it returns an Item
      *
-     * @param itemName
+     * @param
      *
      * @return
      */
-    public  boolean deleteProduct(Item itemToDelete ) {
-
-        boolean result;
-
-        for (Item item : List) {
-                List.remove(itemToDelete);
-                return true;
-            }
-
-
-        return false;
+    public void deleteProduct(Item itemToDelete) {
+        List.remove(itemToDelete);
     }
 
-     /**
+    /**
      * method: makeCombo It helps make the String[] needed for the combos in the different forms
      *
      * @param
      *
      * @return
      */
-    public  String[] makeCombo() {
+    public String[] makeCombo() {
         int size = List.size();
         String[] comboArray = new String[size];
         int i = 0;
@@ -121,12 +120,11 @@ public class RecordSeeker {
     /**
      * method: sort This method will help sort by Name the different lists
      *
-     *
      * @param
      *
      * @return
      */
-    public  Collection Sort(Collection<Item> listToSort) {
+    public Collection Sort(Collection<Item> listToSort) {
 
         Collection ListSorted = new TreeSet(new ByName());
         for (Item item : listToSort) {
@@ -140,20 +138,4 @@ public class RecordSeeker {
     }
 }
 
-/**
- * Class: ByName
- * Description: This will be the class used in the TreeSet to sort By Name
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 23/09/12
- * Time: 10:13 PM *
- */
 
-class ByName implements Comparator {
-
-    public int compare(Object o1, Object o2) {
-        Item item1 = (Item) o1;
-        Item item2 = (Item) o2;
-
-        return item1.getItemName().compareTo(item2.getItemName());
-    }
-}
