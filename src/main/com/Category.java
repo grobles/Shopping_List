@@ -23,7 +23,7 @@ public class Category implements Item, Serializable {
     }
 
     /**
-     * method: getCategory.
+     * method: getItemName.
      *
      * @return
      */
@@ -38,13 +38,5 @@ public class Category implements Item, Serializable {
         this.categoryName = categoryName;
     }
 
-    /**
-     * @param someShop
-     */
-        /**
-     * method: getShop.
-     *
-     * @return
-     */
 
 }
