@@ -17,8 +17,18 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="mockito-all-1.9.5-rc1" level="project" />
-    <orderEntry type="library" name="src" level="project" />
+    <orderEntry type="library" exported="" name="src" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mockito-all-1.9.5-rc1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/lib/mockito-all-1.9.5-rc1.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 

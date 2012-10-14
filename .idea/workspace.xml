@@ -2,108 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f89ebfc-5f21-4e48-b434-5bdfc8d0ccb0" name="Default" comment="Write and Read to XML">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/src.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Comparators/ByName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Comparators/ByShop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\DataContainers.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\Utilities\ByName.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\Utilities\RecordSeeker.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\Utilities\WriteToFile.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\WriteToFileTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.WriteToFileTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\html\com\5_WriteToFileTest.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\file.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\DataContainers.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditCategory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditProduct.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\GUI\EditShop.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\Utilities\ByName.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\Utilities\ReadXMLFile.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\Utilities\RecordSeeker.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\Utilities\WriteToFile.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\production\Shopping_List\com\Utilities\WriteXMLFile.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\test\Shopping_List\com\WriteToFileTest.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\Utilities\ReadXMLFile.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\Utilities\WriteToFile.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\test\com\WriteToFileTest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\DataContainers.java" afterPath="$PROJECT_DIR$/src/main/com/Persistance/DataContainers.java" />
-      <change type="MOVED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\Utilities\RecordSeeker.java" afterPath="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" />
-      <change type="MOVED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\Utilities\WriteXMLFile.java" afterPath="$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataContainers.ser" afterPath="$PROJECT_DIR$/DataContainers.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataContainersTest.ser" afterPath="$PROJECT_DIR$/DataContainersTest.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Category.class" afterPath="$PROJECT_DIR$/build/classes/com/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/CategoryTest.class" afterPath="$PROJECT_DIR$/build/classes/com/CategoryTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/DataContainersTest.class" afterPath="$PROJECT_DIR$/build/classes/com/DataContainersTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$1.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$2.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$3.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$4.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$5.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$6.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditCategory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$1.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$2.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$3.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$4.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$5.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$6.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditProduct.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$1.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$2.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$3.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$4.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$5.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$6.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/GUI/EditShop.class" afterPath="$PROJECT_DIR$/build/classes/com/GUI/EditShop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Product$Builder.class" afterPath="$PROJECT_DIR$/build/classes/com/Product$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Product.class" afterPath="$PROJECT_DIR$/build/classes/com/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ProductTest.class" afterPath="$PROJECT_DIR$/build/classes/com/ProductTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/RecordSeekerTest.class" afterPath="$PROJECT_DIR$/build/classes/com/RecordSeekerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping_List.iml" afterPath="$PROJECT_DIR$/Shopping_List.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.CategoryTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.CategoryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.DataContainersTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.DataContainersTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.ProductTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.ProductTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.RecordSeekerTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.RecordSeekerTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.ShopTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.ShopTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/build/report/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/all-tests.html" afterPath="$PROJECT_DIR$/build/report/html/all-tests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/allclasses-frame.html" afterPath="$PROJECT_DIR$/build/report/html/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/0_CategoryTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/0_CategoryTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/1_DataContainersTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/1_DataContainersTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/2_ProductTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/2_ProductTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/3_RecordSeekerTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/3_RecordSeekerTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/4_ShopTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/4_ShopTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/package-frame.html" afterPath="$PROJECT_DIR$/build/report/html/com/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/package-summary.html" afterPath="$PROJECT_DIR$/build/report/html/com/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/overview-summary.html" afterPath="$PROJECT_DIR$/build/report/html/overview-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.xml" afterPath="$PROJECT_DIR$/data.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/DataContainersTest.java" afterPath="$PROJECT_DIR$/src/test/com/DataContainersTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" afterPath="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" afterPath="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
     </list>
     <ignored path="Shopping_List.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -168,8 +73,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -177,7 +82,117 @@
     <favorites_list name="Shopping_List" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="EditShop.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditShop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="64" selection-start="6010" selection-end="6010" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#639#669#0" expanded="true" />
+                <element signature="e#1750#1934#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="method#main#0;class#EditShop#0" expanded="false" />
+                <element signature="e#11367#11489#0" expanded="true" />
+                <element signature="e#11478#11479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCategory.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditCategory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="173" column="79" selection-start="7699" selection-end="7699" vertical-scroll-proportion="1.9751037">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#639#669#0" expanded="true" />
+                <element signature="e#674#737#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditProduct.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="234" column="47" selection-start="8254" selection-end="8254" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#11171#11201#0" expanded="true" />
+                <element signature="e#13422#13606#0" expanded="true" />
+                <element signature="e#13595#13596#0" expanded="true" />
+                <element signature="e#14426#14612#0" expanded="true" />
+                <element signature="e#14601#14602#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidateInput.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/GUI/ValidateInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordSeeker.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteXMLFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="0" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shop.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="0" selection-start="3258" selection-end="3258" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ShoppingList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -190,22 +205,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Comparators/ByShop.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Data/ReadandWriteToSerializeFile.java" />
-        <option value="$PROJECT_DIR$/src/test/com/WriteandReadToFileTest.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Data/ReadXMLFile.java" />
-        <option value="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Data/RecordSeeker.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Data/WriteXMLFile.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Data/DataContainers.java" />
-        <option value="$PROJECT_DIR$/build2.xml" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java" />
         <option value="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" />
         <option value="$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ValidateImput.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ValInput.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ValidateInput.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ValidateInputTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/Main.java" />
+        <option value="$PROJECT_DIR$/data.xml" />
+        <option value="$PROJECT_DIR$/src/main/com/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Shop.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" />
         <option value="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" />
       </list>
     </option>
   </component>
@@ -213,10 +228,10 @@
     <option name="jreName" value="1.6" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1040" />
-    <option name="height" value="754" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -230,6 +245,9 @@
           </State>
           <State>
             <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Imports</id>
           </State>
           <State>
             <id>Inheritance issues</id>
@@ -246,7 +264,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Class structure</id>
+            <id>UNUSED_IMPORT</id>
           </State>
         </selected-state>
       </profile-state>
@@ -288,6 +306,44 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Shopping_List" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List - copia1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List - copia1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -355,6 +411,14 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -378,6 +442,84 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Persistance">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="GUI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Comparators">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
         <subPane subId="All">
           <PATH>
@@ -392,60 +534,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List - copia1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List - copia1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="40" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="40" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="40" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="40" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="40" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="40" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop/src/shop" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="true" />
@@ -462,20 +566,20 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/com" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="fileTemplates" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -494,97 +598,15 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grobles\Documents\universidad\90308\Shopping_List" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="com.objects" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\grobles\Documents\universidad\90308\Shopping_List" />
-    </key>
   </component>
-  <component name="RunManager" selected="JUnit.WriteandReadXMLFileTest">
-    <configuration default="false" name="RecordSeekerTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.RecordSeekerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EditShop" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.GUI.EditShop" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Shopping_List" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ShopTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.ShopTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="WriteandReadToFileTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.WriteandReadToFileTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.EditCategory">
     <configuration default="false" name="WriteandReadXMLFileTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="Shopping_List" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -604,6 +626,94 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.GUI.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shopping_List" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EditProduct" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.GUI.EditProduct" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shopping_List" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EditShop" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.GUI.EditShop" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shopping_List" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EditCategory" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.GUI.EditCategory" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shopping_List" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -627,24 +737,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -673,6 +765,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -724,12 +834,41 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RecordSeekerTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.EditShop" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ShopTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.WriteandReadToFileTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.WriteandReadXMLFileTest" />
+    <configuration default="false" name="ValidateInputTest" type="JUnit" factoryName="JUnit">
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.ValidateInputTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.WriteandReadXMLFileTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ValidateInputTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="Application.EditProduct" />
+      <item index="4" class="java.lang.String" itemvalue="Application.EditShop" />
+      <item index="5" class="java.lang.String" itemvalue="Application.EditCategory" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -774,7 +913,19 @@
       <created>1348877843689</created>
       <updated>1348877843689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Testing Problems">
+      <created>1350207408228</created>
+      <updated>1350207408228</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Input validation stub">
+      <created>1350208655974</created>
+      <updated>1350208655974</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated validation tests and added validation GUI forms">
+      <created>1350229518340</created>
+      <updated>1350229518340</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -798,28 +949,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="1358" y="-8" width="1296" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783884" sideWeight="0.47766045" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6923077" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21333334" sideWeight="0.68686867" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992674" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30769232" sideWeight="0.19090171" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33295456" sideWeight="0.4923077" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21333334" sideWeight="0.68686867" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39659092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3068182" sideWeight="0.19090171" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24102564" sideWeight="0.2003367" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4923077" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3131313" sideWeight="0.41104794" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.41104794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20512821" sideWeight="0.3040422" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2974359" sideWeight="0.68686867" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30639732" sideWeight="0.80341184" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22420797" sideWeight="0.6034091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30568182" sideWeight="0.80341184" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20512821" sideWeight="0.6666667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.4923077" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24242425" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -861,7 +1012,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write and Read to XML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated validation tests and added validation GUI forms" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -878,6 +1029,9 @@
     <MESSAGE value="Adding build.xml , fixed teachers comments and added sort class" />
     <MESSAGE value="1. changed the names&#10;2. added units to product  lb , pieces&#10;3.Made the DataConatiner a singleton &#10;4. Open 2 new packages:&#10;5.Made a class RecordSeeker that has static classes that help us look for records." />
     <MESSAGE value="Write and Read to XML" />
+    <MESSAGE value="Testing Problems" />
+    <MESSAGE value="Input validation stub" />
+    <MESSAGE value="Updated validation tests and added validation GUI forms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -902,97 +1056,136 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="209" selection-end="209" vertical-scroll-proportion="0.31451613" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ProductTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/RecordSeekerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="2614" selection-end="2614" vertical-scroll-proportion="2.7190082" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_04/jre/lib/rt.jar!/java/awt/EventQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="5635" selection-end="5635" vertical-scroll-proportion="0.7258065" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.116883114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditShop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="374" selection-end="374" vertical-scroll-proportion="-2.8198924" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="4290" selection-end="4290" vertical-scroll-proportion="0.8777174" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="863" selection-end="863" vertical-scroll-proportion="0.6467391" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="644" selection-end="644" vertical-scroll-proportion="-0.6467391" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/report/html/com/package-summary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2985" selection-end="2985" vertical-scroll-proportion="4.409375">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/report/html/com/4_ShopTest.html">
+    <entry file="file://$PROJECT_DIR$/src/test/com/CategoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="25" selection-start="8336" selection-end="8336" vertical-scroll-proportion="0.359375">
+        <state line="14" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataTest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="22" selection-start="3968" selection-end="3968" vertical-scroll-proportion="0.33236995">
+        <state line="10" column="17" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="26" selection-start="2584" selection-end="2584" vertical-scroll-proportion="0.6473988">
+        <state line="13" column="13" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ShoppingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="0" selection-start="3258" selection-end="3258" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="809" selection-end="809" vertical-scroll-proportion="0.19293478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/DataContainers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="16" selection-start="2066" selection-end="2066" vertical-scroll-proportion="0.38858697">
+        <state line="76" column="0" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="7" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.33152175">
+        <state line="65" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="534" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/ValidateInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="64" selection-start="6010" selection-end="6010" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#639#669#0" expanded="true" />
+            <element signature="e#1750#1934#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="method#main#0;class#EditShop#0" expanded="false" />
+            <element signature="e#11367#11489#0" expanded="true" />
+            <element signature="e#11478#11479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="47" selection-start="8254" selection-end="8254" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11171#11201#0" expanded="true" />
+            <element signature="e#13422#13606#0" expanded="true" />
+            <element signature="e#13595#13596#0" expanded="true" />
+            <element signature="e#14426#14612#0" expanded="true" />
+            <element signature="e#14601#14602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="79" selection-start="7699" selection-end="7699" vertical-scroll-proportion="1.9751037">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#639#669#0" expanded="true" />
+            <element signature="e#674#737#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

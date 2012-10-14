@@ -59,20 +59,20 @@ public class EditProduct extends JFrame {
 
             if (product != null) {
                 Search(product);
-                JOptionPane.showMessageDialog(new JFrame(), name + " found.");
+                JOptionPane.showMessageDialog(frame, name + " found.");
             } else {
-                int selection = JOptionPane.showConfirmDialog(new JFrame(), "Would you like to add '"
+                int selection = JOptionPane.showConfirmDialog(frame, "Would you like to add '"
                         + name + "' to the list?");
                 if (selection == 0) {
                     Product newProduct = (Product) recordSeekerProduct.findItem(name);
                     saveProduct(newProduct);
-                    JOptionPane.showMessageDialog(new JFrame(), name + " saved!");
+                    JOptionPane.showMessageDialog(frame, name + " saved!");
                 } else {
                     return;
                 }
             }
         } else {
-            JOptionPane.showMessageDialog(new JFrame(), "'" + name + "' is not a valid product name.");
+            JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid product name.");
         }
         jTextFieldProductName.requestFocus();
     }
@@ -90,7 +90,7 @@ public class EditProduct extends JFrame {
 
         if (ValidateInput.isText(productName)) {
             if (!ValidateInput.isDigit(jTextFieldQuantity.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "Quantity must be numeric digits (0-9).");
+                JOptionPane.showMessageDialog(frame, "Quantity must be numeric digits (0-9).");
                 jTextFieldQuantity.requestFocus();
                 return;
             } else if (productFound != null) {
@@ -102,7 +102,7 @@ public class EditProduct extends JFrame {
             }
         }
 
-        JOptionPane.showMessageDialog(new JFrame(), message);
+        JOptionPane.showMessageDialog(frame, message);
         jTextFieldProductName.setText("");
         jComboBoxUnits.setSelectedItem("");
         jTextFieldQuantity.setText("");
@@ -115,7 +115,6 @@ public class EditProduct extends JFrame {
      * @param evt
      */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrame frame = new JFrame();
         String message;
         String name = jTextFieldProductName.getText();
         if (ValidateInput.isText(name)) {
@@ -127,7 +126,7 @@ public class EditProduct extends JFrame {
                 message = "Product Deleted";
             }
         } else {
-            JOptionPane.showMessageDialog(new JFrame(), "'" + name + "' is not a valid Product name.");
+            JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Product name.");
         }
 
         jTextFieldProductName.setText("");
@@ -171,7 +170,6 @@ public class EditProduct extends JFrame {
      * @param productFound
      */
     private void editProduct(Product productFound) {
-        JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
                 frame,
                 "That product already exists.Would you like to edit this Product?",
@@ -204,7 +202,6 @@ public class EditProduct extends JFrame {
      * @param productFound
      */
     private void saveProduct(Product productFound) {
-        JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
                 frame,
                 "Would you like to save this Product?",
@@ -236,7 +233,6 @@ public class EditProduct extends JFrame {
      * @param productFound
      */
     private void delete(Product productFound) {
-        JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
                 frame,
                 "Would you like to Delete this Product?",
@@ -309,6 +305,7 @@ public class EditProduct extends JFrame {
     private JTextField jTextFieldProductName;
     private JTextField jTextFieldQuantity;
     private JComboBox jComboBoxShops;
+    private JFrame frame;
     // End of variables declaration
 
     /**

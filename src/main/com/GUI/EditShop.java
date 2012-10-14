@@ -138,27 +138,26 @@ public class EditShop extends JFrame {
      */
 
     private void jButtonSearchActionPerformed(ActionEvent evt) {
-
         String name = jTextFieldShopName.getText();
         String message = "The shop '" + name + "' was not found.";
 
         if (name.equals("") || ValidateInput.isText(name) == false) {
-            JOptionPane.showMessageDialog(new JFrame(), "Please enter a valid shop name.");
+            JOptionPane.showMessageDialog(frame, "Please enter a valid shop name.");
 
         } else {
             Shop shop = (Shop) recordSeekerShop.findItem(name);
 
             if (shop != null) {
                 message = "The shop '" + shop.getShopName() + "' was found.";
-                JOptionPane.showMessageDialog(new JFrame(), message);
+                JOptionPane.showMessageDialog(frame, message);
             } else {
-                int selection = JOptionPane.showConfirmDialog(new JFrame(), message +
+                int selection = JOptionPane.showConfirmDialog(frame, message +
                         "\nWould you like to create it?");
                 if (selection == 0) {
                     Shop newShop = new Shop(name);
                     recordSeekerShop.addItem(newShop);
                     recordSeekerShop.writToXml();
-                    JOptionPane.showMessageDialog(new JFrame(), name + " has been saved.");
+                    JOptionPane.showMessageDialog(frame, name + " has been saved.");
                 }
             }
         }
@@ -170,12 +169,11 @@ public class EditShop extends JFrame {
      */
 
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
-        JFrame frame = new JFrame();
         String shopName = jTextFieldShopName.getText();
 
         Shop shopFound = (Shop) recordSeekerShop.findItem(shopName);
         if ((shopName.equals("") || ValidateInput.isText(shopName) == false) || shopFound != null) {
-            JOptionPane.showMessageDialog(new JFrame(), "Not a valid new shop name.");
+            JOptionPane.showMessageDialog(frame, "Not a valid new shop name.");
             jTextFieldShopName.requestFocus();
         } else {
             int n = JOptionPane.showConfirmDialog(
@@ -188,7 +186,7 @@ public class EditShop extends JFrame {
                 Shop newShop = new Shop(shopName);
                 recordSeekerShop.addItem(newShop);
                 recordSeekerShop.writToXml();
-                JOptionPane.showMessageDialog(new JFrame(), "Shop saved");
+                JOptionPane.showMessageDialog(frame, "Shop saved");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
             } else if (n == 1)
@@ -201,11 +199,10 @@ public class EditShop extends JFrame {
      * method: jButtonDeleteActionPerformed : delete a Shop
      */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        JFrame frame = new JFrame();
         String name = jTextFieldShopName.getText();
         Shop shopFound = (Shop) recordSeekerShop.findItem(name);
         if (shopFound == null) {
-            JOptionPane.showMessageDialog(new JFrame(), "Shop not found");
+            JOptionPane.showMessageDialog(frame, "Shop not found");
             jTextFieldShopName.requestFocus();
         } else {
             int n = JOptionPane.showConfirmDialog(
@@ -217,7 +214,7 @@ public class EditShop extends JFrame {
             if (n == 0) {
                 recordSeekerShop.deleteProduct(shopFound);
                 recordSeekerShop.writToXml();
-                JOptionPane.showMessageDialog(new JFrame(), "Shop Deleted");
+                JOptionPane.showMessageDialog(frame, "Shop Deleted");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
             } else if (n == 1)
@@ -284,5 +281,6 @@ public class EditShop extends JFrame {
     private JButton jButtonSearch;
     private JLabel jLabelShopName;
     private JTextField jTextFieldShopName;
+    private JFrame frame;
     // End of variables declaration//GEN-END:variables
 }
