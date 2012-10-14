@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.GUI;
 
 import com.Category;
@@ -57,34 +53,53 @@ public class EditProduct extends JFrame {
      */
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
         String name = jTextFieldProductName.getText();
-        Product product = (Product) recordSeekerProduct.findItem(name);
-        String message = "";
-        if (product != null) {
-            Search(product);
-            message = "Product found";
+
+        if (ValidateInput.isText(name)) {
+            Product product = (Product) recordSeekerProduct.findItem(name);
+
+            if (product != null) {
+                Search(product);
+                JOptionPane.showMessageDialog(new JFrame(), name + " found.");
+            } else {
+                int selection = JOptionPane.showConfirmDialog(new JFrame(), "Would you like to add '"
+                        + name + "' to the list?");
+                if (selection == 0) {
+                    Product newProduct = (Product) recordSeekerProduct.findItem(name);
+                    saveProduct(newProduct);
+                    JOptionPane.showMessageDialog(new JFrame(), name + " saved!");
+                } else {
+                    return;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(new JFrame(), "'" + name + "' is not a valid product name.");
         }
-
-        JOptionPane.showMessageDialog(new JFrame(), message);
         jTextFieldProductName.requestFocus();
-
     }
 
     /**
      * method: jButtonSaveActionPerformed : save a Shop
+     *
+     * @param evt
      */
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        String message = "";
-        JFrame frame = new JFrame();
+        String message = "Not a valid name";
+
         String productName = jTextFieldProductName.getText();
         Product productFound = (Product) recordSeekerProduct.findItem(productName);
-        if (productName.equals(""))
-            message = "Not a valid name";
-        else if (productFound != null) {
-            editProduct(productFound);
-            message = "Product edited";
-        } else {
-            saveProduct(productFound);
-            message = "Product Saved";
+
+        if (ValidateInput.isText(productName)) {
+            if (!ValidateInput.isDigit(jTextFieldQuantity.getText())) {
+                JOptionPane.showMessageDialog(new JFrame(), "Quantity must be numeric digits (0-9).");
+                jTextFieldQuantity.requestFocus();
+                return;
+            } else if (productFound != null) {
+                editProduct(productFound);
+                message = "Product edited";
+            } else {
+                saveProduct(productFound);
+                message = "Product Saved";
+            }
         }
 
         JOptionPane.showMessageDialog(new JFrame(), message);
@@ -94,17 +109,25 @@ public class EditProduct extends JFrame {
         jTextFieldProductName.requestFocus();
     }
 
-
+    /**
+     * method: jButtonDeleteActionPerformed : delete the specified product
+     *
+     * @param evt
+     */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
         JFrame frame = new JFrame();
-        String message = "";
+        String message;
         String name = jTextFieldProductName.getText();
-        Product productFound = (Product) recordSeekerProduct.findItem(name);
-        if (recordSeekerProduct.findItem(name) == null) {
-            message = "Product not found";
+        if (ValidateInput.isText(name)) {
+            Product productFound = (Product) recordSeekerProduct.findItem(name);
+            if (recordSeekerProduct.findItem(name) == null) {
+                message = "Product not found";
+            } else {
+                delete(productFound);
+                message = "Product Deleted";
+            }
         } else {
-            delete(productFound);
-            message = "Product Deleted";
+            JOptionPane.showMessageDialog(new JFrame(), "'" + name + "' is not a valid Product name.");
         }
 
         jTextFieldProductName.setText("");
@@ -113,10 +136,20 @@ public class EditProduct extends JFrame {
         jTextFieldProductName.requestFocus();
     }
 
+    /**
+     * method: jButtonCancelActionPerformed : dispose of the form
+     *
+     * @param evt
+     */
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
     }
 
+    /**
+     * method: Search : search the XML file for the product
+     *
+     * @param product
+     */
     private void Search(Product product) {
 
         Category category = product.getItemCategory();
@@ -132,7 +165,11 @@ public class EditProduct extends JFrame {
         }
     }
 
-
+    /**
+     * method: editProduct : confirm intent to edit the product and edit if requested
+     *
+     * @param productFound
+     */
     private void editProduct(Product productFound) {
         JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
@@ -161,6 +198,11 @@ public class EditProduct extends JFrame {
         }
     }
 
+    /**
+     * method: saveProduct : save the product the teh XML file
+     *
+     * @param productFound
+     */
     private void saveProduct(Product productFound) {
         JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
@@ -188,6 +230,11 @@ public class EditProduct extends JFrame {
         }
     }
 
+    /**
+     * method: deleteProduct : confirm intent to delete the product from the list
+     *
+     * @param productFound
+     */
     private void delete(Product productFound) {
         JFrame frame = new JFrame();
         int n = JOptionPane.showConfirmDialog(
@@ -199,7 +246,6 @@ public class EditProduct extends JFrame {
         if (n == 0) {
             recordSeekerProduct.deleteProduct(productFound);
             recordSeekerProduct.writToXml();
-
         }
     }
 

@@ -1,13 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.GUI;
 
 import com.Persistance.RecordSeeker;
 import com.Shop;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 /**
  * Class: Category
@@ -131,7 +128,7 @@ public class EditShop extends JFrame {
     /**
      * method: jButtonClearActionPerformed : Clear the form
      */
-    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+    private void jButtonClearActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
         jTextFieldShopName.setText("");
         jTextFieldShopName.requestFocus();
     }
@@ -140,17 +137,32 @@ public class EditShop extends JFrame {
      * method: jButtonSearchActionPerformed : Search for shop
      */
 
-    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButtonSearchActionPerformed(ActionEvent evt) {
 
         String name = jTextFieldShopName.getText();
-        Shop shop = (Shop) recordSeekerShop.findItem(name);
-        String message = "Shop not found";
-        if (shop != null)
-            message = "Shop found";
-        JOptionPane.showMessageDialog(new JFrame(), message);
+        String message = "The shop '" + name + "' was not found.";
+
+        if (name.equals("") || ValidateInput.isText(name) == false) {
+            JOptionPane.showMessageDialog(new JFrame(), "Please enter a valid shop name.");
+
+        } else {
+            Shop shop = (Shop) recordSeekerShop.findItem(name);
+
+            if (shop != null) {
+                message = "The shop '" + shop.getShopName() + "' was found.";
+                JOptionPane.showMessageDialog(new JFrame(), message);
+            } else {
+                int selection = JOptionPane.showConfirmDialog(new JFrame(), message +
+                        "\nWould you like to create it?");
+                if (selection == 0) {
+                    Shop newShop = new Shop(name);
+                    recordSeekerShop.addItem(newShop);
+                    recordSeekerShop.writToXml();
+                    JOptionPane.showMessageDialog(new JFrame(), name + " has been saved.");
+                }
+            }
+        }
         jTextFieldShopName.requestFocus();
-
-
     }
 
     /**
@@ -160,9 +172,10 @@ public class EditShop extends JFrame {
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
         JFrame frame = new JFrame();
         String shopName = jTextFieldShopName.getText();
+
         Shop shopFound = (Shop) recordSeekerShop.findItem(shopName);
-        if (shopName.equals("") || shopFound != null) {
-            JOptionPane.showMessageDialog(new JFrame(), "That Shop already exists ");
+        if ((shopName.equals("") || ValidateInput.isText(shopName) == false) || shopFound != null) {
+            JOptionPane.showMessageDialog(new JFrame(), "Not a valid new shop name.");
             jTextFieldShopName.requestFocus();
         } else {
             int n = JOptionPane.showConfirmDialog(
@@ -172,9 +185,9 @@ public class EditShop extends JFrame {
                     JOptionPane.YES_NO_OPTION
             );
             if (n == 0) {
-
                 Shop newShop = new Shop(shopName);
                 recordSeekerShop.addItem(newShop);
+                recordSeekerShop.writToXml();
                 JOptionPane.showMessageDialog(new JFrame(), "Shop saved");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -187,7 +200,6 @@ public class EditShop extends JFrame {
     /**
      * method: jButtonDeleteActionPerformed : delete a Shop
      */
-
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         JFrame frame = new JFrame();
         String name = jTextFieldShopName.getText();
@@ -217,7 +229,6 @@ public class EditShop extends JFrame {
     /**
      * method: jButtonCancelActionPerformed : Exit and save to file
      */
-
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         this.dispose();
     }

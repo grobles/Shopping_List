@@ -1,6 +1,7 @@
 package com.GUI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
@@ -127,10 +128,11 @@ public class Main extends JFrame {
             case 0:
                 //not a valid selection
                 JOptionPane.showMessageDialog(null, "Please make a valid selection");
+                break;
 
             case 1:
                 //run the EditProduct GUI
-                java.awt.EventQueue.invokeLater(new Runnable() {
+                EventQueue.invokeLater(new Runnable() {
                     public void run() {
                         new EditProduct().setVisible(true);
                     }
@@ -139,7 +141,7 @@ public class Main extends JFrame {
 
             case 2:
                 //run the EditCategory GUI
-                java.awt.EventQueue.invokeLater(new Runnable() {
+                EventQueue.invokeLater(new Runnable() {
                     public void run() {
                         new EditCategory().setVisible(true);
                     }
@@ -148,7 +150,7 @@ public class Main extends JFrame {
 
             case 3:
                 //run the EditShop GUI
-                java.awt.EventQueue.invokeLater(new Runnable() {
+                EventQueue.invokeLater(new Runnable() {
                     public void run() {
                         new EditShop().setVisible(true);
                     }
@@ -205,7 +207,7 @@ public class Main extends JFrame {
         /*
          * Create and display the form
          */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
 
             public void run() {
                 new Main().setVisible(true);

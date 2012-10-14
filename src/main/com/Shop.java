@@ -39,4 +39,13 @@ public class Shop implements Item, Serializable {
     public String getItemName() {
         return shopName;
     }
+
+    /**
+     * method: getShopName.
+     *
+     * @return
+     */
+    public String getShopName() {
+        return shopName;
+    }
 }

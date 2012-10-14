@@ -9,16 +9,25 @@ package com.GUI;
  */
 public class ValidateInput {
 
-    public boolean isText(String input) {
-
-        return true;
+    /**
+     * @param input String to be tested
+     * @return bool true if only letters, false otherwise
+     */
+    public static boolean isText(String input) {
+        if (input.matches("^[a-zA-Z ]+$")) {
+            return true;
+        }
+        return false;
     }
 
-
-    public boolean isDigit(String input) {
-
-
-        return true;
+    /**
+     * @param digits String to be tested
+     * @return bool true if only digits, false otherwise
+     */
+    public static boolean isDigit(String digits) {
+        if (digits.matches("^[0-9]+$")) {
+            return true;
+        }
+        return false;
     }
-
 }
