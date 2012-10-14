@@ -7,5 +7,18 @@ package com.GUI;
  * Time: 5:35 AM
  * To change this template use File | Settings | File Templates.
  */
-public class ValidateImput {
+public class ValidateInput {
+
+    public boolean isText(String input) {
+
+        return true;
+    }
+
+
+    public boolean isDigit(String input) {
+
+
+        return true;
+    }
+
 }
