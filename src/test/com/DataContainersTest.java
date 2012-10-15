@@ -25,9 +25,7 @@ public class DataContainersTest {
     private final Item mockProduct2 = mock(Product.class);
     private final Item mockCategory = mock(Category.class);
     private final Item mockShop = mock(Shop.class);
-    private final ArrayList mockCollectionShopping1 = mock(ArrayList.class);
-    private final ArrayList mockCollectionShopping2 = mock(ArrayList.class);
-    DataContainers someDc = DataContainers.getInstance();
+    private final ShoppingList mockShoppingList = mock(ShoppingList.class);
 
 
     /**
@@ -35,12 +33,9 @@ public class DataContainersTest {
      */
     @Before
     public void setup() {
-        someDc.getShoppingLists().add(mockCollectionShopping1);
-        someDc.getShoppingLists().add(mockCollectionShopping2);
-        someDc.getProductList().add(mockProduct);
-        someDc.getProductList().add(mockProduct2);
-        someDc.getCategoryList().add(mockCategory);
-        someDc.getShopList().add(mockShop);
+
+        DataContainers someDc = DataContainers.getInstance();
+
 
     }
 
@@ -51,16 +46,35 @@ public class DataContainersTest {
     @Test
 
     public void testConstruction() {
-        DataContainers anotherDc = DataContainers.getInstance();
+        DataContainers someDc = DataContainers.getInstance();
+        someDc.getShoppingLists().add(mockShoppingList);
+        someDc.getShoppingLists().add(mockShoppingList);
+        someDc.getProductList().add(mockProduct);
+        someDc.getProductList().add(mockProduct2);
 
-        int productSize = anotherDc.getProductList().size();
+        someDc.getCategoryList().add(mockCategory);
+        someDc.getShopList().add(mockShop);
+        int productSize = someDc.getProductList().size();
         assertEquals("size ", productSize, 2);
-        int categorySize = anotherDc.getCategoryList().size();
+        int categorySize = someDc.getCategoryList().size();
         assertEquals("size ", categorySize, 1);
-        int shopSize = anotherDc.getShopList().size();
+        int shopSize = someDc.getShopList().size();
         assertEquals("size ", shopSize, 1);
-        int shoppinglistSize = anotherDc.getShoppingLists().size();
-        assertEquals("size ", shoppinglistSize, 2);
+        int unitslistSize = someDc.getUnitsList().length;
+        assertEquals("size ", unitslistSize, 3);
+    }
+
+
+    @Test
+
+    public void testSetShoppingLists() {
+        DataContainers someDc = DataContainers.getInstance();
+        ArrayList<ShoppingList> newList = new ArrayList<ShoppingList>();
+        newList.add(mockShoppingList);
+        someDc.setShoppingLists(newList);
+        int size = someDc.getShoppingLists().size();
+        assertEquals("size ", size, 1);
+
     }
 
 

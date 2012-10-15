@@ -21,8 +21,8 @@
             <ProductName>Onions</ProductName>
             <ProductCategory>Vegetables</ProductCategory>
             <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>0</ProductQuantity>
-            <ProductUnit/>
+            <ProductQuantity>5</ProductQuantity>
+            <ProductUnit>Pieces</ProductUnit>
         </Product>
     </Products>
 </Item-Lists>

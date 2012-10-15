@@ -32,7 +32,7 @@ public class ProductTest {
         aShop = new Shop(shopName);
         Category aCategory = new Category(categoryName);
         //use the Builder to create a new Product
-        myMasterShopProduct = new Product.Builder(itemName, aCategory , aShop).quantity(itemQuantity).build();
+        myMasterShopProduct = new Product.Builder(itemName, aCategory, aShop).quantity(itemQuantity).unit("pieces").build();
     }
 
     /**
@@ -52,7 +52,7 @@ public class ProductTest {
     @Test
     public void testSetItemName() {
         myMasterShopProduct.setItemName("new Name");
-        assertNotEquals("Product Name", itemName, myMasterShopProduct.getItemName());
+        assertEquals("Product Name", "new Name", myMasterShopProduct.getItemName());
     }
 
     /**
@@ -64,6 +64,18 @@ public class ProductTest {
         Category anotherCategory = new Category("a new category Name");
         myMasterShopProduct.setItemCategory(anotherCategory);
         assertNotEquals("Product Category Name", categoryName, myMasterShopProduct.getItemCategory().getItemName());
+    }
+
+    @Test
+    public void testSetItemShop() {
+        Shop anotherShop = new Shop("a new shop Name");
+        myMasterShopProduct.setItemShop(anotherShop);
+        assertEquals("Product Shop Name", "a new shop Name", myMasterShopProduct.getItemShop().getItemName());
+    }
+
+    @Test
+    public void testgetItemUnit() {
+        assertEquals("Product Item Unit", "pieces", myMasterShopProduct.getItemUnit());
     }
 
 

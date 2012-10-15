@@ -1,5 +1,6 @@
 package com;
 
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,16 +22,17 @@ public class ShoppingListTest {
     private final Product mockProduct = mock(Product.class);
     private final Product mockProduct2 = mock(Product.class);
     private final String ListName = new String("newShoppingList");
-    Collection<Product> shoppingList = new ArrayList<Product>();
+    Collection<Product> ProductList = new ArrayList<Product>();
+    ShoppingList newList;
 
 
     @Before
     public void setUp() throws Exception {
 
 
-        shoppingList.add(mockProduct);
-        shoppingList.add(mockProduct2);
-
+        ProductList.add(mockProduct);
+        ProductList.add(mockProduct2);
+        newList = new ShoppingList(ListName, ProductList);
     }
 
     /**
@@ -40,11 +42,28 @@ public class ShoppingListTest {
     @Test
     public void testConstructor() throws Exception {
 
-        ShoppingList newList = new ShoppingList(ListName, shoppingList);
+
         String name = newList.getItemName();
         int size = newList.getProductsList().size();
         assertEquals("List Name", "newShoppingList", name);
         assertEquals("List size", 2, size);
+
+    }
+
+    @Test
+    public void testSetItemName() {
+        newList.setItemName("Shop2");
+        Assert.assertEquals("Shop Name", "Shop2", newList.getItemName());
+
+    }
+
+    @Test
+    public void testSetProductList() {
+        Collection<Product> newProductList = ProductList;
+        newProductList.add(mockProduct);
+        newList.setProductsList(newProductList);
+        int size = newList.getProductsList().size();
+        Assert.assertEquals("Product size", size, 3);
 
     }
 }

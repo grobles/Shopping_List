@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MEX_DIROP_86" name="com.RecordSeekerTest" tests="4" time="0.513"
-           timestamp="2012-10-09T23:06:42">
+<testsuite errors="0" failures="1" hostname="MEX_DIROP_86" name="com.RecordSeekerTest" tests="4" time="0.316"
+           timestamp="2012-10-14T23:35:51">
     <properties>
         <property name="java.vendor" value="Oracle Corporation"/>
         <property name="lib.dir" value="lib"/>
@@ -11,7 +11,7 @@
                   value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes"/>
         <property name="sun.desktop" value="windows"/>
         <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-        <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
+        <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
         <property name="java.runtime.version" value="1.7.0_04-b22"/>
         <property name="user.name" value="grobles"/>
         <property name="build.dir" value="build"/>
@@ -40,8 +40,7 @@
         <property name="java.vm.version" value="23.0-b21"/>
         <property name="report.dir" value="build\report"/>
         <property name="user.variant" value=""/>
-        <property name="ant.library.dir"
-                  value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
+        <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
         <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
         <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
         <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -50,14 +49,14 @@
         <property name="java.specification.vendor" value="Oracle Corporation"/>
         <property name="test.dir" value="src\test"/>
         <property name="java.library.path"
-                  value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
+                  value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
         <property name="java.vendor.url" value="http://java.oracle.com/"/>
         <property name="java.vm.vendor" value="Oracle Corporation"/>
         <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
         <property name="sun.java.command"
-                  value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.RecordSeekerTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.RecordSeekerTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher8284568300705858598.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit6992714446192627304.properties"/>
+                  value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.RecordSeekerTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.RecordSeekerTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher4669965443894062510.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit8982216001526030487.properties"/>
         <property name="java.class.path"
-                  value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                  value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
         <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
         <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
         <property name="ant.file.type" value="file"/>
@@ -76,17 +75,22 @@
         <property name="basedir" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List"/>
         <property name="ant.java.version" value="1.7"/>
         <property name="ant.file.type.File IO" value="file"/>
-        <property name="ant.core.lib"
-                  value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
+        <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
         <property name="file.encoding" value="Cp1252"/>
         <property name="java.specification.version" value="1.7"/>
         <property name="src.dir" value="src"/>
         <property name="ant.project.invoked-targets" value="all"/>
     </properties>
-    <testcase classname="com.RecordSeekerTest" name="testSortList" time="0.21"/>
-    <testcase classname="com.RecordSeekerTest" name="testSortListFromDc" time="0.026"/>
-    <testcase classname="com.RecordSeekerTest" name="testFindProduct" time="0.006"/>
-    <testcase classname="com.RecordSeekerTest" name="testDeleteProduct" time="0.005"/>
+    <testcase classname="com.RecordSeekerTest" name="testSortList" time="0.086"/>
+    <testcase classname="com.RecordSeekerTest" name="testSortListByCategory" time="0.017">
+        <failure message="First name  expected:&lt;[Alph]a&gt; but was:&lt;[Bet]a&gt;"
+                 type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: First name expected:&lt;[Alph]a&gt;
+            but was:&lt;[Bet]a&gt;
+            at com.RecordSeekerTest.testSortListByCategory(RecordSeekerTest.java:79)
+        </failure>
+    </testcase>
+    <testcase classname="com.RecordSeekerTest" name="testFindProduct" time="0.004"/>
+    <testcase classname="com.RecordSeekerTest" name="testDeleteProduct" time="0.004"/>
     <system-out><![CDATA[]]></system-out>
     <system-err><![CDATA[]]></system-err>
 </testsuite>

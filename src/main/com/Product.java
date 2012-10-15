@@ -3,28 +3,24 @@ package com;
 import java.io.Serializable;
 
 /**
- * Class: Product
- * Description: holds data describing a Product object.
- * Each Product will have a shop and a Category  and an optional Quantity
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 20/09/12
- * Time: 10:12 PM *
+ * Class: Product Description: holds data describing a Product object. Each
+ * Product will have a shop and a Category and an optional Quantity Author:
+ * Brian Arnold & Guadalupe Robles Gil Date: 20/09/12 Time: 10:12 PM *
  */
-
 public class Product implements Item, Serializable {
     //private members of an Product object
+
     private String itemName;
     private Category itemCategory;
     private int itemQuantity;
     private String itemUnit;
     private Shop itemShop;
 
-
     /**
-     * Class: Builder.
-     * Purpose: Builder used to instantiate Items
+     * Class: Builder. Purpose: Builder used to instantiate Items
      */
     public static class Builder {
+
         private final String nameOfItem;
         private final Category categoryOfItem;
         private final Shop shopOfItem;
@@ -38,7 +34,7 @@ public class Product implements Item, Serializable {
          * @param categoryOfItem
          * @param shopItem
          */
-        public Builder(String nameOfItem, Category categoryOfItem , Shop shopItem) {
+        public Builder(String nameOfItem, Category categoryOfItem, Shop shopItem) {
             this.nameOfItem = nameOfItem;
             this.categoryOfItem = categoryOfItem;
             this.shopOfItem = shopItem;
@@ -49,7 +45,6 @@ public class Product implements Item, Serializable {
          * Builder for the optional Product member quantity.
          *
          * @param val
-         *
          * @return
          */
         public Builder quantity(int val) {
@@ -57,6 +52,10 @@ public class Product implements Item, Serializable {
             return this;
         }
 
+        /**
+         * @param unit
+         * @return
+         */
         public Builder unit(String unit) {
             unitOfItem = unit;
             return this;
@@ -87,10 +86,11 @@ public class Product implements Item, Serializable {
 
     /**
      * method: getItemName.
+     *
+     * @param itemname
      */
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setItemName(String itemname) {
+        this.itemName = itemname;
     }
 
     /**
@@ -111,6 +111,9 @@ public class Product implements Item, Serializable {
         return itemCategory;
     }
 
+    /**
+     * @param itemCategory
+     */
     public void setItemCategory(Category itemCategory) {
         this.itemCategory = itemCategory;
     }
@@ -124,6 +127,9 @@ public class Product implements Item, Serializable {
         return itemShop;
     }
 
+    /**
+     * @param itemShop
+     */
     public void setItemShop(Shop itemShop) {
         this.itemShop = itemShop;
     }
@@ -137,17 +143,24 @@ public class Product implements Item, Serializable {
         return itemQuantity;
     }
 
+    /**
+     * @param itemQuantity
+     */
     public void setItemQuantity(int itemQuantity) {
         this.itemQuantity = itemQuantity;
     }
 
+    /**
+     * @param itemUnit
+     */
     public void setItemUnit(String itemUnit) {
         this.itemUnit = itemUnit;
     }
 
+    /**
+     * @return
+     */
     public String getItemUnit() {
         return itemUnit;
     }
-
-
 }

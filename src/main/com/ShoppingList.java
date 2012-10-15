@@ -4,14 +4,11 @@ import java.util.Collection;
 
 /**
  * /**
- * Class: ShoppingLists
- * Description: holds data describing a Category object. Each Product will have a shop and a Category
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 9/10/12
- * Time: 09:50 PM *
+ * Class: ShoppingLists Description: holds data describing a Category object.
+ * Each Product will have a shop and a Category Author: Brian Arnold & Guadalupe
+ * Robles Gil Date: 9/10/12 Time: 09:50 PM *
  */
 public class ShoppingList implements Item {
-
 
     private String ShoppingListName;
     Collection<Product> ProductsList;
@@ -20,7 +17,6 @@ public class ShoppingList implements Item {
      * @param listName
      * @param productsList
      */
-
     public ShoppingList(String listName, Collection<Product> productsList) {
         this.ShoppingListName = listName;
         this.ProductsList = productsList;
@@ -32,7 +28,6 @@ public class ShoppingList implements Item {
      *
      * @return
      */
-
     public String getItemName() {
         return ShoppingListName;
     }
@@ -40,15 +35,15 @@ public class ShoppingList implements Item {
     /**
      * @param shoppingListName
      */
-
     public void setItemName(String shoppingListName) {
         ShoppingListName = shoppingListName;
     }
 
     /**
      * method: getProductsList
+     *
+     * @return
      */
-
     public Collection<Product> getProductsList() {
         return ProductsList;
     }
@@ -56,7 +51,6 @@ public class ShoppingList implements Item {
     /**
      * @param productsList
      */
-
     public void setProductsList(Collection<Product> productsList) {
         ProductsList = productsList;
     }

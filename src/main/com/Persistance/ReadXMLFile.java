@@ -1,10 +1,7 @@
 package com.Persistance;
 
 /**
- * Class:
- * Description:
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 6/10/12
+ * Class: Description: Author: Brian Arnold & Guadalupe Robles Gil Date: 6/10/12
  * Time: 11:00 PM *
  */
 
@@ -20,22 +17,26 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 
-
+/**
+ * @author grobles
+ */
 public class ReadXMLFile {
-
 
     private static String fileName;
     private static DataContainers dc;
     private static File fXmlFile;
     private static DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 
+    /**
+     * @param filename
+     */
     public ReadXMLFile(String filename) {
         fileName = filename;
         dc = DataContainers.getInstance();
         fXmlFile = new File(fileName);
     }
-
 
     private static void readShops() {
 
@@ -43,7 +44,8 @@ public class ReadXMLFile {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList ShopList = doc.getElementsByTagName("Shop");
-            dc.setShopList(new ArrayList<Shop>());
+            Collection<Shop> shopList = new ArrayList<Shop>();
+
 
             for (int temp = 0; temp < ShopList.getLength(); temp++) {
 
@@ -52,14 +54,16 @@ public class ReadXMLFile {
 
                     Element eElement = (Element) nNode;
                     Shop newShop = new Shop(getTagValue("ShopName", eElement));
-                    dc.getShopList().add(newShop);
+                    shopList.add(newShop);
                 }
             }
+
+            dc.setShopList(shopList);
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
+    }
 
     private static void readCategories() {
 
@@ -67,7 +71,7 @@ public class ReadXMLFile {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList CategoryList = doc.getElementsByTagName("Category");
-            dc.setCategoryList(new ArrayList<Category>());
+            Collection<Category> categoryList = new ArrayList<Category>();
 
             for (int temp = 0; temp < CategoryList.getLength(); temp++) {
 
@@ -76,12 +80,15 @@ public class ReadXMLFile {
 
                     Element eElement = (Element) nNode;
                     Category newCategory = new Category(getTagValue("CategoryName", eElement));
-                    dc.getCategoryList().add(newCategory);
+                    categoryList.add(newCategory);
                 }
             }
+
+            dc.setCategoryList(categoryList);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     private static void readProducts() {
@@ -90,7 +97,7 @@ public class ReadXMLFile {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList ProductList = doc.getElementsByTagName("Product");
-            dc.setProductList(new ArrayList<Product>());
+            Collection<Product> productList = new ArrayList<Product>();
 
             for (int temp = 0; temp < ProductList.getLength(); temp++) {
 
@@ -105,12 +112,13 @@ public class ReadXMLFile {
                         newProduct.setItemQuantity(Integer.parseInt(getTagValue("ProductQuantity", eElement)));
                         newProduct.setItemUnit(getTagValue("ProductUnit", eElement));
                     } catch (Exception e) {
-
                     }
-                    dc.getProductList().add(newProduct);
+                    productList.add(newProduct);
 
                 }
             }
+
+            dc.setProductList(productList);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -124,7 +132,9 @@ public class ReadXMLFile {
         return nValue.getNodeValue();
     }
 
-
+    /**
+     * @return
+     */
     public DataContainers readDC() {
 
         readShops();

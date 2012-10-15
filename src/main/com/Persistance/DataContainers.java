@@ -3,6 +3,7 @@ package com.Persistance;
 import com.Category;
 import com.Product;
 import com.Shop;
+import com.ShoppingList;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class DataContainers implements Serializable {
     private Collection<Category> categoryList = new ArrayList<Category>();
     private Collection<Shop> shopList = new ArrayList<Shop>();
     private static String[] unitsList = new String[]{"", "Pieces", "lb"};
-    private Collection<Collection> shoppingLists = new ArrayList<Collection>();
+    private Collection<ShoppingList> shoppingLists = new ArrayList<ShoppingList>();
 
     private DataContainers() {
     }
@@ -59,7 +60,7 @@ public class DataContainers implements Serializable {
     /**
      * @return
      */
-    public Collection<Collection> getShoppingLists() {
+    public Collection getShoppingLists() {
         return shoppingLists;
     }
 
@@ -70,27 +71,31 @@ public class DataContainers implements Serializable {
         return unitsList;
     }
 
+    /**
+     * @param productList
+     */
     public void setProductList(Collection<Product> productList) {
         this.productList = productList;
     }
 
+    /**
+     * @param categoryList
+     */
     public void setCategoryList(Collection<Category> categoryList) {
         this.categoryList = categoryList;
     }
 
+    /**
+     * @param shopList
+     */
     public void setShopList(Collection<Shop> shopList) {
         this.shopList = shopList;
     }
 
-    public static void setUnitsList(String[] unitsList) {
-        DataContainers.unitsList = unitsList;
-    }
-
-    public void setShoppingLists(Collection<Collection> shoppingLists) {
+    /**
+     * @param shoppingLists
+     */
+    public void setShoppingLists(Collection<ShoppingList> shoppingLists) {
         this.shoppingLists = shoppingLists;
     }
-
-
 }
-
-

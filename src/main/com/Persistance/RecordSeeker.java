@@ -1,18 +1,17 @@
 package com.Persistance;
 
-import com.Comparators.ByName;
 import com.Item;
+import com.Product;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
- * Class: Product
- * Description: This will hold all the Items that we are making lists of: Product , categories , Shops
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 23/09/12
- * Time: 10:13 PM *
+ * Class: Product Description: This will hold all the Items that we are making
+ * lists of: Product , categories , Shops Author: Brian Arnold & Guadalupe
+ * Robles Gil Date: 23/09/12 Time: 10:13 PM *
  */
 
 /**
@@ -29,7 +28,9 @@ public class RecordSeeker {
     private ReadXMLFile rxml;
     String filename = "data.xml";
 
-
+    /**
+     * @param itemClass
+     */
     public RecordSeeker(String itemClass) {
 
         rxml = new ReadXMLFile(filename);
@@ -37,18 +38,17 @@ public class RecordSeeker {
         wxml = new WriteXMLFile(filename, dc);
 
 
-        if (itemClass.equals("Shop"))
+        if (itemClass.equals("Shop")) {
             List = dc.getShopList();
-        else if (itemClass.equals("Category"))
+        } else if (itemClass.equals("Category")) {
             List = dc.getCategoryList();
-        else if (itemClass.equals("Product"))
+        } else if (itemClass.equals("Product")) {
             List = dc.getProductList();
+        }
     }
 
     /**
-     * method: findItem  Given the name it returns an Item
-     *
-     * @param
+     * method: findItem Given the name it returns an Item
      *
      * @return
      */
@@ -56,20 +56,31 @@ public class RecordSeeker {
         return dc;
     }
 
+    /**
+     * @param item
+     */
     public void addItem(Item item) {
         List.add(item);
     }
 
-
+    /**
+     *
+     */
     public void writToXml() {
         wxml.writeFile();
     }
 
+    /**
+     * @return
+     */
     public Collection<Item> getList() {
         return List;
     }
 
-
+    /**
+     * @param itemName
+     * @return
+     */
     public Item findItem(String itemName) {
 
         Item itemFound = null;
@@ -85,20 +96,17 @@ public class RecordSeeker {
     }
 
     /**
-     * method: findItem  Given the name it returns an Item
+     * method: findItem Given the name it returns an Item
      *
-     * @param
-     *
-     * @return
+     * @param itemToDelete
      */
     public void deleteProduct(Item itemToDelete) {
         List.remove(itemToDelete);
     }
 
     /**
-     * method: makeCombo It helps make the String[] needed for the combos in the different forms
-     *
-     * @param
+     * method: makeCombo It helps make the String[] needed for the combos in the
+     * different forms
      *
      * @return
      */
@@ -116,18 +124,18 @@ public class RecordSeeker {
         return comboArray;
     }
 
-
     /**
      * method: sort This method will help sort by Name the different lists
      *
-     * @param
-     *
+     * @param listToSort
+     * @param sortby
      * @return
      */
-    public Collection Sort(Collection<Item> listToSort) {
+    public Collection Sort(Collection<Product> listToSort, Comparator sortby) {
 
-        Collection ListSorted = new TreeSet(new ByName());
-        for (Item item : listToSort) {
+        Comparator sort = sortby;
+        Collection ListSorted = new TreeSet(sort);
+        for (Product item : listToSort) {
             ListSorted.add(item);
         }
 
@@ -137,5 +145,3 @@ public class RecordSeeker {
 
     }
 }
-
-

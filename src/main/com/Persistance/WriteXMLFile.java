@@ -17,7 +17,9 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.Collection;
 
-
+/**
+ * @author grobles
+ */
 public class WriteXMLFile {
 
     Collection<Shop> shopList;
@@ -25,7 +27,10 @@ public class WriteXMLFile {
     Collection<Product> productList;
     String fileName;
 
-
+    /**
+     * @param filename
+     * @param dc
+     */
     public WriteXMLFile(String filename, DataContainers dc) {
 
 
@@ -35,6 +40,9 @@ public class WriteXMLFile {
         fileName = filename;
     }
 
+    /**
+     *
+     */
     public void writeFile() {
 
         try {
@@ -122,6 +130,4 @@ public class WriteXMLFile {
             tfe.printStackTrace();
         }
     }
-
-
 }

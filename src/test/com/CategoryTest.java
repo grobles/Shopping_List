@@ -26,7 +26,6 @@ public class CategoryTest {
         //set the category and shop
         categoryName = "Category 1";
         shopName = "Some Shop Name";
-        Shop aShop = new Shop(shopName);
         aCategory = new Category(categoryName);
     }
 
@@ -36,6 +35,16 @@ public class CategoryTest {
     @Test
     public void testCategory() {
         assertEquals("Category Name", categoryName, aCategory.getItemName());
+
+    }
+
+    /**
+     * test setItemName.
+     */
+    @Test
+    public void testSetItemName() {
+        aCategory.setItemName("Category2");
+        assertEquals("Category Name", "Category2", aCategory.getItemName());
 
     }
 }

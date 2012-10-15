@@ -1,5 +1,6 @@
 package com;
 
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,6 +34,13 @@ public class ShopTest {
     @Test
     public void testShop() {
         assertEquals("Shop name test", testShop, myShop.getItemName());
+
+    }
+
+    @Test
+    public void testSetItemName() {
+        myShop.setItemName("Shop2");
+        Assert.assertEquals("Shop Name", "Shop2", myShop.getItemName());
 
     }
 }
