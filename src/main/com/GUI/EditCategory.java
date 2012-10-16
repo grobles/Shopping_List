@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.GUI;
 
 import com.Category;
@@ -19,12 +15,13 @@ import javax.swing.*;
 public class EditCategory extends JFrame {
 
     RecordSeeker recordSeekerCategory;
+    MainForm mainForm;
 
     /**
      * Creates new form NewJFrame
      */
-    public EditCategory() {
-
+    public EditCategory(MainForm mainform) {
+        mainForm = mainform;
         recordSeekerCategory = new RecordSeeker("Category");
         initComponents();
 
@@ -164,76 +161,88 @@ public class EditCategory extends JFrame {
     /**
      * method: jButtonSearchActionPerformed : Search for category
      */
-
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
         String name = jTextFieldCategoryName.getText();
-        Category category = (Category) recordSeekerCategory.findItem(name);
-        String message = "Category not found";
-        if (category != null) {
-            message = "Category found";
-        }
-        JOptionPane.showMessageDialog(new JFrame(), message);
-        jTextFieldCategoryName.requestFocus();
 
+        if (ValidateInput.isText(name)) {
+            Category category = (Category) recordSeekerCategory.findItem(name);
+            String message = "Category not found";
+            if (category != null) {
+                message = "Category '" + name + "' found";
+                JOptionPane.showMessageDialog(frame, message);
+            } else {
+                message = "Category '" + name + "' is not currently a category";
+                int selection = JOptionPane.showConfirmDialog(frame, message + "\nWould you like to create it?");
+                if (selection == 0) {
+                    Category newCategory = new Category(name);
+                    recordSeekerCategory.addItem(newCategory);
+                    recordSeekerCategory.writToXml();
+                    JOptionPane.showMessageDialog(frame, name + " has been saved as a new Category");
+                }
+            }
+        }
+        JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
+        jTextFieldCategoryName.setText("");
+        jTextFieldCategoryName.requestFocus();
     }
 
     /**
      * method: jButtonSaveActionPerformed : save a Category
      */
-
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
-
-        JFrame frame = new JFrame();
         String categoryName = jTextFieldCategoryName.getText();
-        Category categoryFound = (Category) recordSeekerCategory.findItem(categoryName);
-        if (categoryName.equals("") || categoryFound != null) {
-            JOptionPane.showMessageDialog(new JFrame(), "That category already exists");
-        } else {
-            int n = JOptionPane.showConfirmDialog(
-                    frame,
-                    "Would you like to save this Category?",
-                    "Confirm Save Category",
-                    JOptionPane.YES_NO_OPTION
-            );
-            if (n == 0) {
-                Category newCategory = new Category(categoryName);
-                recordSeekerCategory.addItem(newCategory);
-                recordSeekerCategory.writToXml();
-                JOptionPane.showMessageDialog(new JFrame(), "Category saved");
 
+        if (ValidateInput.isText(categoryName)) {
+            Category categoryFound = (Category) recordSeekerCategory.findItem(categoryName);
+            if (categoryFound != null) {
+                JOptionPane.showMessageDialog(frame, "'" + categoryName + "' already exists.");
+            } else {
+                int n = JOptionPane.showConfirmDialog(
+                        frame,
+                        "Would you like to save this Category?",
+                        "Confirm Save Category",
+                        JOptionPane.YES_NO_OPTION);
+                if (n == 0) {
+                    Category newCategory = new Category(categoryName);
+                    recordSeekerCategory.addItem(newCategory);
+                    recordSeekerCategory.writToXml();
+                    JOptionPane.showMessageDialog(frame, "Category saved");
+                }
             }
-            jTextFieldCategoryName.setText("");
-            jTextFieldCategoryName.requestFocus();
         }
+        JOptionPane.showMessageDialog(frame, "'" + categoryName + "' is not a valid Category name.\nTry again.");
+        jTextFieldCategoryName.setText("");
+        jTextFieldCategoryName.requestFocus();
     }
 
     /**
      * method: jButtonDeleteActionPerformed : delete a category
      */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrame frame = new JFrame();
         String name = jTextFieldCategoryName.getText();
-        Category categoryFound = (Category) recordSeekerCategory.findItem(name);
-        if (categoryFound == null) {
-            JOptionPane.showMessageDialog(new JFrame(), "Category not found");
-            jTextFieldCategoryName.requestFocus();
-        } else {
-            int n = JOptionPane.showConfirmDialog(
-                    frame,
-                    "Would you like to Delete this Category?",
-                    "Confirm Delete Category",
-                    JOptionPane.YES_NO_OPTION
-            );
-            if (n == 0) {
-                recordSeekerCategory.deleteProduct(categoryFound);
-                recordSeekerCategory.writToXml();
-                JOptionPane.showMessageDialog(new JFrame(), "Category Deleted");
 
+        if (ValidateInput.isText(name)) {
+            Category categoryFound = (Category) recordSeekerCategory.findItem(name);
+            if (categoryFound == null) {
+                JOptionPane.showMessageDialog(frame, "The Category '" + name + "' was not found");
+                jTextFieldCategoryName.requestFocus();
+            } else {
+                int n = JOptionPane.showConfirmDialog(
+                        frame,
+                        "Would you like to delete the Category '" + name + "'?",
+                        "Confirm Delete Category",
+                        JOptionPane.YES_NO_OPTION
+                );
+                if (n == 0) {
+                    recordSeekerCategory.deleteProduct(categoryFound);
+                    recordSeekerCategory.writToXml();
+                    JOptionPane.showMessageDialog(frame, "'" + name + "' has been deleted.");
+                }
             }
-
-            jTextFieldCategoryName.setText("");
-            jTextFieldCategoryName.requestFocus();
         }
+        JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
+        jTextFieldCategoryName.setText("");
+        jTextFieldCategoryName.requestFocus();
     }
 
     /**
@@ -243,47 +252,6 @@ public class EditCategory extends JFrame {
         this.dispose();
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /*
-         * Set the Nimbus look and feel
-         */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the
-         * default look and feel. For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditCategory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditCategory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditCategory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditCategory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /*
-         * Create and display the form
-         */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-                new EditCategory().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify
     private JButton jButtonCancel;
@@ -295,5 +263,6 @@ public class EditCategory extends JFrame {
     private JInternalFrame jInternalFrame1;
     private JLabel jLabelproductName;
     private JTextField jTextFieldCategoryName;
+    private JFrame frame;
     // End of variables declaration
 }

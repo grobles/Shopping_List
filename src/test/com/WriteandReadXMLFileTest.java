@@ -2,6 +2,7 @@ package com;
 
 import com.Persistance.DataContainers;
 import com.Persistance.ReadXMLFile;
+import com.Persistance.RecordSeeker;
 import com.Persistance.WriteXMLFile;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,10 +25,12 @@ public class WriteandReadXMLFileTest {
     DataContainers someDc = DataContainers.getInstance();
     private WriteXMLFile wxml;
     private ReadXMLFile rxml;
+    private RecordSeeker recordSeekerProduct;
 
 
     @Before
     public void setup() {
+        DataContainers someDc = DataContainers.getInstance();
         someDc.getShopList().add(mockShop);
         someDc.getShopList().add(mockShop2);
         wxml = new WriteXMLFile("dataTest.xml", someDc);
@@ -39,11 +42,14 @@ public class WriteandReadXMLFileTest {
     @Test
 
     public void testWriteXMLAndReadXML() {
+
         when(mockShop.getItemName()).thenReturn("Alpha");
         when(mockShop2.getItemName()).thenReturn("Beta");
         wxml.writeFile();
         someDc = rxml.readDC();
         int arraySize = someDc.getShopList().size();
-        assertEquals("size ", arraySize, 2);
+        assertEquals("size ", 2, arraySize);
     }
+
+
 }

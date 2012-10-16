@@ -18,7 +18,9 @@ public class ByCategory implements Comparator {
     public int compare(Object o1, Object o2) {
         Product product1 = (Product) o1;
         Product product2 = (Product) o1;
+        String category1 = product1.getItemCategory().getItemName();
+        String category2 = product2.getItemCategory().getItemName();
 
-        return product1.getItemCategory().getItemName().compareTo(product2.getItemCategory().getItemName());
+        return category1.compareTo(category2);
     }
 }

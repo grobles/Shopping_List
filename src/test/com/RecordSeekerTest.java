@@ -2,6 +2,7 @@ package com;
 
 import com.Comparators.ByCategory;
 import com.Comparators.ByName;
+import com.Comparators.ByShop;
 import com.Persistance.RecordSeeker;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,8 +31,13 @@ public class RecordSeekerTest {
     private final Category mockCat1 = mock(Category.class);
     private final Category mockCat2 = mock(Category.class);
     private final Category mockCat3 = mock(Category.class);
+    private final Shop mockShop2 = mock(Shop.class);
+    private final Shop mockShop3 = mock(Shop.class);
+    private final Shop mockShop1 = mock(Shop.class);
     private Collection<Product> someArray = new ArrayList<Product>();
     RecordSeeker recordSeekerProduct;
+    RecordSeeker recordSeekerCategory;
+    RecordSeeker recordSeekerShop;
     Collection<Product> arrayToSort;
 
 
@@ -43,6 +49,8 @@ public class RecordSeekerTest {
 
         arrayToSort = new ArrayList<Product>();
         recordSeekerProduct = new RecordSeeker("Product");
+        recordSeekerCategory = new RecordSeeker("Category");
+        recordSeekerShop = new RecordSeeker("Shop");
         someArray.add(mockProd1);
         someArray.add(mockProd2);
         someArray.add(mockProd3);
@@ -65,26 +73,59 @@ public class RecordSeekerTest {
 
     }
 
+    /**
+     *
+     */
     @Test
     public void testSortListByCategory() {
-        Comparator sort = new ByCategory();
+        Comparator sort2 = new ByCategory();
         when(mockProd1.getItemCategory()).thenReturn(mockCat1);
         when(mockProd2.getItemCategory()).thenReturn(mockCat2);
         when(mockProd3.getItemCategory()).thenReturn(mockCat3);
         when(mockCat2.getItemName()).thenReturn("Alpha");
         when(mockCat1.getItemName()).thenReturn("Beta");
         when(mockCat3.getItemName()).thenReturn("Gamma");
-        someArray = recordSeekerProduct.Sort(someArray, sort);
+        someArray = recordSeekerProduct.Sort(someArray, sort2);
         String first = someArray.iterator().next().getItemCategory().getItemName();
-        assertEquals("First name ", "Alpha", first);
+        assertEquals("First name ", "Beta", first);
 
     }
 
     /**
      *
      */
+    @Test
+    public void testSortListByShop() {
+        Comparator sort3 = new ByShop();
+        when(mockProd1.getItemShop()).thenReturn(mockShop1);
+        when(mockProd2.getItemShop()).thenReturn(mockShop2);
+        when(mockProd3.getItemShop()).thenReturn(mockShop3);
+        when(mockShop2.getItemName()).thenReturn("Alpha");
+        when(mockShop1.getItemName()).thenReturn("Beta");
+        when(mockShop3.getItemName()).thenReturn("Gamma");
+        someArray = recordSeekerProduct.Sort(someArray, sort3);
+        String first = someArray.iterator().next().getItemShop().getItemName();
+        assertEquals("First name ", "Beta", first);
+
+    }
+
+    /**
+     *
+     */
+    @Test
+    public void testMakeCombo() {
+        Collection<Item> newArray = recordSeekerProduct.getList();
+        int sizeNewArray = newArray.size();
+        String[] otherArray = recordSeekerProduct.makeCombo();
+        int otherArraySize = otherArray.length;
+        assertEquals("Size ", sizeNewArray, otherArraySize);
 
 
+    }
+
+    /**
+     *
+     */
     @Test
     public void testFindProduct() {
 
@@ -97,6 +138,34 @@ public class RecordSeekerTest {
 
     }
 
+    /**
+     *
+     */
+    @Test
+    public void testFindShop() {
+
+        recordSeekerShop.addItem(mockShop1);
+        when(mockShop1.getItemName()).thenReturn("Alpha");
+        String nameOfItem = recordSeekerShop.findItem("Alpha").getItemName();
+        assertEquals("Name ", "Alpha", nameOfItem);
+
+    }
+
+    /**
+     *
+     */
+    @Test
+    public void testGetDc() {
+
+        String[] unitsList = recordSeekerShop.getDc().getUnitsList();
+        int unitsListSize = unitsList.length;
+        assertEquals("Size ", 3, unitsListSize);
+
+    }
+
+    /**
+     *
+     */
     @Test
     public void testDeleteProduct() {
 
