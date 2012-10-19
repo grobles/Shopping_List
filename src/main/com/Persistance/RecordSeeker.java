@@ -1,18 +1,9 @@
 package com.Persistance;
 
 import com.Item;
-import com.Product;
 
-import java.util.Collection;
-import java.util.Comparator;
 import java.util.Iterator;
-import java.util.TreeSet;
-
-/**
- * Class: Product Description: This will hold all the Items that we are making
- * lists of: Product , categories , Shops Author: Brian Arnold & Guadalupe
- * Robles Gil Date: 23/09/12 Time: 10:13 PM *
- */
+import java.util.List;
 
 /**
  * Class: Record Seeker Description: This class with hold the code needed to get
@@ -22,29 +13,25 @@ import java.util.TreeSet;
  */
 public class RecordSeeker {
 
-    private Collection<Item> List;
+    private List<Item> List;
     private DataContainers dc;
-    private WriteXMLFile wxml;
     private ReadXMLFile rxml;
-    String filename = "data.xml";
+    String filename;
 
     /**
-     * @param itemClass
+     * @param
      */
-    public RecordSeeker(String itemClass) {
-
+    public RecordSeeker() {
+        filename = "data.xml";
         rxml = new ReadXMLFile(filename);
         dc = rxml.readDC();
-        wxml = new WriteXMLFile(filename, dc);
+    }
 
+    public RecordSeeker(String fileName) {
 
-        if (itemClass.equals("Shop")) {
-            List = dc.getShopList();
-        } else if (itemClass.equals("Category")) {
-            List = dc.getCategoryList();
-        } else if (itemClass.equals("Product")) {
-            List = dc.getProductList();
-        }
+        filename = fileName;
+        rxml = new ReadXMLFile(filename);
+        dc = rxml.readDC();
     }
 
     /**
@@ -52,15 +39,42 @@ public class RecordSeeker {
      *
      * @return
      */
-    public DataContainers getDc() {
-        return dc;
+    public String getFilename() {
+        return filename;
+    }
+
+    public String[] getUnitsList() {
+        return dc.getUnitsList();
+    }
+
+    public List getShopList() {
+        return dc.getShopList();
+    }
+
+    public List getProductList() {
+        return dc.getProductList();
+    }
+
+    public List getcategoryList() {
+        return dc.getCategoryList();
+    }
+
+    public List getShoppingList() {
+        return dc.getShoppingLists();
     }
 
 
     /**
      * @param item
      */
-    public void addItem(Item item) {
+    public void addItem(Item item, String itemClass) {
+        if (itemClass.equals("Shop")) {
+            List = dc.getShopList();
+        } else if (itemClass.equals("Category")) {
+            List = dc.getCategoryList();
+        } else if (itemClass.equals("Product")) {
+            List = dc.getProductList();
+        }
         List.add(item);
     }
 
@@ -68,23 +82,25 @@ public class RecordSeeker {
      *
      */
     public void writToXml() {
+        WriteXMLFile wxml = new WriteXMLFile(this);
         wxml.writeFile();
     }
 
-    /**
-     * @return
-     */
-    public Collection<Item> getList() {
-        return List;
-    }
 
     /**
      * @param itemName
      * @return
      */
-    public Item findItem(String itemName) {
+    public Item findItem(String itemName, String itemClass) {
 
         Item itemFound = null;
+        if (itemClass.equals("Shop")) {
+            List = dc.getShopList();
+        } else if (itemClass.equals("Category")) {
+            List = dc.getCategoryList();
+        } else if (itemClass.equals("Product")) {
+            List = dc.getProductList();
+        }
 
         for (Item item : List) {
             if (item.getItemName().equalsIgnoreCase(itemName)) {
@@ -101,7 +117,14 @@ public class RecordSeeker {
      *
      * @param itemToDelete
      */
-    public void deleteProduct(Item itemToDelete) {
+    public void deleteProduct(Item itemToDelete, String itemClass) {
+        if (itemClass.equals("Shop")) {
+            List = dc.getShopList();
+        } else if (itemClass.equals("Category")) {
+            List = dc.getCategoryList();
+        } else if (itemClass.equals("Product")) {
+            List = dc.getProductList();
+        }
         List.remove(itemToDelete);
     }
 
@@ -111,11 +134,11 @@ public class RecordSeeker {
      *
      * @return
      */
-    public String[] makeCombo() {
-        int size = List.size();
+    public String[] setStringArray(List list) {
+        int size = list.size();
         String[] comboArray = new String[size];
         int i = 0;
-        Iterator iterator = List.iterator();
+        Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
             Item item = (Item) iterator.next();
             String name = item.getItemName();
@@ -125,24 +148,5 @@ public class RecordSeeker {
         return comboArray;
     }
 
-    /**
-     * method: sort This method will help sort by Name the different lists
-     *
-     * @param listToSort
-     * @param sortby
-     * @return
-     */
-    public Collection Sort(Collection<Product> listToSort, Comparator sortby) {
 
-        Comparator sort = sortby;
-        Collection ListSorted = new TreeSet(sort);
-        for (Product item : listToSort) {
-            ListSorted.add(item);
-        }
-
-
-        return ListSorted;
-
-
-    }
 }

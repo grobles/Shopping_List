@@ -163,4 +163,11 @@ public class Product implements Item, Serializable {
     public String getItemUnit() {
         return itemUnit;
     }
+
+    public String toString() {
+        return String.format("%-14s", itemName) +
+                String.format("%-14s", itemCategory.getItemName()) +
+                String.format("%-14s", itemShop.getItemName());
+
+    }
 }

@@ -16,7 +16,7 @@ import java.awt.event.ActionEvent;
 public class EditShop extends JFrame {
 
 
-    RecordSeeker recordSeekerShop;
+    RecordSeeker recordSeeker;
     MainForm mainForm;
 
 
@@ -25,7 +25,7 @@ public class EditShop extends JFrame {
      */
     public EditShop(MainForm mainform) {
         mainForm = mainform;
-        recordSeekerShop = new RecordSeeker("Shop");
+        recordSeeker = new RecordSeeker();
         initComponents();
     }
 
@@ -147,7 +147,7 @@ public class EditShop extends JFrame {
             JOptionPane.showMessageDialog(frame, "Please enter a valid shop name.");
 
         } else {
-            Shop shop = (Shop) recordSeekerShop.findItem(name);
+            Shop shop = (Shop) recordSeeker.findItem(name, "Shop");
 
             if (shop != null) {
                 message = "The shop '" + shop.getItemName() + "' was found.";
@@ -157,8 +157,8 @@ public class EditShop extends JFrame {
                         "\nWould you like to create it?");
                 if (selection == 0) {
                     Shop newShop = new Shop(name);
-                    recordSeekerShop.addItem(newShop);
-                    recordSeekerShop.writToXml();
+                    recordSeeker.addItem(newShop, "Shop");
+                    recordSeeker.writToXml();
                     JOptionPane.showMessageDialog(frame, name + " has been saved.");
                 }
             }
@@ -173,7 +173,7 @@ public class EditShop extends JFrame {
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
         String shopName = jTextFieldShopName.getText();
 
-        Shop shopFound = (Shop) recordSeekerShop.findItem(shopName);
+        Shop shopFound = (Shop) recordSeeker.findItem(shopName, "Shop");
         if ((shopName.equals("") || ValidateInput.isText(shopName) == false) || shopFound != null) {
             JOptionPane.showMessageDialog(frame, "Not a valid new shop name.");
             jTextFieldShopName.requestFocus();
@@ -186,8 +186,8 @@ public class EditShop extends JFrame {
             );
             if (n == 0) {
                 Shop newShop = new Shop(shopName);
-                recordSeekerShop.addItem(newShop);
-                recordSeekerShop.writToXml();
+                recordSeeker.addItem(newShop, "Shop");
+                recordSeeker.writToXml();
                 JOptionPane.showMessageDialog(frame, "Shop saved");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();
@@ -202,7 +202,7 @@ public class EditShop extends JFrame {
      */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         String name = jTextFieldShopName.getText();
-        Shop shopFound = (Shop) recordSeekerShop.findItem(name);
+        Shop shopFound = (Shop) recordSeeker.findItem(name, "Shop");
         if (shopFound == null) {
             JOptionPane.showMessageDialog(frame, "Shop not found");
             jTextFieldShopName.requestFocus();
@@ -214,8 +214,8 @@ public class EditShop extends JFrame {
                     JOptionPane.YES_NO_OPTION
             );
             if (n == 0) {
-                recordSeekerShop.deleteProduct(shopFound);
-                recordSeekerShop.writToXml();
+                recordSeeker.deleteProduct(shopFound, "Shop");
+                recordSeeker.writToXml();
                 JOptionPane.showMessageDialog(frame, "Shop Deleted");
                 jTextFieldShopName.setText("");
                 jTextFieldShopName.requestFocus();

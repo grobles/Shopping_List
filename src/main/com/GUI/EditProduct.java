@@ -19,9 +19,7 @@ public class EditProduct extends JFrame {
     private String[] comboCategory;
     private String[] comboShop;
     private String[] comboUnit;
-    RecordSeeker recordSeekerShop;
-    RecordSeeker recordSeekerCategory;
-    RecordSeeker recordSeekerProduct;
+    RecordSeeker recordSeeker;
     MainForm mainForm;
 
     /**
@@ -29,12 +27,10 @@ public class EditProduct extends JFrame {
      */
     public EditProduct(MainForm mainform) {
         mainForm = mainform;
-        recordSeekerShop = new RecordSeeker("Shop");
-        recordSeekerCategory = new RecordSeeker("Category");
-        recordSeekerProduct = new RecordSeeker("Product");
-        comboUnit = recordSeekerProduct.getDc().getUnitsList();
-        comboCategory = recordSeekerCategory.makeCombo();
-        comboShop = recordSeekerShop.makeCombo();
+        recordSeeker = new RecordSeeker();
+        comboUnit = recordSeeker.getUnitsList();
+        comboCategory = recordSeeker.setStringArray(recordSeeker.getcategoryList());
+        comboShop = recordSeeker.setStringArray(recordSeeker.getShopList());
         initComponents();
     }
 
@@ -57,7 +53,7 @@ public class EditProduct extends JFrame {
         String name = jTextFieldProductName.getText();
 
         if (ValidateInput.isText(name)) {
-            Product product = (Product) recordSeekerProduct.findItem(name);
+            Product product = (Product) recordSeeker.findItem(name, "Product");
 
             if (product != null) {
                 Search(product);
@@ -66,9 +62,8 @@ public class EditProduct extends JFrame {
                 int selection = JOptionPane.showConfirmDialog(frame, "Would you like to add '"
                         + name + "' to the list?");
                 if (selection == 0) {
-                    Product newProduct = (Product) recordSeekerProduct.findItem(name);
+                    Product newProduct = (Product) recordSeeker.findItem(name, "Product");
                     saveProduct(newProduct);
-                    JOptionPane.showMessageDialog(frame, name + " saved!");
                 } else {
                     return;
                 }
@@ -85,10 +80,10 @@ public class EditProduct extends JFrame {
      * @param evt
      */
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        String message = "Not a valid name";
+
 
         String productName = jTextFieldProductName.getText();
-        Product productFound = (Product) recordSeekerProduct.findItem(productName);
+        Product productFound = (Product) recordSeeker.findItem(productName, "Product");
 
         if (ValidateInput.isText(productName)) {
             if (!ValidateInput.isDigit(jTextFieldQuantity.getText())) {
@@ -97,18 +92,13 @@ public class EditProduct extends JFrame {
                 return;
             } else if (productFound != null) {
                 editProduct(productFound);
-                message = "Product edited";
+                JOptionPane.showMessageDialog(frame, "Product Edited");
             } else {
                 saveProduct(productFound);
-                message = "Product Saved";
+
             }
         }
 
-        JOptionPane.showMessageDialog(frame, message);
-        jTextFieldProductName.setText("");
-        jComboBoxUnits.setSelectedItem("");
-        jTextFieldQuantity.setText("");
-        jTextFieldProductName.requestFocus();
     }
 
     /**
@@ -120,17 +110,19 @@ public class EditProduct extends JFrame {
         String message;
         String name = jTextFieldProductName.getText();
         if (ValidateInput.isText(name)) {
-            Product productFound = (Product) recordSeekerProduct.findItem(name);
-            if (recordSeekerProduct.findItem(name) == null) {
+
+            Product productFound = (Product) recordSeeker.findItem(name, "Product");
+            if (productFound == null) {
                 message = "Product not found";
+                System.out.println("esta pasando" + name);
             } else {
                 delete(productFound);
                 message = "Product Deleted";
             }
         } else {
-            JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Product name.");
+            message = "Not a Valid Name";
         }
-
+        JOptionPane.showMessageDialog(frame, message);
         jTextFieldProductName.setText("");
         jComboBoxUnits.setSelectedItem("");
         jTextFieldQuantity.setText("");
@@ -180,10 +172,10 @@ public class EditProduct extends JFrame {
         );
         if (n == 0) {
             String categoryName = jComboBoxCategory.getSelectedItem().toString();
-            Category category = (Category) recordSeekerCategory.findItem(categoryName);
+            Category category = (Category) recordSeeker.findItem(categoryName, "Category");
             productFound.setItemCategory(category);
             String shopName = jComboBoxShops.getSelectedItem().toString();
-            Shop shop = (Shop) recordSeekerShop.findItem(shopName);
+            Shop shop = (Shop) recordSeeker.findItem(shopName, "Shop");
             productFound.setItemShop(shop);
             try {
                 int quantity = Integer.parseInt(jTextFieldQuantity.getText());
@@ -194,7 +186,7 @@ public class EditProduct extends JFrame {
                 System.out.println("catch : ");
             }
 
-            recordSeekerProduct.writToXml();
+            recordSeeker.writToXml();
         }
     }
 
@@ -204,6 +196,14 @@ public class EditProduct extends JFrame {
      * @param productFound
      */
     private void saveProduct(Product productFound) {
+        try {
+            jComboBoxCategory.getSelectedItem().toString();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(frame, "You have to choose a Category and a Shop.");
+            jTextFieldProductName.requestFocus();
+            return;
+        }
+
         int n = JOptionPane.showConfirmDialog(
                 frame,
                 "Would you like to save this Product?",
@@ -213,19 +213,27 @@ public class EditProduct extends JFrame {
         if (n == 0) {
             String productName = jTextFieldProductName.getText().toString();
             String categoryName = jComboBoxCategory.getSelectedItem().toString();
-            Category category = (Category) recordSeekerCategory.findItem(categoryName);
             String shopName = jComboBoxShops.getSelectedItem().toString();
-            Shop shop = (Shop) recordSeekerShop.findItem(shopName);
+            Category category = (Category) recordSeeker.findItem(categoryName, "Category");
+            Shop shop = (Shop) recordSeeker.findItem(shopName, "Shop");
             Product newProduct = new Product.Builder(productName, category, shop).build();
+
             try {
                 int quantity = Integer.parseInt(jTextFieldQuantity.getText());
                 newProduct.setItemQuantity(quantity);
                 newProduct.setItemUnit(jComboBoxUnits.getSelectedItem().toString());
             } catch (Exception e) {
 
+
             }
-            recordSeekerProduct.addItem(newProduct);
-            recordSeekerProduct.writToXml();
+            recordSeeker.addItem(newProduct, "Product");
+            recordSeeker.writToXml();
+            mainForm.setComboProduct();
+            JOptionPane.showMessageDialog(frame, "Product Saved");
+            jTextFieldProductName.setText("");
+            jComboBoxUnits.setSelectedItem("");
+            jTextFieldQuantity.setText("");
+            jTextFieldProductName.requestFocus();
         }
     }
 
@@ -242,8 +250,8 @@ public class EditProduct extends JFrame {
                 JOptionPane.YES_NO_OPTION
         );
         if (n == 0) {
-            recordSeekerProduct.deleteProduct(productFound);
-            recordSeekerProduct.writToXml();
+            recordSeeker.deleteProduct(productFound, "Product");
+            recordSeeker.writToXml();
         }
     }
 

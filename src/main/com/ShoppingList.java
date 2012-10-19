@@ -1,6 +1,6 @@
 package com;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * /**
@@ -11,13 +11,13 @@ import java.util.Collection;
 public class ShoppingList implements Item {
 
     private String ShoppingListName;
-    Collection<Product> ProductsList;
+    List<Product> ProductsList;
 
     /**
      * @param listName
      * @param productsList
      */
-    public ShoppingList(String listName, Collection<Product> productsList) {
+    public ShoppingList(String listName, List<Product> productsList) {
         this.ShoppingListName = listName;
         this.ProductsList = productsList;
 
@@ -44,14 +44,14 @@ public class ShoppingList implements Item {
      *
      * @return
      */
-    public Collection<Product> getProductsList() {
+    public List<Product> getProductsList() {
         return ProductsList;
     }
 
     /**
      * @param productsList
      */
-    public void setProductsList(Collection<Product> productsList) {
+    public void setProductsList(List<Product> productsList) {
         ProductsList = productsList;
     }
 }

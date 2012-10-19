@@ -4,20 +4,44 @@
  */
 package com.GUI;
 
+import com.Comparators.ByCategory;
+import com.Comparators.ByName;
+import com.Comparators.ByShop;
+import com.Persistance.RecordSeeker;
+import com.Product;
+import com.ShoppingList;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * @author grobles
  */
 public class MainForm extends javax.swing.JFrame {
-
     private EditProduct editProduct;
     private EditCategory editCategory;
     private EditShop editShop;
+    private List<Product> arrayShoppingProduct;
+    private RecordSeeker recordSeeker;
+    public JComboBox jComboBoxCategory;
+    public JComboBox jComboBoxProduct;
+
 
     /**
-     * Creates new form MainForm
+     * Creates new form NewJFrame
      */
     public MainForm() {
+        recordSeeker = new RecordSeeker();
+        recordSeeker.writToXml();
+        String[] comboCategory = recordSeeker.setStringArray(recordSeeker.getcategoryList());
+        arrayShoppingProduct = new ArrayList<Product>();
         initComponents();
+        jComboBoxCategory.setModel(new DefaultComboBoxModel(comboCategory));
+        setComboProduct();
+        setTable();
     }
 
     /**
@@ -30,19 +54,18 @@ public class MainForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         jComboBoxProduct = new javax.swing.JComboBox();
+        jComboBoxCategory = new javax.swing.JComboBox();
         jLabelProduct = new javax.swing.JLabel();
         jLabelCategory = new javax.swing.JLabel();
-        jComboBoxCategory = new javax.swing.JComboBox();
         jButtonAdd = new javax.swing.JButton();
         jButtonDelete = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jListShoppingProducts = new javax.swing.JList();
         jButtonSortAZ = new javax.swing.JButton();
         jButtonCategry = new javax.swing.JButton();
         jButtonClear = new javax.swing.JButton();
         jButtonSortShop = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTableShoppingProducts = new javax.swing.JTable();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemOpen = new javax.swing.JMenuItem();
@@ -61,34 +84,16 @@ public class MainForm extends javax.swing.JFrame {
         jMenuHelp = new javax.swing.JMenu();
         jMenuItemAbout = new javax.swing.JMenuItem();
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public Object getElementAt(int i) {
-                return strings[i];
-            }
-        });
-        jScrollPane1.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Shopping List App");
 
-        jComboBoxProduct.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
-        jComboBoxProduct.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxProductActionPerformed(evt);
-            }
-        });
 
         jLabelProduct.setText("Product");
 
         jLabelCategory.setText("Category");
 
-        jComboBoxCategory.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"Item 1", "Item 2", "Item 3", "Item 4"}));
+
         jComboBoxCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCategoryActionPerformed(evt);
@@ -108,19 +113,6 @@ public class MainForm extends javax.swing.JFrame {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-
-        jListShoppingProducts.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public Object getElementAt(int i) {
-                return strings[i];
-            }
-        });
-        jScrollPane2.setViewportView(jListShoppingProducts);
 
         jButtonSortAZ.setText("Sort A_Z");
         jButtonSortAZ.addActionListener(new java.awt.event.ActionListener() {
@@ -149,6 +141,19 @@ public class MainForm extends javax.swing.JFrame {
                 jButtonSortShopActionPerformed(evt);
             }
         });
+
+        jTableShoppingProducts.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{
+                        {null, null, null, null, null},
+                        {null, null, null, null, null},
+                        {null, null, null, null, null},
+                        {null, null, null, null, null}
+                },
+                new String[]{
+                        "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
+                }
+        ));
+        jScrollPane3.setViewportView(jTableShoppingProducts);
 
         jMenuFile.setText("File");
 
@@ -279,16 +284,16 @@ public class MainForm extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(82, 82, 82)
                                                 .addComponent(jLabelProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jButtonSortAZ, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(29, 29, 29)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jButtonCategry)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jButtonSortShop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(31, 31, 31))
+                                                .addGap(35, 35, 35)
+                                                .addComponent(jButtonSortShop, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,13 +313,14 @@ public class MainForm extends javax.swing.JFrame {
                                                         .addComponent(jButtonAdd)
                                                         .addComponent(jButtonDelete)
                                                         .addComponent(jButtonClear))
-                                                .addGap(0, 74, Short.MAX_VALUE))
-                                        .addComponent(jScrollPane2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButtonSortAZ)
-                                        .addComponent(jButtonCategry)
-                                        .addComponent(jButtonSortShop))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jButtonSortAZ)
+                                                        .addComponent(jButtonCategry)
+                                                        .addComponent(jButtonSortShop)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
                                 .addContainerGap())
         );
 
@@ -322,11 +328,23 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jMenuItemSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        if (arrayShoppingProduct.size() > 1) {
+            String name =
+                    JOptionPane.showInputDialog("Enter the name for the Shopping List");
+
+
+            ShoppingList List = new ShoppingList(name, arrayShoppingProduct);
+            recordSeeker.getShoppingList().add(List);
+            recordSeeker.writToXml();
+        } else {
+            JOptionPane.showMessageDialog(new JFrame(), "You have to add products to the list");
+        }
     }
 
     private void jButtonSortAZActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        Collections.sort(arrayShoppingProduct, new ByName());
+        setTable();
+
     }
 
     private void jMenuItemOpenActionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,31 +360,73 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     private void jComboBoxCategoryActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        this.setComboProduct();
     }
 
-    private void jComboBoxProductActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
 
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        try {
+            Product product = (Product) recordSeeker.findItem(jComboBoxProduct.getSelectedItem().toString(), "Product");
+            arrayShoppingProduct.add(product);
+            setTable();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(new JFrame(), "You have to choose a Product");
+        }
     }
 
+
+    private void setTable() {
+        jTableShoppingProducts.setModel((new javax.swing.table.DefaultTableModel(
+                setStringShoppingPanel(arrayShoppingProduct),
+                new String[]{
+                        "Product", "Category", "Shop", "Quantity", "Unit"
+                })));
+    }
+
+
+    private String[][] setStringShoppingPanel(List arraylist) {
+        int size = arraylist.size();
+        String StringArray[][] = new String[size][5];
+        int i = 0;
+        Iterator iterator = arraylist.iterator();
+        while (iterator.hasNext()) {
+            for (int row = 0; row < arrayShoppingProduct.size(); row++) {
+                Product product = (Product) iterator.next();
+                StringArray[row][0] = product.getItemName();
+                StringArray[row][1] = product.getItemCategory().getItemName();
+                StringArray[row][2] = product.getItemShop().getItemName();
+                StringArray[row][3] = Integer.toString(product.getItemQuantity());
+                StringArray[row][4] = product.getItemUnit();
+            }
+        }
+        return StringArray;
+    }
+
+
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        try {
+            int row = jTableShoppingProducts.getSelectedRow();
+            Product product = arrayShoppingProduct.get(row);
+            arrayShoppingProduct.remove(product);
+            setTable();
+        } catch (Exception ex) {
+
+        }
     }
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        arrayShoppingProduct = new ArrayList<Product>();
+        setTable();
     }
 
     private void jButtonCategryActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        Collections.sort(arrayShoppingProduct, new ByCategory());
+        setTable();
     }
 
     private void jButtonSortShopActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        Collections.sort(arrayShoppingProduct, new ByShop());
+        setTable();
     }
 
     private void jMenuItemEdtProductActionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,6 +469,25 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jMenuItemListShopsActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    }
+
+
+    void setComboProduct() {
+        String categoryName = new String();
+        try {
+            categoryName = jComboBoxCategory.getSelectedItem().toString();
+        } catch (Exception ex) {
+
+        }
+        List<Product> productList = (List<Product>) recordSeeker.getProductList();
+        List<Product> list = new ArrayList<Product>();
+        for (Product product : productList) {
+            if (product.getItemCategory().getItemName().equals(categoryName)) {
+                list.add(product);
+            }
+        }
+
+        jComboBoxProduct.setModel(new javax.swing.DefaultComboBoxModel(recordSeeker.setStringArray(list)));
     }
 
     /**
@@ -460,12 +539,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonSortAZ;
     private javax.swing.JButton jButtonSortShop;
-    private javax.swing.JComboBox jComboBoxCategory;
-    private javax.swing.JComboBox jComboBoxProduct;
     private javax.swing.JLabel jLabelCategory;
     private javax.swing.JLabel jLabelProduct;
-    private javax.swing.JList jList1;
-    private javax.swing.JList jListShoppingProducts;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuEdit;
     private javax.swing.JMenu jMenuFile;
@@ -484,6 +559,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemSendEmail;
     private javax.swing.JMenu jMenuLists;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTableShoppingProducts;
     // End of variables declaration
 }

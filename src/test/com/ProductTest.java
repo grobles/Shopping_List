@@ -78,6 +78,18 @@ public class ProductTest {
         assertEquals("Product Item Unit", "pieces", myMasterShopProduct.getItemUnit());
     }
 
+    @Test
+    public void testsetItemUnit() {
+        myMasterShopProduct.setItemUnit("lb");
+        assertEquals("Product Item Unit", "lb", myMasterShopProduct.getItemUnit());
+    }
+
+    @Test
+    public void testsetItemQuantity() {
+        myMasterShopProduct.setItemQuantity(10);
+        assertEquals("Product Item Unit", 10, myMasterShopProduct.getItemQuantity());
+    }
+
 
 }
 

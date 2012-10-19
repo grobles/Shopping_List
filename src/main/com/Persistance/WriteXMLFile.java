@@ -3,6 +3,7 @@ package com.Persistance;
 import com.Category;
 import com.Product;
 import com.Shop;
+import com.ShoppingList;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -15,35 +16,42 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.util.Collection;
+import java.util.List;
 
 /**
  * @author grobles
  */
 public class WriteXMLFile {
 
-    Collection<Shop> shopList;
-    Collection<Category> categoryList;
-    Collection<Product> productList;
+    List<Shop> shopList;
+    List<Category> categoryList;
+    List<Product> productList;
+    List<ShoppingList> shoppingLists;
     String fileName;
+    RecordSeeker recordseeker;
 
     /**
-     * @param filename
-     * @param dc
+     * @param
+     * @param
      */
-    public WriteXMLFile(String filename, DataContainers dc) {
+    public WriteXMLFile(RecordSeeker rs) {
+        recordseeker = rs;
+        shopList = recordseeker.getShopList();
+        categoryList = recordseeker.getcategoryList();
+        productList = recordseeker.getProductList();
+        shoppingLists = recordseeker.getShoppingList();
+        fileName = recordseeker.getFilename();
 
-
-        shopList = dc.getShopList();
-        categoryList = dc.getCategoryList();
-        productList = dc.getProductList();
-        fileName = filename;
     }
 
     /**
+     * method: Overload constructor to be able to test
      *
+     * @param
      */
-    public void writeFile() {
+
+
+    void writeFile() {
 
         try {
 
@@ -108,6 +116,43 @@ public class WriteXMLFile {
                 Element productunit = doc.createElement("ProductUnit");
                 product.appendChild(productunit);
                 productunit.appendChild(doc.createTextNode(pr.getItemUnit()));
+            }
+            // Products elements
+            Element ShoppingLists = doc.createElement("ShoppingLists");
+            rootElement.appendChild(ShoppingLists);
+
+            // product elements
+
+            for (ShoppingList list : shoppingLists) {
+                Element ShoppingList = doc.createElement("ShoppingList");
+                ShoppingLists.appendChild(ShoppingList);
+                Element shoppingListName = doc.createElement("ShoppingListName");
+                ShoppingList.appendChild(shoppingListName);
+                shoppingListName.appendChild(doc.createTextNode(list.getItemName()));
+
+
+                Element shoppingListproducts = doc.createElement("ShoppingListProducts");
+                ShoppingList.appendChild(shoppingListproducts);
+
+                for (Product pr : list.getProductsList()) {
+                    Element shoppingproduct = doc.createElement("ShoppingProduct");
+                    shoppingListproducts.appendChild(shoppingproduct);
+                    Element productname = doc.createElement("ProductName");
+                    shoppingproduct.appendChild(productname);
+                    productname.appendChild(doc.createTextNode(pr.getItemName()));
+                    Element productcategory = doc.createElement("ProductCategory");
+                    shoppingproduct.appendChild(productcategory);
+                    productcategory.appendChild(doc.createTextNode(pr.getItemCategory().getItemName()));
+                    Element productshop = doc.createElement("ProductShop");
+                    shoppingproduct.appendChild(productshop);
+                    productshop.appendChild(doc.createTextNode(pr.getItemShop().getItemName()));
+                    Element productqty = doc.createElement("ProductQuantity");
+                    shoppingproduct.appendChild(productqty);
+                    productqty.appendChild(doc.createTextNode(Integer.toString(pr.getItemQuantity())));
+                    Element productunit = doc.createElement("ProductUnit");
+                    shoppingproduct.appendChild(productunit);
+                    productunit.appendChild(doc.createTextNode(pr.getItemUnit()));
+                }
             }
 
 

@@ -30,4 +30,11 @@ public class ValidateInput {
         }
         return false;
     }
+
+    public static boolean isProduct(String digits) {
+        if (digits.matches("^[0-9]+$")) {
+            return true;
+        }
+        return false;
+    }
 }

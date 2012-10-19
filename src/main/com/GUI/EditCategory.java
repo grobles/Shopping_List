@@ -14,7 +14,7 @@ import javax.swing.*;
  */
 public class EditCategory extends JFrame {
 
-    RecordSeeker recordSeekerCategory;
+    RecordSeeker recordSeeker;
     MainForm mainForm;
 
     /**
@@ -22,7 +22,7 @@ public class EditCategory extends JFrame {
      */
     public EditCategory(MainForm mainform) {
         mainForm = mainform;
-        recordSeekerCategory = new RecordSeeker("Category");
+        recordSeeker = new RecordSeeker();
         initComponents();
 
     }
@@ -165,7 +165,7 @@ public class EditCategory extends JFrame {
         String name = jTextFieldCategoryName.getText();
 
         if (ValidateInput.isText(name)) {
-            Category category = (Category) recordSeekerCategory.findItem(name);
+            Category category = (Category) recordSeeker.findItem(name, "Category");
             String message = "Category not found";
             if (category != null) {
                 message = "Category '" + name + "' found";
@@ -175,13 +175,15 @@ public class EditCategory extends JFrame {
                 int selection = JOptionPane.showConfirmDialog(frame, message + "\nWould you like to create it?");
                 if (selection == 0) {
                     Category newCategory = new Category(name);
-                    recordSeekerCategory.addItem(newCategory);
-                    recordSeekerCategory.writToXml();
+                    recordSeeker.addItem(newCategory, "Category");
+                    recordSeeker.writToXml();
                     JOptionPane.showMessageDialog(frame, name + " has been saved as a new Category");
                 }
             }
+        } else {
+            JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
         }
-        JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
+
         jTextFieldCategoryName.setText("");
         jTextFieldCategoryName.requestFocus();
     }
@@ -193,7 +195,7 @@ public class EditCategory extends JFrame {
         String categoryName = jTextFieldCategoryName.getText();
 
         if (ValidateInput.isText(categoryName)) {
-            Category categoryFound = (Category) recordSeekerCategory.findItem(categoryName);
+            Category categoryFound = (Category) recordSeeker.findItem(categoryName, "Category");
             if (categoryFound != null) {
                 JOptionPane.showMessageDialog(frame, "'" + categoryName + "' already exists.");
             } else {
@@ -204,13 +206,17 @@ public class EditCategory extends JFrame {
                         JOptionPane.YES_NO_OPTION);
                 if (n == 0) {
                     Category newCategory = new Category(categoryName);
-                    recordSeekerCategory.addItem(newCategory);
-                    recordSeekerCategory.writToXml();
+                    recordSeeker.addItem(newCategory, "Category");
+                    recordSeeker.writToXml();
                     JOptionPane.showMessageDialog(frame, "Category saved");
+                    mainForm.jComboBoxCategory.setModel(new javax.swing.DefaultComboBoxModel(recordSeeker.setStringArray(recordSeeker.getcategoryList())));
                 }
             }
+
+        } else {
+            JOptionPane.showMessageDialog(frame, "'" + categoryName + "' is not a valid Category name.\nTry again.");
         }
-        JOptionPane.showMessageDialog(frame, "'" + categoryName + "' is not a valid Category name.\nTry again.");
+
         jTextFieldCategoryName.setText("");
         jTextFieldCategoryName.requestFocus();
     }
@@ -222,7 +228,7 @@ public class EditCategory extends JFrame {
         String name = jTextFieldCategoryName.getText();
 
         if (ValidateInput.isText(name)) {
-            Category categoryFound = (Category) recordSeekerCategory.findItem(name);
+            Category categoryFound = (Category) recordSeeker.findItem(name, "Category");
             if (categoryFound == null) {
                 JOptionPane.showMessageDialog(frame, "The Category '" + name + "' was not found");
                 jTextFieldCategoryName.requestFocus();
@@ -234,13 +240,15 @@ public class EditCategory extends JFrame {
                         JOptionPane.YES_NO_OPTION
                 );
                 if (n == 0) {
-                    recordSeekerCategory.deleteProduct(categoryFound);
-                    recordSeekerCategory.writToXml();
+                    recordSeeker.deleteProduct(categoryFound, "Category");
+                    recordSeeker.writToXml();
                     JOptionPane.showMessageDialog(frame, "'" + name + "' has been deleted.");
                 }
             }
+        } else {
+
+            JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
         }
-        JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Category name.\nTry again.");
         jTextFieldCategoryName.setText("");
         jTextFieldCategoryName.requestFocus();
     }

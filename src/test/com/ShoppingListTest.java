@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -22,7 +22,7 @@ public class ShoppingListTest {
     private final Product mockProduct = mock(Product.class);
     private final Product mockProduct2 = mock(Product.class);
     private final String ListName = new String("newShoppingList");
-    Collection<Product> ProductList = new ArrayList<Product>();
+    List<Product> ProductList = new ArrayList<Product>();
     ShoppingList newList;
 
 
@@ -59,7 +59,7 @@ public class ShoppingListTest {
 
     @Test
     public void testSetProductList() {
-        Collection<Product> newProductList = ProductList;
+        List<Product> newProductList = ProductList;
         newProductList.add(mockProduct);
         newList.setProductsList(newProductList);
         int size = newList.getProductsList().size();
