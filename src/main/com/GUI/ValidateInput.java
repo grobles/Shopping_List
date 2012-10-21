@@ -1,11 +1,10 @@
 package com.GUI;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Brian
+ * Class: ValidateInput
+ * Description: Used to validate user input prior to adding teh data to the lists
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 10/14/12
- * Time: 5:35 AM
- * To change this template use File | Settings | File Templates.
  */
 public class ValidateInput {
 
@@ -14,7 +13,8 @@ public class ValidateInput {
      * @return bool true if only letters, false otherwise
      */
     public static boolean isText(String input) {
-        if (input.matches("^[a-zA-Z ]+$")) {
+        // matches       any upper or lowercase letters only
+        if (input.matches("^[a-zA-Z ']+$")) {
             return true;
         }
         return false;
@@ -25,14 +25,16 @@ public class ValidateInput {
      * @return bool true if only digits, false otherwise
      */
     public static boolean isDigit(String digits) {
-        if (digits.matches("^[0-9]+$")) {
+        //matches        any digit 0-9
+        if (digits.matches("\\d+?")) {
             return true;
         }
         return false;
     }
 
-    public static boolean isProduct(String digits) {
-        if (digits.matches("^[0-9]+$")) {
+    public static boolean isDecimal(String digits) {
+        //matches         any digit, 0 or 1 decimal points, at least one digit following the decimal
+        if (digits.matches("\\d+([.{0,1}]\\d+)?")) {
             return true;
         }
         return false;

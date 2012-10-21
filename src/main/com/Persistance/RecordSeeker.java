@@ -6,10 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Class: Record Seeker Description: This class with hold the code needed to get
- * records from the container. It will help sort the records , get specific data
- * etc.. Author: Brian Arnold & Guadalupe Robles Gil Date: 27/09/12 Time: 08:11
- * PM *
+ * Class: Record Seeker
+ * Description: This class with hold the code needed to get records from the container.
+ * It will help sort the records , get specific data etc..
+ * Author: Brian Arnold & Guadalupe Robles Gil
+ * Date: 27/09/12
+ * Time: 08:11 PM *
  */
 public class RecordSeeker {
 
@@ -28,7 +30,6 @@ public class RecordSeeker {
     }
 
     public RecordSeeker(String fileName) {
-
         filename = fileName;
         rxml = new ReadXMLFile(filename);
         dc = rxml.readDC();
@@ -86,7 +87,6 @@ public class RecordSeeker {
         wxml.writeFile();
     }
 
-
     /**
      * @param itemName
      * @return
@@ -100,14 +100,15 @@ public class RecordSeeker {
             List = dc.getCategoryList();
         } else if (itemClass.equals("Product")) {
             List = dc.getProductList();
+        } else if (itemClass.equals("ShoppingList")) {
+            List = dc.getShoppingLists();
         }
 
         for (Item item : List) {
             if (item.getItemName().equalsIgnoreCase(itemName)) {
                 itemFound = item;
-
+                break;
             }
-
         }
         return itemFound;
     }
@@ -147,6 +148,4 @@ public class RecordSeeker {
         }
         return comboArray;
     }
-
-
 }

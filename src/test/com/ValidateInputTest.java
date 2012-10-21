@@ -6,46 +6,59 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Brian
+ * Class: ValidateInputTest
+ * Description: Tests for teh ValidateInput class
+ * Author: Brian Arnold & Guadalupe Robles Gil
  * Date: 10/14/12
- * Time: 5:33 AM
- * To change this template use File | Settings | File Templates.
  */
 public class ValidateInputTest {
 
-    private String validText, invalidText;
-    private String validDigits, invalidDigits;
+    private String validText, invalidText, moreValidText;
+    private String validDigits, invalidDigits, moreInvalidText;
+    private String validDecimal, invalidDecimal;
 
     /**
      * setup the test conditions
      */
     @Before
     public void setup() {
-        validText = "Juice";
+        validText = "abcdefghijklmnopqrstuvwxyz's ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         invalidText = "12 Cookies";
-        validDigits = "11";
+        moreInvalidText = "peas & carrots";
+        validDigits = "0123456789";
         invalidDigits = "eighteen";
+        validDecimal = "12.3";
+        invalidDecimal = "12.3.2";
     }
 
     /**
      * Exercise the tests for text
      */
     @Test
-    public void testText() {
+    public void testIsText() {
 
         Assert.assertTrue("Valid Text", ValidateInput.isText(validText));
         Assert.assertFalse("Invalid Text", ValidateInput.isText(invalidText));
+        Assert.assertFalse("Invalid Text with special char", ValidateInput.isText(moreInvalidText));
     }
 
     /**
      * Exercise the tests for digits
      */
     @Test
-    public void testDigits() {
+    public void testIsDigits() {
         Assert.assertTrue("Valid Digits", ValidateInput.isDigit(validDigits));
-        Assert.assertFalse("Valid Digits", ValidateInput.isDigit(invalidDigits));
+        Assert.assertFalse("Invalid Digits", ValidateInput.isDigit(invalidDigits));
+    }
 
+    /**
+     * Exercise the tests for decimals
+     */
+    @Test
+    public void testIsDecimal() {
+        Assert.assertTrue("Valid Decimal", ValidateInput.isDecimal(validDecimal));
+        Assert.assertTrue("Valid Decimal", ValidateInput.isDecimal(validDigits));
+        Assert.assertFalse("Invalid Decimal", ValidateInput.isDecimal(invalidDecimal));
     }
 
 
