@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.GUI;
 
 import com.Comparators.ByCategory;
 import com.Comparators.ByName;
 import com.Comparators.ByShop;
+import com.Persistance.PrintLists;
 import com.Persistance.RecordSeeker;
 import com.Product;
 import com.ShoppingList;
@@ -356,7 +353,18 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        String list = JOptionPane.showInputDialog("Enter the name of the list to print.");
+
+        if (ValidateInput.isText(list)) {
+            ShoppingList aShoppingList = (ShoppingList) recordSeeker.findItem(list, "ShoppingList");
+
+            if (aShoppingList != null) {
+
+                new PrintLists(aShoppingList);
+            }
+        } else {
+            JOptionPane.showMessageDialog(new JFrame(), list + " is not a valid list name.");
+        }
     }
 
     private void jComboBoxCategoryActionPerformed(java.awt.event.ActionEvent evt) {
