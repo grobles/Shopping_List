@@ -15,10 +15,11 @@ import java.util.List;
  */
 public class RecordSeeker {
 
-    private List<Item> List;
-    private DataContainers dc;
-    private ReadXMLFile rxml;
-    String filename;
+
+    private final DataContainers dc;
+    private final ReadXMLFile rxml;
+    private final String filename;
+
 
     /**
      * @param
@@ -64,21 +65,6 @@ public class RecordSeeker {
         return dc.getShoppingLists();
     }
 
-
-    /**
-     * @param item
-     */
-    public void addItem(Item item, String itemClass) {
-        if (itemClass.equals("Shop")) {
-            List = dc.getShopList();
-        } else if (itemClass.equals("Category")) {
-            List = dc.getCategoryList();
-        } else if (itemClass.equals("Product")) {
-            List = dc.getProductList();
-        }
-        List.add(item);
-    }
-
     /**
      *
      */
@@ -89,44 +75,19 @@ public class RecordSeeker {
 
     /**
      * @param itemName
+     *
      * @return
      */
-    public Item findItem(String itemName, String itemClass) {
+    public Item findItem(String itemName, List<Item> list) {
 
         Item itemFound = null;
-        if (itemClass.equals("Shop")) {
-            List = dc.getShopList();
-        } else if (itemClass.equals("Category")) {
-            List = dc.getCategoryList();
-        } else if (itemClass.equals("Product")) {
-            List = dc.getProductList();
-        } else if (itemClass.equals("ShoppingList")) {
-            List = dc.getShoppingLists();
-        }
-
-        for (Item item : List) {
+        for (Item item : list) {
             if (item.getItemName().equalsIgnoreCase(itemName)) {
                 itemFound = item;
                 break;
             }
         }
         return itemFound;
-    }
-
-    /**
-     * method: findItem Given the name it returns an Item
-     *
-     * @param itemToDelete
-     */
-    public void deleteProduct(Item itemToDelete, String itemClass) {
-        if (itemClass.equals("Shop")) {
-            List = dc.getShopList();
-        } else if (itemClass.equals("Category")) {
-            List = dc.getCategoryList();
-        } else if (itemClass.equals("Product")) {
-            List = dc.getProductList();
-        }
-        List.remove(itemToDelete);
     }
 
     /**

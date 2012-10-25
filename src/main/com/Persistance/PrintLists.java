@@ -17,7 +17,7 @@ import java.awt.print.PrinterJob;
  */
 
 public class PrintLists implements Printable {
-    Item data;
+    private final Item data;
 
     //TODO should take a List in the constructor
     //constructor

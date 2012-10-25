@@ -25,7 +25,7 @@ public class RecordSeekerTest {
     private final Category mockCat1 = mock(Category.class);
     private final Category mockCat2 = mock(Category.class);
     private final Shop mockShop1 = mock(Shop.class);
-    RecordSeeker recordSeeker;
+    private RecordSeeker recordSeeker;
 
 
     /**
@@ -60,11 +60,11 @@ public class RecordSeekerTest {
     @Test
     public void testFindProduct() {
 
-        recordSeeker.addItem(mockProd1, "Product");
-        recordSeeker.addItem(mockProd2, "Product");
+        recordSeeker.getProductList().add(mockProd1);
+        recordSeeker.getProductList().add(mockProd2);
         when(mockProd2.getItemName()).thenReturn("Alpha");
         when(mockProd1.getItemName()).thenReturn("Beta");
-        String nameOfItem = recordSeeker.findItem("Alpha", "product").getItemName();
+        String nameOfItem = recordSeeker.findItem("Alpha", recordSeeker.getProductList()).getItemName();
         assertEquals("Name ", "Alpha", nameOfItem);
 
     }
@@ -75,9 +75,9 @@ public class RecordSeekerTest {
     @Test
     public void testFindShop() {
 
-        recordSeeker.addItem(mockShop1, "Shop");
+        recordSeeker.getShopList().add(mockShop1);
         when(mockShop1.getItemName()).thenReturn("Alpha");
-        String nameOfItem = recordSeeker.findItem("Alpha", "Shop").getItemName();
+        String nameOfItem = recordSeeker.findItem("Alpha", recordSeeker.getShopList()).getItemName();
         assertEquals("Name ", "Alpha", nameOfItem);
 
     }
@@ -100,13 +100,13 @@ public class RecordSeekerTest {
     @Test
     public void testDeleteProduct() {
 
-        recordSeeker.addItem(mockCat1, "Category");
-        recordSeeker.addItem(mockCat2, "Category");
+        recordSeeker.getcategoryList().add(mockCat1);
+        recordSeeker.getcategoryList().add(mockCat2);
         when(mockCat2.getItemName()).thenReturn("Alpha");
         when(mockCat1.getItemName()).thenReturn("Beta");
         int catsize = recordSeeker.getcategoryList().size();
-        Category category = (Category) recordSeeker.findItem("Alpha", "Category");
-        recordSeeker.deleteProduct(category, "Category");
+        Category category = (Category) recordSeeker.findItem("Alpha", recordSeeker.getcategoryList());
+        recordSeeker.getcategoryList().remove(category);
         int newCatSize = recordSeeker.getcategoryList().size();
         assertEquals("Size ", catsize - 1, newCatSize);
 

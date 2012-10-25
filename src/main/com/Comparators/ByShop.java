@@ -5,7 +5,9 @@ import com.Product;
 import java.util.Comparator;
 
 /**
- * Class: Description: Author: Brian Arnold & Guadalupe Robles Gil Date: 9/10/12
+ * Class: ByShop
+ * Description:This Class will help to sort Products by Shop
+ * Author: Brian Arnold & Guadalupe Robles Gil Date: 9/10/12
  * Time: 12:52 PM *
  */
 public class ByShop implements Comparator {
@@ -13,6 +15,7 @@ public class ByShop implements Comparator {
     /**
      * @param o1
      * @param o2
+     *
      * @return
      */
     public int compare(Object o1, Object o2) {

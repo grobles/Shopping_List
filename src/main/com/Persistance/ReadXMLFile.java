@@ -24,20 +24,20 @@ import java.util.List;
 /**
  * @author grobles
  */
-public class ReadXMLFile {
+class ReadXMLFile {
 
-    private static String fileName;
+
     private static DataContainers dc;
     private static File fXmlFile;
-    private static DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+    private static final DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 
     /**
      * @param filename
      */
     ReadXMLFile(String filename) {
-        fileName = filename;
+
         dc = DataContainers.getInstance();
-        fXmlFile = new File(fileName);
+        fXmlFile = new File(filename);
     }
 
     private static void readShops() {
@@ -149,7 +149,7 @@ public class ReadXMLFile {
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
                     Element eElement = (Element) nNode;
-                    String name = new String(getTagValue("ShoppingListName", eElement));
+                    String name = getTagValue("ShoppingListName", eElement);
 
                     NodeList ShoppingProductList = doc.getElementsByTagName("ShoppingProduct");
                     List<Product> productList = new ArrayList<Product>();

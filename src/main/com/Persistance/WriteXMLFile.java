@@ -21,14 +21,14 @@ import java.util.List;
 /**
  * @author grobles
  */
-public class WriteXMLFile {
+class WriteXMLFile {
 
-    List<Shop> shopList;
-    List<Category> categoryList;
-    List<Product> productList;
-    List<ShoppingList> shoppingLists;
-    String fileName;
-    RecordSeeker recordseeker;
+    private final List<Shop> shopList;
+    private final List<Category> categoryList;
+    private final List<Product> productList;
+    private final List<ShoppingList> shoppingLists;
+    private final String fileName;
+    private final RecordSeeker recordseeker;
 
     /**
      * @param

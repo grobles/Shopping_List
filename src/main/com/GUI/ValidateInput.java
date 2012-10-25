@@ -10,6 +10,7 @@ public class ValidateInput {
 
     /**
      * @param input String to be tested
+     *
      * @return bool true if only letters, false otherwise
      */
     public static boolean isText(String input) {
@@ -22,11 +23,12 @@ public class ValidateInput {
 
     /**
      * @param digits String to be tested
+     *
      * @return bool true if only digits, false otherwise
      */
     public static boolean isDigit(String digits) {
         //matches        any digit 0-9
-        if (digits.matches("\\d+?")) {
+        if (digits.matches("\\d+?") || digits.equals("")) {
             return true;
         }
         return false;

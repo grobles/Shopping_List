@@ -14,13 +14,13 @@ import java.util.List;
  * information Author: Brian Arnold & Guadalupe Robles Gil Date: 23/09/12 Time:
  * 09:51 PM *
  */
-public class DataContainers {
+class DataContainers {
 
-    private static DataContainers ourInstance = new DataContainers();
+    private static final DataContainers ourInstance = new DataContainers();
     private List<Product> productList = new ArrayList<Product>();
     private List<Category> categoryList = new ArrayList<Category>();
     private List<Shop> shopList = new ArrayList<Shop>();
-    private static String[] unitsList = new String[]{"", "Pieces", "lb"};
+    private static final String[] unitsList = new String[]{"", "Pieces", "lb"};
     private List<ShoppingList> shoppingLists = new ArrayList<ShoppingList>();
 
     private DataContainers() {

@@ -33,8 +33,8 @@ public class WriteandReadXMLFileTest {
 
     public void testWriteXMLAndReadXML() {
         int size1 = recordSeeker.getShopList().size();
-        recordSeeker.addItem(mockShop, "Shop");
-        recordSeeker.addItem(mockShop2, "Shop");
+        recordSeeker.getShopList().add(mockShop);
+        recordSeeker.getShopList().add(mockShop2);
         when(mockShop.getItemName()).thenReturn("Alpha");
         when(mockShop2.getItemName()).thenReturn("Beta");
         recordSeeker.writToXml();

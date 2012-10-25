@@ -21,9 +21,9 @@ public class ShoppingListTest {
 
     private final Product mockProduct = mock(Product.class);
     private final Product mockProduct2 = mock(Product.class);
-    private final String ListName = new String("newShoppingList");
-    List<Product> ProductList = new ArrayList<Product>();
-    ShoppingList newList;
+    private final String ListName = "newShoppingList";
+    private final List<Product> ProductList = new ArrayList<Product>();
+    private ShoppingList newList;
 
 
     @Before

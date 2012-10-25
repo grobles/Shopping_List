@@ -11,7 +11,7 @@ import java.util.List;
 public class ShoppingList implements Item {
 
     private String ShoppingListName;
-    List<Product> ProductsList;
+    private List<Product> ProductsList;
 
     /**
      * @param listName

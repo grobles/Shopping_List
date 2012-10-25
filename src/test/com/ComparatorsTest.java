@@ -28,8 +28,8 @@ public class ComparatorsTest {
     private final Product mockProd2 = mock(Product.class);
     private final Category mockCat1 = mock(Category.class);
     private final Category mockCat2 = mock(Category.class);
-    RecordSeeker recordSeeker;
-    Collection<Product> arrayToSort;
+    private RecordSeeker recordSeeker;
+    private Collection<Product> arrayToSort;
     private final Shop mockShop1 = mock(Shop.class);
     private final Shop mockShop2 = mock(Shop.class);
 
@@ -43,8 +43,8 @@ public class ComparatorsTest {
     @Test
     public void testSort() {
 
-        recordSeeker.addItem(mockProd1, "Product");
-        recordSeeker.addItem(mockProd2, "Product");
+        recordSeeker.getProductList().add(mockProd1);
+        recordSeeker.getProductList().add(mockProd2);
         when(mockProd2.getItemCategory()).thenReturn(mockCat1);
         when(mockProd1.getItemCategory()).thenReturn(mockCat2);
         when(mockProd2.getItemShop()).thenReturn(mockShop1);
