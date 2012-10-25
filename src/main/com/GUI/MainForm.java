@@ -8,12 +8,13 @@ import com.GUI.ListPanels.CategoryList;
 import com.GUI.ListPanels.ProductList;
 import com.GUI.ListPanels.ShopList;
 import com.GUI.ListPanels.ShoppingLists;
+import com.Item;
 import com.Persistance.RecordSeeker;
-import com.Product;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class: MainForm
@@ -32,7 +33,7 @@ public class MainForm extends JFrame {
      */
     public MainForm() {
         recordSeeker = new RecordSeeker();
-        MainPanel = new EditShoppingList(new ArrayList<Product>());
+        MainPanel = new EditShoppingList(new ArrayList<Item>());
         initComponents();
 
     }
@@ -236,7 +237,7 @@ public class MainForm extends JFrame {
      */
     private void jMenuItemSendEmailActionPerformed(java.awt.event.ActionEvent evt) {
 
-        String[][] stringToPrint = MainPanel.getStringList();
+        List stringToPrint = MainPanel.getItemList();
     }
 
     /**
@@ -244,7 +245,7 @@ public class MainForm extends JFrame {
      */
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
 
-        String[][] stringToPrint = MainPanel.getStringList();
+        List listToPrint = MainPanel.getItemList();
     }
 
     /**
@@ -262,7 +263,7 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shopping MenuIten
      */
     private void jMenuItemEdtShoppingActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditShoppingList(new ArrayList<Product>());
+        MainPanel = new EditShoppingList(new ArrayList<Item>());
         setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);

@@ -6,6 +6,8 @@ package com.GUI;
 
 import com.Persistance.RecordSeeker;
 
+import java.util.List;
+
 /**
  * Class: MainPanel
  * Description: MainPanel is an Interface to hold all the Jpanels to be presented in the MainForm
@@ -24,5 +26,6 @@ public interface MainPanel {
      *
      * @return
      */
-    public String[][] getStringList();
+
+    public List getItemList();
 }

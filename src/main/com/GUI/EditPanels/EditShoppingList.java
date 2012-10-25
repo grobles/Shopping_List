@@ -4,6 +4,7 @@ import com.Comparators.ByCategory;
 import com.Comparators.ByName;
 import com.Comparators.ByShop;
 import com.GUI.MainPanel;
+import com.Item;
 import com.Product;
 import com.ShoppingList;
 
@@ -22,7 +23,7 @@ import java.util.List;
  */
 public class EditShoppingList extends JPanel implements MainPanel {
 
-    private List<Product> ItemList;
+    private List<Item> ItemList;
     private String[][] stringList;
 
     /**
@@ -30,9 +31,9 @@ public class EditShoppingList extends JPanel implements MainPanel {
      *
      * @param list
      */
-    public EditShoppingList(List<Product> list) {
+    public EditShoppingList(List<Item> list) {
         ItemList = list;
-        String[] comboCategory = recordSeeker.setStringArray(recordSeeker.getcategoryList());
+        String[] comboCategory = recordSeeker.setSingleStringArray(recordSeeker.getcategoryList());
         initComponents();
         jComboBoxCategory.setModel(new DefaultComboBoxModel(comboCategory));
         setComboProduct();
@@ -41,12 +42,12 @@ public class EditShoppingList extends JPanel implements MainPanel {
     }
 
     /**
-     * Method: getStringList . It returns the string that will be printed
+     * This method is just to return the ItemList to be printed
      *
      * @return
      */
-    public String[][] getStringList() {
-        return stringList = setStringShoppingPanel(ItemList);
+    public List getItemList() {
+        return ItemList;
     }
 
     /**
@@ -54,7 +55,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
      *
      * @return
      */
-
     private void initComponents() {
 
         jLabelProduct = new javax.swing.JLabel();
@@ -149,7 +149,7 @@ public class EditShoppingList extends JPanel implements MainPanel {
      * @return
      */
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
-        ItemList = new ArrayList<Product>();
+        ItemList = new ArrayList<Item>();
         setTable();
     }
 
@@ -263,7 +263,13 @@ public class EditShoppingList extends JPanel implements MainPanel {
             } else if (recordSeeker.findItem(name, recordSeeker.getShoppingList()) != null) {
                 JOptionPane.showMessageDialog(new JFrame(), "That name already exists");
             } else {
-                ShoppingList ShoppingList = new ShoppingList(name, ItemList);
+                Iterator iterator = ItemList.iterator();
+                List<Product> newList = new ArrayList<Product>();
+                while (iterator.hasNext()) {
+                    Product product = (Product) iterator.next();
+                    newList.add(product);
+                }
+                ShoppingList ShoppingList = new ShoppingList(name, newList);
                 recordSeeker.getShoppingList().add(ShoppingList);
                 recordSeeker.writToXml();
             }
@@ -281,14 +287,15 @@ public class EditShoppingList extends JPanel implements MainPanel {
         String categoryName;
         try {
             categoryName = jComboBoxCategory.getSelectedItem().toString();
-            List<Product> productList = (List<Product>) recordSeeker.getProductList();
-            List<Product> list = new ArrayList<Product>();
-            for (Product product : productList) {
+            List<Item> productList = recordSeeker.getProductList();
+            List<Item> list = new ArrayList<Item>();
+            for (Item pro : productList) {
+                Product product = (Product) pro;
                 if (product.getItemCategory().getItemName().equals(categoryName)) {
                     list.add(product);
                 }
             }
-            jComboBoxProduct.setModel(new javax.swing.DefaultComboBoxModel(recordSeeker.setStringArray(list)));
+            jComboBoxProduct.setModel(new javax.swing.DefaultComboBoxModel(recordSeeker.setSingleStringArray(list)));
         } catch (Exception ex) {
         }
 

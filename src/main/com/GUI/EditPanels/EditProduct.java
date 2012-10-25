@@ -38,8 +38,8 @@ public class EditProduct extends EditPanels {
     public EditProduct(List<Item> list) {
         super(list);
         comboUnit = recordSeeker.getUnitsList();
-        comboCategory = recordSeeker.setStringArray(recordSeeker.getcategoryList());
-        comboShop = recordSeeker.setStringArray(recordSeeker.getShopList());
+        comboCategory = recordSeeker.setSingleStringArray(recordSeeker.getcategoryList());
+        comboShop = recordSeeker.setSingleStringArray(recordSeeker.getShopList());
         initComponents2();
         setLayout();
     }

@@ -33,7 +33,7 @@ public class EditShop extends EditPanels {
     @Override
     public void addItem(String name) {
         Shop newshop = new Shop(name);
-        List.add(newshop);
+        ItemList.add(newshop);
         JOptionPane.showMessageDialog(frame, name + " has been saved as a new Item");
         recordSeeker.writToXml();
 

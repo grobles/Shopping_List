@@ -8,11 +8,9 @@ import com.Comparators.ByCategory;
 import com.Comparators.ByName;
 import com.Comparators.ByShop;
 import com.Item;
-import com.Product;
 
 import javax.swing.*;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -32,31 +30,6 @@ public class ProductList extends ShowLists {
         super(itemList);
         jComboBoxSort.setModel(new DefaultComboBoxModel(new String[]{"Sort", "Sort Alphabetically", "Sort By Category", "Sort ByCategory Shop"}));
 
-    }
-
-    /**
-     * Creates the StringList for the Table and to Print. It overrides super because Product has 5 columns
-     *
-     * @return
-     */
-    @Override
-    public String[][] setStringShoppingPanel() {
-
-        int size = ItemList.size();
-
-        String StringArray[][] = new String[size][5];
-        Iterator iterator = ItemList.iterator();
-        while (iterator.hasNext()) {
-            for (int row = 0; row < ItemList.size(); row++) {
-                Product product = (Product) iterator.next();
-                StringArray[row][0] = product.getItemName();
-                StringArray[row][1] = product.getItemCategory().getItemName();
-                StringArray[row][2] = product.getItemShop().getItemName();
-                StringArray[row][3] = Integer.toString(product.getItemQuantity());
-                StringArray[row][4] = product.getItemUnit();
-            }
-        }
-        return StringArray;
     }
 
     /**
@@ -84,7 +57,7 @@ public class ProductList extends ShowLists {
     @Override
     public void setTable() {
         jTableShoppingProducts.setModel((new javax.swing.table.DefaultTableModel(
-                setStringShoppingPanel(),
+                recordSeeker.setStringProductArray(ItemList),
                 new String[]{
                         "Name", "Category", "Shop", "Quantity", "Units"
                 })));

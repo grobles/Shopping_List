@@ -37,7 +37,7 @@ public class EditCategory extends EditPanels {
     @Override
     public void addItem(String name) {
         Category newCategory = new Category(name);
-        List.add(newCategory);
+        ItemList.add(newCategory);
         JOptionPane.showMessageDialog(frame, name + " has been saved as a new Item");
         recordSeeker.writToXml();
 

@@ -15,12 +15,12 @@ import java.util.List;
  */
 public abstract class EditPanels extends JPanel implements MainPanel {
 
-    final List<Item> List;
+    List<Item> ItemList;
     JButton jButtonClear;
     JButton jButtonDelete;
     JButton jButtonSave;
     JButton jButtonSearch;
-    private JLabel jLabelName;
+    JLabel jLabelName;
     JTextField jTextFieldName;
     JFrame frame;
 
@@ -30,7 +30,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
      * @param list
      */
     EditPanels(List<Item> list) {
-        List = list;
+        ItemList = list;
         initComponents();
     }
 
@@ -39,8 +39,8 @@ public abstract class EditPanels extends JPanel implements MainPanel {
      *
      * @return
      */
-    public String[][] getStringList() {
-        return new String[0][0];
+    public List getItemList() {
+        return ItemList;
     }
 
     /**
@@ -129,7 +129,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         String name = jTextFieldName.getText();
 
         if (ValidateInput.isText(name)) {
-            Item item = recordSeeker.findItem(name, List);
+            Item item = recordSeeker.findItem(name, ItemList);
             String message = "Item not found";
             if (item != null) {
                 Search(item);
@@ -159,7 +159,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         String name = jTextFieldName.getText();
 
         if (ValidateInput.isText(name)) {
-            Item itemFound = recordSeeker.findItem(name, List);
+            Item itemFound = recordSeeker.findItem(name, ItemList);
             if (itemFound != null) {
                 editProduct(itemFound);
                 JOptionPane.showMessageDialog(frame, "'" + name + "' already exists.");
@@ -190,7 +190,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         String name = jTextFieldName.getText();
 
         if (ValidateInput.isText(name)) {
-            Item itemFound = recordSeeker.findItem(name, List);
+            Item itemFound = recordSeeker.findItem(name, ItemList);
             if (itemFound == null) {
                 JOptionPane.showMessageDialog(frame, "The Item '" + name + "' was not found");
                 jTextFieldName.requestFocus();
@@ -203,7 +203,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
                         JOptionPane.YES_NO_OPTION);
                 if (n == 0) {
                     deleteItem(itemFound);
-                    List.remove(itemFound);
+                    ItemList.remove(itemFound);
                     recordSeeker.writToXml();
                     JOptionPane.showMessageDialog(frame, "'" + name + "' has been deleted.");
                 }

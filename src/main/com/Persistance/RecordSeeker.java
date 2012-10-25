@@ -1,6 +1,7 @@
 package com.Persistance;
 
 import com.Item;
+import com.Product;
 
 import java.util.Iterator;
 import java.util.List;
@@ -96,7 +97,7 @@ public class RecordSeeker {
      *
      * @return
      */
-    public String[] setStringArray(List list) {
+    public String[] setSingleStringArray(List<Item> list) {
         int size = list.size();
         String[] comboArray = new String[size];
         int i = 0;
@@ -108,5 +109,40 @@ public class RecordSeeker {
             i++;
         }
         return comboArray;
+    }
+
+    public String[][] setTableStringArray(List<Item> list) {
+
+        int size = list.size();
+
+        String StringArray[][] = new String[size][1];
+        Iterator iterator = list.iterator();
+        while (iterator.hasNext()) {
+            for (int row = 0; row < list.size(); row++) {
+                Item item = (Item) iterator.next();
+                StringArray[row][0] = item.getItemName();
+
+            }
+        }
+        return StringArray;
+    }
+
+    public String[][] setStringProductArray(List<Item> list) {
+
+        int size = list.size();
+
+        String StringArray[][] = new String[size][5];
+        Iterator iterator = list.iterator();
+        while (iterator.hasNext()) {
+            for (int row = 0; row < list.size(); row++) {
+                Product product = (Product) iterator.next();
+                StringArray[row][0] = product.getItemName();
+                StringArray[row][1] = product.getItemCategory().getItemName();
+                StringArray[row][2] = product.getItemShop().getItemName();
+                StringArray[row][3] = Integer.toString(product.getItemQuantity());
+                StringArray[row][4] = product.getItemUnit();
+            }
+        }
+        return StringArray;
     }
 }

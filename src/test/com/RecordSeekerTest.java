@@ -47,7 +47,7 @@ public class RecordSeekerTest {
     public void testSetStringArray() {
         List<Item> newArray = recordSeeker.getProductList();
         int sizeNewArray = newArray.size();
-        String[] otherArray = recordSeeker.setStringArray(newArray);
+        String[] otherArray = recordSeeker.setSingleStringArray(newArray);
         int otherArraySize = otherArray.length;
         assertEquals("Size ", sizeNewArray, otherArraySize);
 

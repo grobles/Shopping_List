@@ -6,7 +6,6 @@ import com.Item;
 
 import javax.swing.*;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -38,12 +37,12 @@ public abstract class ShowLists extends JPanel implements MainPanel {
     }
 
     /**
-     * Method:getStringList . To get the string to be printed
+     * Method:getItemList . To get the List to be printed
      *
      * @return
      */
-    public String[][] getStringList() {
-        return setStringShoppingPanel();
+    public List getItemList() {
+        return ItemList;
     }
 
     /**
@@ -143,29 +142,9 @@ public abstract class ShowLists extends JPanel implements MainPanel {
      */
     void setTable() {
         jTableShoppingProducts.setModel((new javax.swing.table.DefaultTableModel(
-                setStringShoppingPanel(),
+                recordSeeker.setTableStringArray(ItemList),
                 new String[]{
                         "Name"
                 })));
-    }
-
-    /**
-     * sets the string to be presented in the Tabe
-     *
-     * @return
-     */
-    String[][] setStringShoppingPanel() {
-
-        int size = ItemList.size();
-        String StringArray[][] = new String[size][2];
-
-        Iterator iterator = ItemList.iterator();
-        while (iterator.hasNext()) {
-            for (int row = 0; row < ItemList.size(); row++) {
-                Item item = (Item) iterator.next();
-                StringArray[row][0] = item.getItemName();
-            }
-        }
-        return StringArray;
     }
 }
