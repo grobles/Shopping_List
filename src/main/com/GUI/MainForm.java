@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class MainForm extends JFrame {
 
     private final RecordSeeker recordSeeker;
-    private final MainPanel MainPanel;
+    private MainPanel MainPanel;
 
 
     /**
@@ -225,7 +225,8 @@ public class MainForm extends JFrame {
      * Sets the action for the Openmenuitem
      */
     private void jMenuItemOpenActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new ShoppingLists(recordSeeker.getShoppingList()));
+        MainPanel = new ShoppingLists(recordSeeker.getShoppingList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -250,7 +251,8 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Product MenuIten
      */
     private void jMenuItemEdtProductActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new EditProduct(recordSeeker.getProductList()));
+        MainPanel = new EditProduct(recordSeeker.getProductList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
 
@@ -260,7 +262,8 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shopping MenuIten
      */
     private void jMenuItemEdtShoppingActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new EditShoppingList(new ArrayList<Product>()));
+        MainPanel = new EditShoppingList(new ArrayList<Product>());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -269,7 +272,8 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Category MenuIten
      */
     private void jMenuItemEditCategoryActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new EditCategory(recordSeeker.getcategoryList()));
+        MainPanel = new EditCategory(recordSeeker.getcategoryList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
 
@@ -279,7 +283,8 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shop MenuIten
      */
     private void jMenuItemEditShopActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new EditShop(recordSeeker.getShopList()));
+        MainPanel = new EditShop(recordSeeker.getShopList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
     }
@@ -288,7 +293,8 @@ public class MainForm extends JFrame {
      * Sets the action for the ListProduct MenuIten
      */
     private void jMenuItemListProductsActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new ProductList(recordSeeker.getProductList()));
+        MainPanel = new ProductList(recordSeeker.getProductList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
 
@@ -298,7 +304,8 @@ public class MainForm extends JFrame {
      * Sets the action for the ListCategory MenuIten
      */
     private void jMenuItemListCategoriesActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new CategoryList(recordSeeker.getcategoryList()));
+        MainPanel = new CategoryList(recordSeeker.getcategoryList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -307,7 +314,8 @@ public class MainForm extends JFrame {
      * Sets the action for the ListShop MenuIten
      */
     private void jMenuItemListShopsActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new ShopList(recordSeeker.getShopList()));
+        MainPanel = new ShopList(recordSeeker.getShopList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -316,7 +324,8 @@ public class MainForm extends JFrame {
      * Sets the action for the ListShoppingList MenuIten
      */
     private void jMenuItemListShoppinglistsActionPerformed(java.awt.event.ActionEvent evt) {
-        setLayout(new ShoppingLists(recordSeeker.getShoppingList()));
+        MainPanel = new ShoppingLists(recordSeeker.getShoppingList());
+        setLayout(MainPanel);
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }

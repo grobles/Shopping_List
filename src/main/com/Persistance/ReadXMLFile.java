@@ -104,7 +104,6 @@ class ReadXMLFile {
             Document doc = dBuilder.parse(fXmlFile);
             NodeList PL = doc.getElementsByTagName("Product");
             List<Product> productList = new ArrayList<Product>();
-            System.out.println(PL.getLength());
             for (int temp = 0; temp < PL.getLength(); temp++) {
 
                 Node nNode = PL.item(temp);
@@ -141,7 +140,6 @@ class ReadXMLFile {
             Document doc = dBuilder.parse(fXmlFile);
             NodeList SHL = doc.getElementsByTagName("ShoppingList");
             List<ShoppingList> shoppingLists = new ArrayList<ShoppingList>();
-            System.out.println(SHL.getLength());
             for (int temp = 0; temp < SHL.getLength(); temp++) {
 
 

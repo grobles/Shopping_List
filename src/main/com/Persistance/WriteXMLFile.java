@@ -167,8 +167,6 @@ class WriteXMLFile {
 
             transformer.transform(source, result);
 
-            System.out.println("File saved!");
-
         } catch (ParserConfigurationException pce) {
             pce.printStackTrace();
         } catch (TransformerException tfe) {
