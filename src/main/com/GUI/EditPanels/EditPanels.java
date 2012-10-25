@@ -73,7 +73,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
 
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
-        jLabelName.setText("Category Name");
+        jLabelName.setText("Name");
 
         jButtonSearch.setText("Search");
         jButtonSearch.setName("JButtonSearch");

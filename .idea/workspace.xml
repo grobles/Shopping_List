@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f89ebfc-5f21-4e48-b434-5bdfc8d0ccb0" name="Default" comment="Write and Read to XML">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/GUI/MainForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/com/GUI/ValidateInput.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/ValidateInputTest.java" />
-      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\src\main\com\GUI\Main.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="4f89ebfc-5f21-4e48-b434-5bdfc8d0ccb0" name="Default" comment="Continue with Mainform. Read and Write ShoppingLists.&#10;Command save working">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coverage-error.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataTest.xml" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\DataContainersTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditCategory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditProduct.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes\com\GUI\EditShop.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.DataContainersTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\html\com\1_DataContainersTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\grobles\Documents\universidad\90308\Shopping_List\out\test\Shopping_List\com\DataContainersTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/CategoryTest.class" afterPath="$PROJECT_DIR$/build/classes/com/CategoryTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Product$Builder.class" afterPath="$PROJECT_DIR$/build/classes/com/Product$Builder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Product.class" afterPath="$PROJECT_DIR$/build/classes/com/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/ProductTest.class" afterPath="$PROJECT_DIR$/build/classes/com/ProductTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/RecordSeekerTest.class" afterPath="$PROJECT_DIR$/build/classes/com/RecordSeekerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/Shop.class" afterPath="$PROJECT_DIR$/build/classes/com/Shop.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shopping_List.iml" afterPath="$PROJECT_DIR$/Shopping_List.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.CategoryTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.CategoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.ProductTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.ProductTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.RecordSeekerTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.RecordSeekerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TEST-com.ShopTest.xml" afterPath="$PROJECT_DIR$/build/report/TEST-com.ShopTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/build/report/TESTS-TestSuites.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/all-tests.html" afterPath="$PROJECT_DIR$/build/report/html/all-tests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/allclasses-frame.html" afterPath="$PROJECT_DIR$/build/report/html/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/alltests-fails.html" afterPath="$PROJECT_DIR$/build/report/html/alltests-fails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/0_CategoryTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/0_CategoryTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/2_ProductTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/2_ProductTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/3_RecordSeekerTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/3_RecordSeekerTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/4_ShopTest.html" afterPath="$PROJECT_DIR$/build/report/html/com/4_ShopTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/package-frame.html" afterPath="$PROJECT_DIR$/build/report/html/com/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/com/package-summary.html" afterPath="$PROJECT_DIR$/build/report/html/com/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/report/html/overview-summary.html" afterPath="$PROJECT_DIR$/build/report/html/overview-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.xml" afterPath="$PROJECT_DIR$/data.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java" afterPath="$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" afterPath="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/Shop.java" afterPath="$PROJECT_DIR$/src/main/com/Shop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" afterPath="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" afterPath="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditPanels.java" afterPath="$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditPanels.java" />
     </list>
     <ignored path="Shopping_List.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,21 +64,37 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Shopping_List$RecordSeekerTest.coverage" NAME="RecordSeekerTest Coverage Results" MODIFIED="1350359039336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Shopping_List$ProductTest.coverage" NAME="ProductTest Coverage Results" MODIFIED="1350516088190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Shopping_List$ShopTest.coverage" NAME="ShopTest Coverage Results" MODIFIED="1350268671641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Shopping_List$ComparatorsTest.coverage" NAME="ComparatorsTest Coverage Results" MODIFIED="1350583038311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Shopping_List$WriteandReadXMLFileTest.coverage" NAME="WriteandReadXMLFileTest Coverage Results" MODIFIED="1350359374282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Shopping_List$RecordSeekerTest.coverage" NAME="RecordSeekerTest Coverage Results" MODIFIED="1350516647184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Shopping_List$DataContainersTest.coverage" NAME="DataContainersTest Coverage Results" MODIFIED="1350261665690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Shopping_List$ShopTest.coverage" NAME="ShopTest Coverage Results" MODIFIED="1350489309907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Shopping_List$CategoryTest.coverage" NAME="CategoryTest Coverage Results" MODIFIED="1350489281996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Shopping_List$WriteandReadXMLFileTest.coverage" NAME="WriteandReadXMLFileTest Coverage Results" MODIFIED="1350493823021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Shopping_List$ShoppingListTest.coverage" NAME="ShoppingListTest Coverage Results" MODIFIED="1350489323240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Shopping_List$All_in_Shopping_List.coverage" NAME="All in Shopping_List Coverage Results" MODIFIED="1350263638591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Shopping_List$com_in_Shopping_List.coverage" NAME="com in Shopping_List Coverage Results" MODIFIED="1350359349390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Shopping_List$DataContainersTest.coverage" NAME="DataContainersTest Coverage Results" MODIFIED="1350261665690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Shopping_List$com_in_Shopping_List.coverage" NAME="com in Shopping_List Coverage Results" MODIFIED="1250744991305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Shopping_List$ValidateInputTest.coverage" NAME="ValidateInputTest Coverage Results" MODIFIED="1350489338180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Shopping_List$MainForm.coverage" NAME="MainForm Coverage Results" MODIFIED="1250744895283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.GUI.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
@@ -104,8 +155,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -126,22 +177,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/com/GUI/ValidateImput.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/ValInput.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/ValidateInput.java" />
-        <option value="$PROJECT_DIR$/src/test/com/ValidateInputTest.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/Main.java" />
-        <option value="$PROJECT_DIR$/data.xml" />
-        <option value="$PROJECT_DIR$/src/main/com/Product.java" />
-        <option value="$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Shop.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ComparatorsTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/RecordSeekerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/EditProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/EditCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/com/GUI/EditShop.java" />
+        <option value="$PROJECT_DIR$/src/main/com/ShoppingList.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Persistance/DataContainers.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Persistance/PrintLists.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ListPanels/ProductList.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditProduct.java" />
+        <option value="$PROJECT_DIR$/src/test/com/ShoppingListTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ListPanels/ShowLists.java" />
+        <option value="$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/ListPanels/ShoppingLists.java" />
         <option value="$PROJECT_DIR$/src/main/com/GUI/MainForm.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditShoppingList.java" />
+        <option value="$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditPanels.java" />
       </list>
     </option>
   </component>
@@ -219,20 +270,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shopping_List" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Default">
           <PATH>
@@ -283,6 +320,76 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Shopping_List">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="GUI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
         <subPane subId="All">
           <PATH>
@@ -307,22 +414,36 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shopping_List" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="40" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="40" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="40" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop/src/shop" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="true" />
@@ -334,34 +455,34 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build2" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/com" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/com" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="fileTemplates" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.Comparators" />
       <recent name="com.GUI" />
+      <recent name="com.Comparators" />
       <recent name="com" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -370,6 +491,7 @@
       <recent name="C:\Users\grobles\Documents\universidad\90308\Shopping_List - copia" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.GUI" />
       <recent name="com" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -380,132 +502,9 @@
       <recent name="C:\Users\grobles\Documents\universidad\90308\Shopping_List" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainForm">
-    <configuration default="false" name="RecordSeekerTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.RecordSeekerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ShoppingListTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.ShoppingListTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ShopTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.ShopTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="WriteandReadXMLFileTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Shopping_List" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.WriteandReadXMLFileTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.com in Shopping_List">
     <configuration default="false" name="MainForm" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.GUI.MainForm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -517,6 +516,76 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Shopping_List" />
       <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ComparatorsTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.ComparatorsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EditShoppingList" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.GUI.EditPanels.EditShoppingList" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shopping_List" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in Shopping_List" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Shopping_List" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -541,6 +610,24 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -570,24 +657,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -660,12 +729,14 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -700,14 +771,13 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="7">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ValidateInputTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.com in Shopping_List" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RecordSeekerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ShoppingListTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ShopTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.WriteandReadXMLFileTest" />
-      <item index="6" class="java.lang.String" itemvalue="Application.MainForm" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainForm" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ComparatorsTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.EditShoppingList" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.All in Shopping_List" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -764,7 +834,19 @@
       <created>1350229518340</created>
       <updated>1350229518340</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test with Coverage tool.  Started MainForm">
+      <created>1350360571294</created>
+      <updated>1350360571294</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Continue with Mainform. Read and Write ShoppingLists.&#10;Command save working">
+      <created>1350683774079</created>
+      <updated>1350683774079</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ListPanels , Interface MainPanel and 2 abstract classes to hold the editPanels and the showlist Panels.">
+      <created>1351134152354</created>
+      <updated>1351134152354</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -791,31 +873,31 @@
     <frame x="-8" y="-8" width="1296" height="706" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783884" sideWeight="0.47766045" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6923077" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21333334" sideWeight="0.68686867" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6923077" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.4923077" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21283509" sideWeight="0.6978022" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39579684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3068182" sideWeight="0.19090171" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24102564" sideWeight="0.2003367" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.4923077" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31135532" sideWeight="0.41104794" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11282468" sideWeight="0.6959707" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3021978" sideWeight="0.41104794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20512821" sideWeight="0.3040422" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3198052" sideWeight="0.6959707" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30402932" sideWeight="0.80341184" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2843217" sideWeight="0.5531136" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41758242" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44688645" sideWeight="0.80341184" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20512821" sideWeight="0.6666667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06147541" sideWeight="0.6969697" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06147541" sideWeight="0.34175083" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33150184" sideWeight="0.4923077" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24242425" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -855,7 +937,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated validation tests and added validation GUI forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continue with Mainform. Read and Write ShoppingLists.&#10;Command save working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -875,6 +957,9 @@
     <MESSAGE value="Testing Problems" />
     <MESSAGE value="Input validation stub" />
     <MESSAGE value="Updated validation tests and added validation GUI forms" />
+    <MESSAGE value="Test with Coverage tool.  Started MainForm" />
+    <MESSAGE value="ListPanels , Interface MainPanel and 2 abstract classes to hold the editPanels and the showlist Panels." />
+    <MESSAGE value="Continue with Mainform. Read and Write ShoppingLists.&#10;Command save working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -899,109 +984,162 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="42" selection-start="739" selection-end="739" vertical-scroll-proportion="0.39473686" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ShopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/CategoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="-1.0112677" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="-0.21052632" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/ShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="276" selection-end="276" vertical-scroll-proportion="0.23684211" />
+        <state line="13" column="12" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/DataContainers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/WriteandReadXMLFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1359" selection-end="1359" vertical-scroll-proportion="1.9549296" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Comparators/ByCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="644" selection-end="644" vertical-scroll-proportion="0.771831">
+        <state line="22" column="25" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/Comparators/ByName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="196" selection-end="196" vertical-scroll-proportion="0.32112676">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/RecordSeekerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="37" selection-start="79" selection-end="79" vertical-scroll-proportion="0.14366198">
-          <folding>
-            <element signature="e#1217#1226#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/RecordSeeker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="656" selection-end="656" vertical-scroll-proportion="0.7661972">
+        <state line="20" column="18" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/WriteXMLFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="7" selection-start="700" selection-end="721" vertical-scroll-proportion="0.80994153">
+        <state line="25" column="18" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditCategory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="489" selection-end="510" vertical-scroll-proportion="0.0">
+        <state line="19" column="16" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/ListPanels/ProductList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="23" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ComparatorsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="32" selection-start="937" selection-end="937" vertical-scroll-proportion="0.330855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ShoppingListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="53" selection-start="565" selection-end="565" vertical-scroll-proportion="0.330855">
           <folding>
-            <element signature="e#707#737#0" expanded="true" />
-            <element signature="method#initComponents#0;class#EditCategory#0" expanded="false" />
+            <element signature="e#626#635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/ReadXMLFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="25" selection-start="683" selection-end="683" vertical-scroll-proportion="0.44140625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="57" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.3057554">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#EditProduct#0;class#EditProduct#0" expanded="false" />
+            <element signature="method#Search#0;class#EditProduct#0" expanded="false" />
+            <element signature="docComment;method#clear#0;class#EditProduct#0" expanded="false" />
+            <element signature="method#clear#0;class#EditProduct#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/Persistance/PrintLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="22" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.30584192">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/ListPanels/ShowLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="8" selection-start="5630" selection-end="5630" vertical-scroll-proportion="0.30584192">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getStringList#0;class#ShowLists#0" expanded="false" />
+            <element signature="method#initComponents#0;class#ShowLists#0" expanded="false" />
+            <element signature="method#jButtonDeleteActionPerformed#0;class#ShowLists#0" expanded="false" />
+            <element signature="method#setTable#0;class#ShowLists#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/ListPanels/ShoppingLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="14" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.5223368">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/GUI/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="391" column="26" selection-start="17946" selection-end="17946" vertical-scroll-proportion="0.88596493">
+        <state line="29" column="11" selection-start="740" selection-end="740" vertical-scroll-proportion="0.8776978">
           <folding>
-            <element signature="e#632#662#0" expanded="true" />
             <element signature="method#initComponents#0;class#MainForm#0" expanded="false" />
+            <element signature="method#setLayout#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemOpenActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemSendEmailActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemEdtProductActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemEdtShoppingActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemEditCategoryActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemEditShopActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemListCategoriesActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemListShopsActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemListShoppinglistsActionPerformed#0;class#MainForm#0" expanded="false" />
+            <element signature="method#jMenuItemCloseActionPerformed#0;class#MainForm#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditShop.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditShoppingList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="3" selection-start="9837" selection-end="9837" vertical-scroll-proportion="0.055555556">
+        <state line="269" column="111" selection-start="12958" selection-end="12958" vertical-scroll-proportion="0.6054054">
           <folding>
-            <element signature="e#708#738#0" expanded="true" />
-            <element signature="method#initComponents#0;class#EditShop#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#initComponents#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#jButtonClearActionPerformed#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#jComboBoxSortActionPerformed#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#jButtonAddActionPerformed#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#setTable#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#jComboBoxCategoryActionPerformed#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="method#jButtonSaveActionPerformed#0;class#EditShoppingList#0" expanded="false" />
+            <element signature="e#12722#12731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/GUI/EditPanels/EditPanels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="35" selection-start="3199" selection-end="3199" vertical-scroll-proportion="0.60305345">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getStringList#0;class#EditPanels#0" expanded="false" />
+            <element signature="docComment;method#jButtonClearActionPerformed#0;class#EditPanels#0" expanded="false" />
+            <element signature="docComment;method#jButtonSearchActionPerformed#0;class#EditPanels#0" expanded="false" />
+            <element signature="docComment;method#jButtonSaveActionPerformed#0;class#EditPanels#0" expanded="false" />
+            <element signature="docComment;method#jButtonDeleteActionPerformed#0;class#EditPanels#0" expanded="false" />
+            <element signature="docComment;method#clear#0;class#EditPanels#0" expanded="false" />
+            <element signature="method#deleteItem#0;class#EditPanels#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
     <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="0" name="CategoryTest" package="com" tests="2"
-               time="0.093" timestamp="2012-10-14T23:35:48">
+               time="0.137" timestamp="2012-10-25T02:58:24">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -20,7 +20,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -79,7 +80,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -96,7 +98,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -105,10 +107,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.CategoryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.CategoryTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher5956790656442759994.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit4148094633457232018.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.CategoryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.CategoryTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher3390486253242048836.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit7584942455507519971.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -145,7 +147,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -157,7 +160,7 @@
 
         </properties>
 
-        <testcase classname="com.CategoryTest" name="testSetItemName" time="0.001"/>
+        <testcase classname="com.CategoryTest" name="testSetItemName" time="0.003"/>
 
         <testcase classname="com.CategoryTest" name="testCategory" time="0.0"/>
 
@@ -166,8 +169,8 @@
         <system-err><![CDATA[]]></system-err>
 
     </testsuite>
-    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="1" name="DataContainersTest" package="com" tests="2"
-               time="0.565" timestamp="2012-10-14T23:35:49">
+    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="1" name="ComparatorsTest" package="com" tests="1"
+               time="0.259" timestamp="2012-10-25T02:58:25">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -186,7 +189,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -245,7 +249,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -262,7 +267,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -271,10 +276,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.DataContainersTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.DataContainersTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher4033507331479826774.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit3920153396859211183.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ComparatorsTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ComparatorsTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher4306536146952877463.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit3907403102817970708.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -311,7 +316,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -323,17 +329,17 @@
 
         </properties>
 
-        <testcase classname="com.DataContainersTest" name="testSetShoppingLists" time="0.052"/>
+        <testcase classname="com.ComparatorsTest" name="testSort" time="0.08"/>
 
-        <testcase classname="com.DataContainersTest" name="testConstruction" time="0.0"/>
-
-        <system-out><![CDATA[]]></system-out>
+        <system-out><![CDATA[0
+0
+]]></system-out>
 
         <system-err><![CDATA[]]></system-err>
 
     </testsuite>
-    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="2" name="ProductTest" package="com" tests="5"
-               time="0.07" timestamp="2012-10-14T23:35:50">
+    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="2" name="ProductTest" package="com" tests="7"
+               time="0.109" timestamp="2012-10-25T02:58:27">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -352,7 +358,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -411,7 +418,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -428,7 +436,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -437,10 +445,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ProductTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ProductTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher1540447475529849222.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit7588853888676240251.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ProductTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ProductTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher288792961178856168.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit5967130795004601814.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -477,7 +485,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -489,23 +498,27 @@
 
         </properties>
 
-        <testcase classname="com.ProductTest" name="testSetItemName" time="0.002"/>
+        <testcase classname="com.ProductTest" name="testSetItemName" time="0.003"/>
 
         <testcase classname="com.ProductTest" name="testSetItemShop" time="0.0"/>
+
+        <testcase classname="com.ProductTest" name="testsetItemQuantity" time="0.0"/>
 
         <testcase classname="com.ProductTest" name="testSetItemCategory" time="0.0"/>
 
         <testcase classname="com.ProductTest" name="testItem" time="0.0"/>
 
-        <testcase classname="com.ProductTest" name="testgetItemUnit" time="0.001"/>
+        <testcase classname="com.ProductTest" name="testsetItemUnit" time="0.0"/>
+
+        <testcase classname="com.ProductTest" name="testgetItemUnit" time="0.0"/>
 
         <system-out><![CDATA[]]></system-out>
 
         <system-err><![CDATA[]]></system-err>
 
     </testsuite>
-    <testsuite errors="0" failures="1" hostname="MEX_DIROP_86" id="3" name="RecordSeekerTest" package="com" tests="4"
-               time="0.316" timestamp="2012-10-14T23:35:51">
+    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="3" name="RecordSeekerTest" package="com" tests="5"
+               time="0.241" timestamp="2012-10-25T02:58:28">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -524,7 +537,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -583,7 +597,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -600,7 +615,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -609,10 +624,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.RecordSeekerTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.RecordSeekerTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher4669965443894062510.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit8982216001526030487.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.RecordSeekerTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.RecordSeekerTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher1333152650448558585.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit7628914431686366119.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -649,7 +664,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -661,28 +677,33 @@
 
         </properties>
 
-        <testcase classname="com.RecordSeekerTest" name="testSortList" time="0.086"/>
+        <testcase classname="com.RecordSeekerTest" name="testSetStringArray" time="0.014"/>
 
-        <testcase classname="com.RecordSeekerTest" name="testSortListByCategory" time="0.017">
-            <failure message="First name  expected:&lt;[Alph]a&gt; but was:&lt;[Bet]a&gt;"
-                     type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: First name expected:&lt;[Alph]a&gt;
-                but was:&lt;[Bet]a&gt;
-                at com.RecordSeekerTest.testSortListByCategory(RecordSeekerTest.java:79)
-            </failure>
+        <testcase classname="com.RecordSeekerTest" name="testFindProduct" time="0.021"/>
 
-        </testcase>
+        <testcase classname="com.RecordSeekerTest" name="testFindShop" time="0.006"/>
 
-        <testcase classname="com.RecordSeekerTest" name="testFindProduct" time="0.004"/>
+        <testcase classname="com.RecordSeekerTest" name="testGetUnitsList" time="0.006"/>
 
-        <testcase classname="com.RecordSeekerTest" name="testDeleteProduct" time="0.004"/>
+        <testcase classname="com.RecordSeekerTest" name="testDeleteProduct" time="0.005"/>
 
-        <system-out><![CDATA[]]></system-out>
+        <system-out><![CDATA[0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+]]></system-out>
 
         <system-err><![CDATA[]]></system-err>
 
     </testsuite>
     <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="4" name="ShopTest" package="com" tests="2"
-               time="0.085" timestamp="2012-10-14T23:35:52">
+               time="0.075" timestamp="2012-10-25T02:58:29">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -701,7 +722,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -752,8 +774,6 @@
 
             <property name="os.version" value="6.1"/>
 
-            <property name="test_failure" value="true"/>
-
             <property name="path.separator" value=";"/>
 
             <property name="java.vm.version" value="23.0-b21"/>
@@ -762,7 +782,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -779,7 +800,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -788,10 +809,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ShopTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ShopTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher7617741110845759261.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit6320706922768673579.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ShopTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ShopTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher1646534891456726525.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit8155122553299914169.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -828,7 +849,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -840,9 +862,9 @@
 
         </properties>
 
-        <testcase classname="com.ShopTest" name="testSetItemName" time="0.002"/>
+        <testcase classname="com.ShopTest" name="testSetItemName" time="0.001"/>
 
-        <testcase classname="com.ShopTest" name="testShop" time="0.0"/>
+        <testcase classname="com.ShopTest" name="testShop" time="0.001"/>
 
         <system-out><![CDATA[]]></system-out>
 
@@ -850,7 +872,7 @@
 
     </testsuite>
     <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="5" name="ShoppingListTest" package="com" tests="3"
-               time="0.273" timestamp="2012-10-14T23:35:54">
+               time="0.178" timestamp="2012-10-25T02:58:30">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -869,7 +891,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -920,8 +943,6 @@
 
             <property name="os.version" value="6.1"/>
 
-            <property name="test_failure" value="true"/>
-
             <property name="path.separator" value=";"/>
 
             <property name="java.vm.version" value="23.0-b21"/>
@@ -930,7 +951,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -947,7 +969,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -956,10 +978,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ShoppingListTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ShoppingListTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher4234122852022863118.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit1808346064290559652.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ShoppingListTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ShoppingListTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher616286959453261877.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit175833605869344019.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -996,7 +1018,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -1008,7 +1031,7 @@
 
         </properties>
 
-        <testcase classname="com.ShoppingListTest" name="testSetItemName" time="0.001"/>
+        <testcase classname="com.ShoppingListTest" name="testSetItemName" time="0.002"/>
 
         <testcase classname="com.ShoppingListTest" name="testSetProductList" time="0.0"/>
 
@@ -1019,8 +1042,8 @@
         <system-err><![CDATA[]]></system-err>
 
     </testsuite>
-    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="6" name="WriteandReadXMLFileTest" package="com"
-               tests="1" time="0.427" timestamp="2012-10-14T23:35:55">
+    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="6" name="ValidateInputTest" package="com" tests="3"
+               time="0.09" timestamp="2012-10-25T02:58:31">
         <properties>
             <property name="java.vendor" value="Oracle Corporation"/>
 
@@ -1039,7 +1062,8 @@
 
             <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
 
-            <property name="ant.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant"/>
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
 
             <property name="java.runtime.version" value="1.7.0_04-b22"/>
 
@@ -1090,8 +1114,6 @@
 
             <property name="os.version" value="6.1"/>
 
-            <property name="test_failure" value="true"/>
-
             <property name="path.separator" value=";"/>
 
             <property name="java.vm.version" value="23.0-b21"/>
@@ -1100,7 +1122,8 @@
 
             <property name="user.variant" value=""/>
 
-            <property name="ant.library.dir" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib"/>
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
 
             <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
 
@@ -1117,7 +1140,7 @@
             <property name="test.dir" value="src\test"/>
 
             <property name="java.library.path"
-                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea 11.1.3\jre\jre\bin;."/>
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
 
             <property name="java.vendor.url" value="http://java.oracle.com/"/>
 
@@ -1126,10 +1149,10 @@
             <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 
             <property name="sun.java.command"
-                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.WriteandReadXMLFileTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.WriteandReadXMLFileTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher1721975559774931060.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit7143389172018636315.properties"/>
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.ValidateInputTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.ValidateInputTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher6029436407604453016.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit5390054060208865933.properties"/>
 
             <property name="java.class.path"
-                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant-junit.jar"/>
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
 
             <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
 
@@ -1166,7 +1189,8 @@
 
             <property name="ant.file.type.File IO" value="file"/>
 
-            <property name="ant.core.lib" value="C:\Program Files\JetBrains\IntelliJ IDEA 11.1.3\lib\ant\lib\ant.jar"/>
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
 
             <property name="file.encoding" value="Cp1252"/>
 
@@ -1178,9 +1202,182 @@
 
         </properties>
 
-        <testcase classname="com.WriteandReadXMLFileTest" name="testWriteXMLAndReadXML" time="0.26"/>
+        <testcase classname="com.ValidateInputTest" name="testIsDigits" time="0.02"/>
 
-        <system-out><![CDATA[File saved!
+        <testcase classname="com.ValidateInputTest" name="testIsText" time="0.001"/>
+
+        <testcase classname="com.ValidateInputTest" name="testIsDecimal" time="0.001"/>
+
+        <system-out><![CDATA[]]></system-out>
+
+        <system-err><![CDATA[]]></system-err>
+
+    </testsuite>
+    <testsuite errors="0" failures="0" hostname="MEX_DIROP_86" id="7" name="WriteandReadXMLFileTest" package="com"
+               tests="1" time="0.553" timestamp="2012-10-25T02:58:32">
+        <properties>
+            <property name="java.vendor" value="Oracle Corporation"/>
+
+            <property name="lib.dir" value="lib"/>
+
+            <property name="sun.java.launcher" value="SUN_STANDARD"/>
+
+            <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+
+            <property name="os.name" value="Windows 7"/>
+
+            <property name="sun.boot.class.path"
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_04\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_04\jre\classes"/>
+
+            <property name="sun.desktop" value="windows"/>
+
+            <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+
+            <property name="ant.home"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant"/>
+
+            <property name="java.runtime.version" value="1.7.0_04-b22"/>
+
+            <property name="user.name" value="grobles"/>
+
+            <property name="build.dir" value="build"/>
+
+            <property name="user.language" value="es"/>
+
+            <property name="ant.file.File IO"
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build.xml"/>
+
+            <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_04\jre\bin"/>
+
+            <property name="ant.project.default-target" value="all"/>
+
+            <property name="ant.project.name" value="File IO"/>
+
+            <property name="java.version" value="1.7.0_04"/>
+
+            <property name="user.timezone" value=""/>
+
+            <property name="sun.arch.data.model" value="32"/>
+
+            <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\endorsed"/>
+
+            <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+
+            <property name="sun.jnu.encoding" value="Cp1252"/>
+
+            <property name="file.encoding.pkg" value="sun.io"/>
+
+            <property name="file.separator" value="\"/>
+
+            <property name="java.specification.name" value="Java Platform API Specification"/>
+
+            <property name="classes.dir" value="build\classes"/>
+
+            <property name="java.class.version" value="51.0"/>
+
+            <property name="user.country" value="MX"/>
+
+            <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_04\jre"/>
+
+            <property name="java.vm.info" value="mixed mode, sharing"/>
+
+            <property name="ant.file" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build.xml"/>
+
+            <property name="os.version" value="6.1"/>
+
+            <property name="path.separator" value=";"/>
+
+            <property name="java.vm.version" value="23.0-b21"/>
+
+            <property name="report.dir" value="build\report"/>
+
+            <property name="user.variant" value=""/>
+
+            <property name="ant.library.dir"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib"/>
+
+            <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+
+            <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+
+            <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+
+            <property name="user.script" value=""/>
+
+            <property name="user.home" value="C:\Users\grobles"/>
+
+            <property name="java.specification.vendor" value="Oracle Corporation"/>
+
+            <property name="test.dir" value="src\test"/>
+
+            <property name="java.library.path"
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\bin\..\.\bin;C:\Program Files\apache-ant-1.8.4\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\SYBASE\IQ-15_1\BIN32;C:\SYBASE\OLEDB;C:\SYBASE\ODBC;C:\SYBASE\ASEP_WIN32;C:\SYBASE\OCS-12_5\DLL;C:\SYBASE\OCS-12_5\LIB3P;C:\SYBASE\OCS-12_5\BIN;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\THINKPAD\BLUETOOTH SOFTWARE\;C:\PROGRAM FILES\MICROSOFT SQL SERVER\80\TOOLS\BINN;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\OpenVPN\bin;c:\program files\jetbrains\intellij idea community edition 11.1.3\jre\jre\bin;."/>
+
+            <property name="java.vendor.url" value="http://java.oracle.com/"/>
+
+            <property name="java.vm.vendor" value="Oracle Corporation"/>
+
+            <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+
+            <property name="sun.java.command"
+                      value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.WriteandReadXMLFileTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\report\TEST-com.WriteandReadXMLFileTest.xml crashfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junitvmwatcher1492132522010965550.properties propsfile=C:\Users\grobles\Documents\universidad\90308\Shopping_List\junit3606742271218634507.properties"/>
+
+            <property name="java.class.path"
+                      value="C:\Users\grobles\Documents\universidad\90308\Shopping_List\build\classes;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Users\grobles\Documents\universidad\90308\Shopping_List\lib\mockito-all-1.9.5-rc1.jar;c:\sybase\ASEP_Win32\3pclass.zip;c:\sybase\ASEP_Win32\monclass.zip;C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext\junit-4.11-SNAPSHOT-20120805-1225.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-launcher.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant-junit.jar"/>
+
+            <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010"/>
+
+            <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+
+            <property name="ant.file.type" value="file"/>
+
+            <property name="java.vm.specification.version" value="1.7"/>
+
+            <property name="sun.cpu.endian" value="little"/>
+
+            <property name="sun.os.patch.level" value="Service Pack 1"/>
+
+            <property name="java.io.tmpdir" value="C:\Users\grobles\AppData\Local\Temp\"/>
+
+            <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+
+            <property name="os.arch" value="x86"/>
+
+            <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+
+            <property name="java.ext.dirs"
+                      value="C:\Program Files\Java\jdk1.7.0_04\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+
+            <property name="user.dir" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List"/>
+
+            <property name="line.separator" value="&#xd;&#xa;"/>
+
+            <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+
+            <property name="basedir" value="C:\Users\grobles\Documents\universidad\90308\Shopping_List"/>
+
+            <property name="ant.java.version" value="1.7"/>
+
+            <property name="ant.file.type.File IO" value="file"/>
+
+            <property name="ant.core.lib"
+                      value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 11.1.3\lib\ant\lib\ant.jar"/>
+
+            <property name="file.encoding" value="Cp1252"/>
+
+            <property name="java.specification.version" value="1.7"/>
+
+            <property name="src.dir" value="src"/>
+
+            <property name="ant.project.invoked-targets" value="all"/>
+
+        </properties>
+
+        <testcase classname="com.WriteandReadXMLFileTest" name="testWriteXMLAndReadXML" time="0.245"/>
+
+        <system-out><![CDATA[0
+0
+File saved!
 ]]></system-out>
 
         <system-err><![CDATA[]]></system-err>
