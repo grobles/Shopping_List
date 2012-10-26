@@ -246,6 +246,8 @@ public class MainForm extends JFrame {
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
 
         List listToPrint = MainPanel.getItemList();
+        String[][] stringToPrint = MainPanel.getStringList();
+
     }
 
     /**

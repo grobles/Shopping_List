@@ -28,4 +28,6 @@ public interface MainPanel {
      */
 
     public List getItemList();
+
+    public String[][] getStringList();
 }

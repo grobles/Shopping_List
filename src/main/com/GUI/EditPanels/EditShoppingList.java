@@ -50,6 +50,10 @@ public class EditShoppingList extends JPanel implements MainPanel {
         return ItemList;
     }
 
+    public String[][] getStringList() {
+        return recordSeeker.setStringProductArray(ItemList);
+    }
+
     /**
      * Method: initComponents. It initalizes all the components in the panel
      *

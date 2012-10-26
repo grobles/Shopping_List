@@ -43,6 +43,10 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         return ItemList;
     }
 
+    public String[][] getStringList() {
+        return recordSeeker.setTableStringArray(ItemList);
+    }
+
     /**
      * It sets the Layout for the Panel
      */
