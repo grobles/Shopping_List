@@ -12,10 +12,12 @@ import java.util.Comparator;
  */
 public class ByCategory implements Comparator {
 
+
+    // todo - javadoc comment how things are compared.
+
     /**
      * @param o1
      * @param o2
-     *
      * @return
      */
     public int compare(Object o1, Object o2) {

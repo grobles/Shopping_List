@@ -199,7 +199,8 @@ public class EditShoppingList extends JPanel implements MainPanel {
             Product product = (Product) recordSeeker.findItem(jComboBoxProduct.getSelectedItem().toString(), recordSeeker.getProductList());
             ItemList.add(product);
             setTable();
-        } catch (Exception ex) {
+        } catch (Exception ex) {            //todo nice job here, but don't catch all exceptions just the right ones.
+            //todo see chapter nine of effective Java
             JOptionPane.showMessageDialog(new JFrame(), "You have to choose a Product");
         }
     }

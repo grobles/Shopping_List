@@ -1,3 +1,32 @@
+============== Oct 27
+
+Excellent - ant just worked and ran a bunch of passing tests!
+
+Excellent - code coverage numbers
+
+Less than excellent (but not a huge deal) packages should have a  top-level domain (e.g. com) like you have but also  subdomain (e.g. origamisoftware)
+Also package names should be all lower case
+
+See the todo I sprinkled in your code.
+
+Use common libraries don't roll your own solutions   (remember the lecture notes where I lament the fact that most of
+the tools you'll need have already been written?)
+For isDecimal see:  http://commons.apache.org/lang/api-3.1/org/apache/commons/lang3/StringUtils.html
+
+Pretty good, but not excellent JavDoc. Improve that and make it consistent.
+
+In general this very good work.
+
+It is coming along really well.
+
+Has it been fun?
+
+What have you been learning from it?
+
+
+
+
+==============
 1) Not a huge deal, but don't use .doc files in code. Txt is better, easier to read and so on.
 
 2) Overall I like your ideas a lot.

@@ -19,6 +19,9 @@ public interface MainPanel {
     /**
      *
      */
+    // todo:
+    // this code does not belong in an interface
+    // do not use interfaces for global data or to share variables like this
     RecordSeeker recordSeeker = new RecordSeeker();
 
     /**
@@ -27,7 +30,12 @@ public interface MainPanel {
      * @return
      */
 
+
+    // todo comments?
+    // todo should not be public
     public List getItemList();
 
+    // todo comments?
+    // todo should not be public
     public String[][] getStringList();
 }

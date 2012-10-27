@@ -15,6 +15,8 @@ import java.util.List;
  */
 public abstract class EditPanels extends JPanel implements MainPanel {
 
+    // todo why package scope?
+
     List<Item> ItemList;
     JButton jButtonClear;
     JButton jButtonDelete;
