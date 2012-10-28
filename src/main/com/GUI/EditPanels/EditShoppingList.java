@@ -38,6 +38,7 @@ public class EditShoppingList extends JPanel implements MainPanel {
         jComboBoxCategory.setModel(new DefaultComboBoxModel(comboCategory));
         setComboProduct();
         setTable();
+
     }
 
     /**
@@ -47,6 +48,10 @@ public class EditShoppingList extends JPanel implements MainPanel {
      */
     public List getItemList() {
         return ItemList;
+    }
+
+    public String[][] getStringList() {
+        return recordSeeker.setStringProductArray(ItemList);
     }
 
     /**
@@ -165,6 +170,7 @@ public class EditShoppingList extends JPanel implements MainPanel {
         } else if (jComboBoxSort.getSelectedItem().toString().equals("Sort By Shop")) {
             Collections.sort(ItemList, new ByShop());
         }
+
         setTable();
     }
 
@@ -193,7 +199,8 @@ public class EditShoppingList extends JPanel implements MainPanel {
             Product product = (Product) recordSeeker.findItem(jComboBoxProduct.getSelectedItem().toString(), recordSeeker.getProductList());
             ItemList.add(product);
             setTable();
-        } catch (Exception ex) {
+        } catch (Exception ex) {            //todo nice job here, but don't catch all exceptions just the right ones.
+            //todo see chapter nine of effective Java
             JOptionPane.showMessageDialog(new JFrame(), "You have to choose a Product");
         }
     }

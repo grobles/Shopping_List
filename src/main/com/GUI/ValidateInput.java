@@ -32,10 +32,9 @@ public class ValidateInput {
         return false;
     }
 
-    /**
-     * @param digits String to be tested
-     * @return bool true if only digits and 1 decimal point, false otherwise
-     */
+    //todo use common libraries don't roll your own solutions
+    // see: http://commons.apache.org/lang/api-3.1/org/apache/commons/lang3/StringUtils.html
+
     public static boolean isDecimal(String digits) {
         //matches         any digit, 0 or 1 decimal points, at least one digit following the decimal
         if (digits.matches("\\d+([.{0,1}]\\d+)?")) {

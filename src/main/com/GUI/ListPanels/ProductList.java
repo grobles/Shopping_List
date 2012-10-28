@@ -33,6 +33,13 @@ public class ProductList extends ShowLists {
     }
 
     /**
+     * creates de String that we will use to print . It overrides because product has more members    *
+     */
+    public String[][] getStringList() {
+        return recordSeeker.setStringProductArray(ItemList);
+    }
+
+    /**
      * Sorts the product. It overrides , to be able to sort by category and by Shop
      *
      * @param evt

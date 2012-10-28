@@ -37,7 +37,7 @@ public abstract class ShowLists extends JPanel implements MainPanel {
     }
 
     /**
-     * Method: getItemList : To get the List to be printed
+     * Method:getItemList . To get the List to be printed
      *
      * @return
      */
@@ -45,8 +45,12 @@ public abstract class ShowLists extends JPanel implements MainPanel {
         return ItemList;
     }
 
+    public String[][] getStringList() {
+        return recordSeeker.setTableStringArray(ItemList);
+    }
+
     /**
-     * Method: initComponets : It initializes all the components in the Layout
+     * Method:initComponets: It initializes all the components in the Layout
      *
      * @return
      */

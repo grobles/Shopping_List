@@ -15,6 +15,8 @@ import java.util.List;
  */
 public abstract class EditPanels extends JPanel implements MainPanel {
 
+    // todo why package scope?
+
     List<Item> ItemList;
     JButton jButtonClear;
     JButton jButtonDelete;
@@ -43,6 +45,10 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         return ItemList;
     }
 
+    public String[][] getStringList() {
+        return recordSeeker.setTableStringArray(ItemList);
+    }
+
     /**
      * It sets the Layout for the Panel
      */
@@ -69,6 +75,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         jButtonSave = new JButton();
         jButtonClear = new JButton();
         jButtonDelete = new JButton();
+
 
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
@@ -129,7 +136,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
 
         if (ValidateInput.isText(name)) {
             Item item = recordSeeker.findItem(name, ItemList);
-            String message;
+            String message = "Item not found";
             if (item != null) {
                 Search(item);
                 message = "Item '" + name + "' found";
@@ -144,6 +151,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         } else {
             JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Item name.\nTry again.");
         }
+
         jTextFieldName.setText("");
         jTextFieldName.requestFocus();
     }
@@ -164,16 +172,18 @@ public abstract class EditPanels extends JPanel implements MainPanel {
             } else {
                 int n = JOptionPane.showConfirmDialog(
                         frame,
-                        "Would you like to save " + name + "?",
+                        "Would you like to save this Item?",
                         "Confirm Save Item",
                         JOptionPane.YES_NO_OPTION);
                 if (n == 0) {
                     addItem(name);
                 }
             }
+
         } else {
             JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Item name.\nTry again.");
         }
+
         clear();
     }
 
