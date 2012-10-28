@@ -9,6 +9,7 @@ import com.GUI.ListPanels.ProductList;
 import com.GUI.ListPanels.ShopList;
 import com.GUI.ListPanels.ShoppingLists;
 import com.Item;
+import com.Persistance.PrintLists;
 import com.Persistance.RecordSeeker;
 
 import javax.swing.*;
@@ -206,7 +207,7 @@ public class MainForm extends JFrame {
     }// </editor-fold>
 
     /**
-     * It sets the Layput where we will attach the other panels
+     * It sets the Layout where we will attach the other panels
      *
      * @param panel
      */
@@ -223,7 +224,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Openmenuitem
+     * Sets the action for the open menu item
      */
     private void jMenuItemOpenActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new ShoppingLists(recordSeeker.getShoppingList());
@@ -233,7 +234,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the SendEmail MenuIten
+     * Sets the action for the SendEmail MenuItem
      */
     private void jMenuItemSendEmailActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -241,15 +242,16 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Print MenuIten
+     * Sets the action for the Print MenuItem
      */
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
 
         List listToPrint = MainPanel.getItemList();
+        new PrintLists(listToPrint);
     }
 
     /**
-     * Sets the action for the Edit/Product MenuIten
+     * Sets the action for the Edit/Product MenuItem
      */
     private void jMenuItemEdtProductActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new EditProduct(recordSeeker.getProductList());
@@ -260,7 +262,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Edit/Shopping MenuIten
+     * Sets the action for the Edit/Shopping MenuItem
      */
     private void jMenuItemEdtShoppingActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new EditShoppingList(new ArrayList<Item>());
@@ -270,7 +272,9 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Edit/Category MenuIten
+     * Sets the action for the Edit/Category MenuItem
+     *
+     * @param evt : event raised by editCategory action
      */
     private void jMenuItemEditCategoryActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new EditCategory(recordSeeker.getcategoryList());
@@ -281,7 +285,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Edit/Shop MenuIten
+     * Sets the action for the Edit/Shop MenuItem
      */
     private void jMenuItemEditShopActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new EditShop(recordSeeker.getShopList());
@@ -291,7 +295,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the ListProduct MenuIten
+     * Sets the action for the ListProduct MenuItem
      */
     private void jMenuItemListProductsActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new ProductList(recordSeeker.getProductList());
@@ -302,7 +306,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the ListCategory MenuIten
+     * Sets the action for the ListCategory MenuItem
      */
     private void jMenuItemListCategoriesActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new CategoryList(recordSeeker.getcategoryList());
@@ -312,7 +316,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the ListShop MenuIten
+     * Sets the action for the ListShop MenuItem
      */
     private void jMenuItemListShopsActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new ShopList(recordSeeker.getShopList());
@@ -322,7 +326,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the ListShoppingList MenuIten
+     * Sets the action for the ListShoppingList MenuItem
      */
     private void jMenuItemListShoppinglistsActionPerformed(java.awt.event.ActionEvent evt) {
         MainPanel = new ShoppingLists(recordSeeker.getShoppingList());
@@ -332,7 +336,7 @@ public class MainForm extends JFrame {
     }
 
     /**
-     * Sets the action for the Close MenuIten
+     * Sets the action for the Close MenuItem
      */
     private void jMenuItemCloseActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();

@@ -70,7 +70,6 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         jButtonClear = new JButton();
         jButtonDelete = new JButton();
 
-
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
         jLabelName.setText("Name");
@@ -130,7 +129,7 @@ public abstract class EditPanels extends JPanel implements MainPanel {
 
         if (ValidateInput.isText(name)) {
             Item item = recordSeeker.findItem(name, ItemList);
-            String message = "Item not found";
+            String message;
             if (item != null) {
                 Search(item);
                 message = "Item '" + name + "' found";
@@ -145,7 +144,6 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         } else {
             JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Item name.\nTry again.");
         }
-
         jTextFieldName.setText("");
         jTextFieldName.requestFocus();
     }
@@ -166,18 +164,16 @@ public abstract class EditPanels extends JPanel implements MainPanel {
             } else {
                 int n = JOptionPane.showConfirmDialog(
                         frame,
-                        "Would you like to save this Item?",
+                        "Would you like to save " + name + "?",
                         "Confirm Save Item",
                         JOptionPane.YES_NO_OPTION);
                 if (n == 0) {
                     addItem(name);
                 }
             }
-
         } else {
             JOptionPane.showMessageDialog(frame, "'" + name + "' is not a valid Item name.\nTry again.");
         }
-
         clear();
     }
 

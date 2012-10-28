@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Class:EditShop
  * Description: In this form you can edit or add a new Shop
- * Author: Brian Arnold & Guadalupe Robles Gil Date: 9/22/12 Time: 12:51 PM *
+ * Author: Brian Arnold & Guadalupe Robles Gil Date: 9/22/12
  */
 public class EditShop extends EditPanels {
 
@@ -22,7 +22,6 @@ public class EditShop extends EditPanels {
 
         super(list);
         setLayout();
-
     }
 
     /**
@@ -36,6 +35,5 @@ public class EditShop extends EditPanels {
         ItemList.add(newshop);
         JOptionPane.showMessageDialog(frame, name + " has been saved as a new Item");
         recordSeeker.writToXml();
-
     }
 }

@@ -22,7 +22,6 @@ public class CategoryList extends ShowLists {
      */
     public CategoryList(List<Item> itemList) {
         super(itemList);
-
     }
 
     /**
@@ -46,7 +45,6 @@ public class CategoryList extends ShowLists {
                     "Confirm Delete Category",
                     JOptionPane.YES_NO_OPTION);
             if (n == 0) {
-
                 Iterator iterator = recordSeeker.getProductList().iterator();
                 List<Product> removelist = new ArrayList<Product>();
                 while (iterator.hasNext()) {
@@ -60,9 +58,7 @@ public class CategoryList extends ShowLists {
                 recordSeeker.writToXml();
                 JOptionPane.showMessageDialog(frame, "'" + name + "' has been deleted.");
             }
-
             setTable();
-
         } catch (Exception ex) {
         }
     }

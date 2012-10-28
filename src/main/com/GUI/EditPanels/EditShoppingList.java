@@ -38,7 +38,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
         jComboBoxCategory.setModel(new DefaultComboBoxModel(comboCategory));
         setComboProduct();
         setTable();
-
     }
 
     /**
@@ -166,7 +165,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
         } else if (jComboBoxSort.getSelectedItem().toString().equals("Sort By Shop")) {
             Collections.sort(ItemList, new ByShop());
         }
-
         setTable();
     }
 

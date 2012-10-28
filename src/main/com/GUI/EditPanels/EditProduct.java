@@ -13,7 +13,7 @@ import java.util.List;
  * Class: Product edit Form
  * Description: In this for you can edit or add a new Product
  * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 9/22/12 Time: 12:51  PM *
+ * Date: 9/22/12
  */
 public class EditProduct extends EditPanels {
 
@@ -52,22 +52,32 @@ public class EditProduct extends EditPanels {
     @Override
     public void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
 
-
         String productName = jTextFieldName.getText();
         Product productFound = (Product) recordSeeker.findItem(productName, recordSeeker.getProductList());
 
         if (ValidateInput.isText(productName)) {
-            if (!ValidateInput.isDigit(jTextFieldQuantity.getText())) {
-                JOptionPane.showMessageDialog(frame, "Quantity must be numeric digits (0-9).");
-                jTextFieldQuantity.requestFocus();
-            } else if (productFound != null) {
-                editProduct(productFound);
+            if (jComboBoxUnits.getSelectedIndex() == 1) {
+                if (ValidateInput.isDigit(jTextFieldQuantity.getText()) && productFound == null) {
+                    addItem(productName);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Quantity must be only numeric digits (0-9).");
+                    jTextFieldQuantity.requestFocus();
+                }
+            } else if (jComboBoxUnits.getSelectedIndex() == 2) {
+                if ((ValidateInput.isDecimal(jTextFieldQuantity.getText()) && productFound == null)) {
+                    addItem(productName);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Quantity must be a decimal.");
+                    jTextFieldQuantity.requestFocus();
+                }
             } else {
-                addItem(productName);
-
+                JOptionPane.showMessageDialog(frame, "Please need to enter a quantity prior to saving.");
+                jTextFieldQuantity.requestFocus();
             }
+        } else {
+            JOptionPane.showMessageDialog(frame, "Please need to enter a valid product name prior to saving.");
+            jTextFieldQuantity.requestFocus();
         }
-
     }
 
     /**
@@ -155,7 +165,6 @@ public class EditProduct extends EditPanels {
 
             JOptionPane.showMessageDialog(frame, "You have to choose a Category and a Shop.");
         }
-
     }
 
     /**
