@@ -1,5 +1,6 @@
 package com.GUI.EditPanels;
 
+import com.GUI.MainForm;
 import com.Item;
 import com.Shop;
 
@@ -18,9 +19,9 @@ public class EditShop extends EditPanels {
      *
      * @param list
      */
-    public EditShop(List<Item> list) {
+    public EditShop(List<Item> list, MainForm mf) {
 
-        super(list);
+        super(list, mf);
         setLayout();
     }
 

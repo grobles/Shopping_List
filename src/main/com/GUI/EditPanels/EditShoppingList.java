@@ -3,8 +3,10 @@ package com.GUI.EditPanels;
 import com.Comparators.ByCategory;
 import com.Comparators.ByName;
 import com.Comparators.ByShop;
+import com.GUI.MainForm;
 import com.GUI.MainPanel;
 import com.Item;
+import com.Persistance.RecordSeeker;
 import com.Product;
 import com.ShoppingList;
 
@@ -25,13 +27,17 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     private List<Item> ItemList;
     private String[][] stringList;
+    RecordSeeker recordSeeker;
+    MainForm Mf;
 
     /**
      * Creates new form NewJPanel
      *
      * @param list
      */
-    public EditShoppingList(List<Item> list) {
+    public EditShoppingList(List<Item> list, MainForm mf) {
+        Mf = mf;
+        recordSeeker = Mf.getRecordSeeker();
         ItemList = list;
         String[] comboCategory = recordSeeker.setSingleStringArray(recordSeeker.getcategoryList());
         initComponents();
@@ -50,14 +56,18 @@ public class EditShoppingList extends JPanel implements MainPanel {
         return ItemList;
     }
 
+    /**
+     * This method is just to return the StringList to be printed
+     *
+     * @return
+     */
+
     public String[][] getStringList() {
         return recordSeeker.setStringProductArray(ItemList);
     }
 
     /**
      * Method: initComponents. It initalizes all the components in the panel
-     *
-     * @return
      */
     private void initComponents() {
 
@@ -149,8 +159,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It clears the textboxes
-     *
-     * @return
      */
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {
         ItemList = new ArrayList<Item>();
@@ -159,8 +167,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It sorts the product List
-     *
-     * @return
      */
     private void jComboBoxSortActionPerformed(java.awt.event.ActionEvent evt) {
         if (jComboBoxSort.getSelectedItem().toString().equals("Sort Alphabetically")) {
@@ -176,8 +182,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It deletes an item from the list
-     *
-     * @return
      */
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {
         try {
@@ -191,24 +195,19 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It adds a product to the list
-     *
-     * @return
      */
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             Product product = (Product) recordSeeker.findItem(jComboBoxProduct.getSelectedItem().toString(), recordSeeker.getProductList());
             ItemList.add(product);
             setTable();
-        } catch (Exception ex) {            //todo nice job here, but don't catch all exceptions just the right ones.
-            //todo see chapter nine of effective Java
+        } catch (Exception ex) {
             JOptionPane.showMessageDialog(new JFrame(), "You have to choose a Product");
         }
     }
 
     /**
      * It sets the table evry time needed
-     *
-     * @return
      */
     private void setTable() {
         jTableShoppingProducts.setModel((new javax.swing.table.DefaultTableModel(
@@ -243,8 +242,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It makes the Product ComboBox so it only shows products from that Category
-     *
-     * @return
      */
     private void jComboBoxCategoryActionPerformed(java.awt.event.ActionEvent evt) {
         this.setComboProduct();
@@ -252,8 +249,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It Saves the product list into a Shopping List
-     *
-     * @return
      */
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -285,8 +280,6 @@ public class EditShoppingList extends JPanel implements MainPanel {
 
     /**
      * It makes the Product ComboBox so it only shows products from that Category
-     *
-     * @return
      */
     void setComboProduct() {
         String categoryName;

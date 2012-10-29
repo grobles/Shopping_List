@@ -4,8 +4,6 @@
  */
 package com.GUI;
 
-import com.Persistance.RecordSeeker;
-
 import java.util.List;
 
 /**
@@ -16,26 +14,18 @@ import java.util.List;
  */
 public interface MainPanel {
 
+
     /**
+     * It will return the List to be printed or send by Email
      *
+     * @return
      */
-    // todo:
-    // this code does not belong in an interface
-    // do not use interfaces for global data or to share variables like this
-    RecordSeeker recordSeeker = new RecordSeeker();
+    public List getItemList();
 
     /**
      * It will return the String to be printed or send by Email
      *
      * @return
      */
-
-
-    // todo comments?
-    // todo should not be public
-    public List getItemList();
-
-    // todo comments?
-    // todo should not be public
     public String[][] getStringList();
 }

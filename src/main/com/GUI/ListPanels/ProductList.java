@@ -7,11 +7,10 @@ package com.GUI.ListPanels;
 import com.Comparators.ByCategory;
 import com.Comparators.ByName;
 import com.Comparators.ByShop;
-import com.Item;
+import com.GUI.MainForm;
 
 import javax.swing.*;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * Class: ProductList
@@ -24,19 +23,14 @@ public class ProductList extends ShowLists {
     /**
      * Creates new form NewJPanel
      *
-     * @param itemList
+     * @param mf
      */
-    public ProductList(List<Item> itemList) {
-        super(itemList);
+    public ProductList(MainForm mf) {
+        super(mf);
+        ItemList = recordSeeker.getProductList();
+        setTable();
         jComboBoxSort.setModel(new DefaultComboBoxModel(new String[]{"Sort", "Sort Alphabetically", "Sort By Category", "Sort ByCategory Shop"}));
 
-    }
-
-    /**
-     * creates de String that we will use to print . It overrides because product has more members    *
-     */
-    public String[][] getStringList() {
-        return recordSeeker.setStringProductArray(ItemList);
     }
 
     /**
@@ -62,7 +56,7 @@ public class ProductList extends ShowLists {
      * Sets the Table
      */
     @Override
-    public void setTable() {
+    void setTable() {
         jTableShoppingProducts.setModel((new javax.swing.table.DefaultTableModel(
                 recordSeeker.setStringProductArray(ItemList),
                 new String[]{

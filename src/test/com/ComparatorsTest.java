@@ -7,8 +7,6 @@ import com.Persistance.RecordSeeker;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -29,14 +27,12 @@ public class ComparatorsTest {
     private final Category mockCat1 = mock(Category.class);
     private final Category mockCat2 = mock(Category.class);
     private RecordSeeker recordSeeker;
-    private Collection<Product> arrayToSort;
     private final Shop mockShop1 = mock(Shop.class);
     private final Shop mockShop2 = mock(Shop.class);
 
     @Before
     public void setup() {
 
-        arrayToSort = new ArrayList<Product>();
         recordSeeker = new RecordSeeker("dataTest.xml");
     }
 

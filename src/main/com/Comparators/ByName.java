@@ -12,11 +12,12 @@ import java.util.Comparator;
  */
 public class ByName implements Comparator {
 
-    // todo - javadoc comment how things are compared.
+    // product , categories , Shops are compared Alphabetically by their name
 
     /**
      * @param o1
      * @param o2
+     *
      * @return
      */
     public int compare(Object o1, Object o2) {

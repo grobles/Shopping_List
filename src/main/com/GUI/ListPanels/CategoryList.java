@@ -1,7 +1,7 @@
 package com.GUI.ListPanels;
 
 import com.Category;
-import com.Item;
+import com.GUI.MainForm;
 import com.Product;
 
 import javax.swing.*;
@@ -18,10 +18,12 @@ import java.util.List;
 public class CategoryList extends ShowLists {
 
     /**
-     * @param itemList
+     * @param mf
      */
-    public CategoryList(List<Item> itemList) {
-        super(itemList);
+    public CategoryList(MainForm mf) {
+        super(mf);
+        ItemList = recordSeeker.getcategoryList();
+        setTable();
     }
 
     /**

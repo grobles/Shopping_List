@@ -1,8 +1,10 @@
 package com.GUI.EditPanels;
 
+import com.GUI.MainForm;
 import com.GUI.MainPanel;
 import com.GUI.ValidateInput;
 import com.Item;
+import com.Persistance.RecordSeeker;
 
 import javax.swing.*;
 import java.util.List;
@@ -15,23 +17,27 @@ import java.util.List;
  */
 public abstract class EditPanels extends JPanel implements MainPanel {
 
-    // todo why package scope?
+    // They are package scope so the classes that implement this abstract class will have acces to them
 
     List<Item> ItemList;
     JButton jButtonClear;
     JButton jButtonDelete;
     JButton jButtonSave;
     JButton jButtonSearch;
-    JLabel jLabelName;
+    private JLabel jLabelName;
     JTextField jTextFieldName;
     JFrame frame;
+    RecordSeeker recordSeeker;
+    MainForm Mf;
 
     /**
      * Constructor
      *
      * @param list
      */
-    EditPanels(List<Item> list) {
+    EditPanels(List<Item> list, MainForm mf) {
+        Mf = mf;
+        recordSeeker = Mf.getRecordSeeker();
         ItemList = list;
         initComponents();
     }

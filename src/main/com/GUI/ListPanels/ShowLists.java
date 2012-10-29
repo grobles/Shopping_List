@@ -1,8 +1,10 @@
 package com.GUI.ListPanels;
 
 import com.Comparators.ByName;
+import com.GUI.MainForm;
 import com.GUI.MainPanel;
 import com.Item;
+import com.Persistance.RecordSeeker;
 
 import javax.swing.*;
 import java.util.Collections;
@@ -16,25 +18,27 @@ import java.util.List;
  */
 public abstract class ShowLists extends JPanel implements MainPanel {
 
-    final List<Item> ItemList;
+    List<Item> ItemList;
     private JButton jButtonDelete;
     JButton jButtonOpen;
     JComboBox jComboBoxSort;
     private JScrollPane jScrollPane3;
     JTable jTableShoppingProducts;
+    RecordSeeker recordSeeker;
+    MainForm Mf;
 
     /**
      * Creates new form NewJPanel
      *
-     * @param itemList
+     * @param mf
      */
-    ShowLists(List<Item> itemList) {
-
-        ItemList = itemList;
+    ShowLists(MainForm mf) {
+        Mf = mf;
+        recordSeeker = Mf.getRecordSeeker();
         initComponents();
-        setTable();
         jButtonOpen.setVisible(false);
     }
+
 
     /**
      * Method:getItemList . To get the List to be printed
@@ -51,8 +55,6 @@ public abstract class ShowLists extends JPanel implements MainPanel {
 
     /**
      * Method:initComponets: It initializes all the components in the Layout
-     *
-     * @return
      */
     void initComponents() {
 

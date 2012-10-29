@@ -1,8 +1,6 @@
 package com.GUI.ListPanels;
 
-import com.Item;
-
-import java.util.List;
+import com.GUI.MainForm;
 
 /**
  * Class: ShopList
@@ -14,7 +12,9 @@ public class ShopList extends ShowLists {
     /**
      * Creates new form NewJPanel
      */
-    public ShopList(List<Item> itemList) {
-        super(itemList);
+    public ShopList(MainForm mf) {
+        super(mf);
+        ItemList = recordSeeker.getShopList();
+        setTable();
     }
 }

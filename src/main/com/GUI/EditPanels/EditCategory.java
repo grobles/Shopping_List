@@ -1,6 +1,7 @@
 package com.GUI.EditPanels;
 
 import com.Category;
+import com.GUI.MainForm;
 import com.Item;
 import com.Product;
 
@@ -21,8 +22,8 @@ public class EditCategory extends EditPanels {
      *
      * @param list
      */
-    public EditCategory(List<Item> list) {
-        super(list);
+    public EditCategory(List<Item> list, MainForm mf) {
+        super(list, mf);
         setLayout();
     }
 

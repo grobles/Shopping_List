@@ -1,6 +1,7 @@
 package com.GUI.EditPanels;
 
 import com.Category;
+import com.GUI.MainForm;
 import com.GUI.ValidateInput;
 import com.Item;
 import com.Product;
@@ -35,8 +36,8 @@ public class EditProduct extends EditPanels {
      *
      * @param list
      */
-    public EditProduct(List<Item> list) {
-        super(list);
+    public EditProduct(List<Item> list, MainForm mf) {
+        super(list, mf);
         comboUnit = recordSeeker.getUnitsList();
         comboCategory = recordSeeker.setSingleStringArray(recordSeeker.getcategoryList());
         comboShop = recordSeeker.setSingleStringArray(recordSeeker.getShopList());
@@ -54,29 +55,31 @@ public class EditProduct extends EditPanels {
 
         String productName = jTextFieldName.getText();
         Product productFound = (Product) recordSeeker.findItem(productName, recordSeeker.getProductList());
-
-        if (ValidateInput.isText(productName)) {
-            if (jComboBoxUnits.getSelectedIndex() == 1) {
-                if (ValidateInput.isDigit(jTextFieldQuantity.getText()) && productFound == null) {
-                    addItem(productName);
+        if (productFound == null) {
+            if (ValidateInput.isText(productName)) {
+                if (jComboBoxUnits.getSelectedIndex() == 1) {
+                    if (ValidateInput.isDigit(jTextFieldQuantity.getText())) {
+                        addItem(productName);
+                    } else {
+                        JOptionPane.showMessageDialog(frame, "Quantity must be only numeric digits (0-9).");
+                        jTextFieldQuantity.requestFocus();
+                    }
+                } else if (jComboBoxUnits.getSelectedIndex() == 2) {
+                    if ((ValidateInput.isDecimal(jTextFieldQuantity.getText()))) {
+                        addItem(productName);
+                    } else {
+                        JOptionPane.showMessageDialog(frame, "Quantity must be a decimal.");
+                        jTextFieldQuantity.requestFocus();
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(frame, "Quantity must be only numeric digits (0-9).");
-                    jTextFieldQuantity.requestFocus();
-                }
-            } else if (jComboBoxUnits.getSelectedIndex() == 2) {
-                if ((ValidateInput.isDecimal(jTextFieldQuantity.getText()) && productFound == null)) {
                     addItem(productName);
-                } else {
-                    JOptionPane.showMessageDialog(frame, "Quantity must be a decimal.");
-                    jTextFieldQuantity.requestFocus();
                 }
             } else {
-                JOptionPane.showMessageDialog(frame, "Please need to enter a quantity prior to saving.");
+                JOptionPane.showMessageDialog(frame, "Please need to enter a valid product name prior to saving.");
                 jTextFieldQuantity.requestFocus();
             }
         } else {
-            JOptionPane.showMessageDialog(frame, "Please need to enter a valid product name prior to saving.");
-            jTextFieldQuantity.requestFocus();
+            editProduct(productFound);
         }
     }
 

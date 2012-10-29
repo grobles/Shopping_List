@@ -1,10 +1,12 @@
 package com.GUI.ListPanels;
 
+import com.GUI.EditPanels.EditShoppingList;
 import com.GUI.MainForm;
 import com.Item;
 import com.Product;
 import com.ShoppingList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,14 +17,17 @@ import java.util.List;
  */
 public class ShoppingLists extends ShowLists {
 
+
     /**
      * Creates new form NewJPanel
      *
-     * @param itemList
+     * @param mf
      */
-    public ShoppingLists(List<Item> itemList) {
-        super(itemList);
+    public ShoppingLists(MainForm mf) {
+        super(mf);
         jButtonOpen.setVisible(true);
+        ItemList = recordSeeker.getShoppingList();
+        setTable();
 
     }
 
@@ -33,9 +38,19 @@ public class ShoppingLists extends ShowLists {
      */
     @Override
     public void jButtonOpenActionPerformed(java.awt.event.ActionEvent evt) {
-        int row = jTableShoppingProducts.getSelectedRow();
-        ShoppingList shoppinglist = (ShoppingList) recordSeeker.getShoppingList().get(row);
-        List<Product> productslist = shoppinglist.getProductsList();
-        new MainForm();
+        try {
+            int row = jTableShoppingProducts.getSelectedRow();
+            ShoppingList shoppinglist = (ShoppingList) recordSeeker.getShoppingList().get(row);
+            List<Product> productslist = shoppinglist.getProductsList();
+            List<Item> list = new ArrayList<Item>();
+            for (Item item : productslist) {
+                Product product = (Product) item;
+                list.add(product);
+                Mf.setLayout(new EditShoppingList(list, Mf));
+            }
+        } catch (Exception ex) {
+
+        }
+
     }
 }

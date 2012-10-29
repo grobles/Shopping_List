@@ -21,7 +21,7 @@ public class ShoppingListTest {
 
     private final Product mockProduct = mock(Product.class);
     private final Product mockProduct2 = mock(Product.class);
-    private final String ListName = "newShoppingList";
+
     private final List<Product> ProductList = new ArrayList<Product>();
     private ShoppingList newList;
 
@@ -29,7 +29,7 @@ public class ShoppingListTest {
     @Before
     public void setUp() throws Exception {
 
-
+        String ListName = "newShoppingList";
         ProductList.add(mockProduct);
         ProductList.add(mockProduct2);
         newList = new ShoppingList(ListName, ProductList);
