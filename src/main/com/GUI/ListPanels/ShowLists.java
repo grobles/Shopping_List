@@ -18,14 +18,14 @@ import java.util.List;
  */
 public abstract class ShowLists extends JPanel implements MainPanel {
 
-    List<Item> ItemList;
-    private JButton jButtonDelete;
-    JButton jButtonOpen;
-    JComboBox jComboBoxSort;
-    private JScrollPane jScrollPane3;
-    JTable jTableShoppingProducts;
-    RecordSeeker recordSeeker;
-    MainForm Mf;
+    protected List<Item> ItemList;
+    protected JButton jButtonDelete;
+    protected JButton jButtonOpen;
+    protected JComboBox jComboBoxSort;
+    protected JScrollPane jScrollPane3;
+    protected JTable jTableShoppingProducts;
+    protected RecordSeeker recordSeeker;
+    protected MainForm Mf;
 
     /**
      * Creates new form NewJPanel
@@ -49,8 +49,8 @@ public abstract class ShowLists extends JPanel implements MainPanel {
         return ItemList;
     }
 
-    public String[][] getStringList() {
-        return recordSeeker.setTableStringArray(ItemList);
+    public JTable getTable() {
+        return jTableShoppingProducts;
     }
 
     /**

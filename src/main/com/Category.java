@@ -34,4 +34,9 @@ public class Category implements Item, Serializable {
     public void setItemName(String categoryName) {
         this.categoryName = categoryName;
     }
+
+    public String toString() {
+        return String.format("%-14s", categoryName);
+
+    }
 }

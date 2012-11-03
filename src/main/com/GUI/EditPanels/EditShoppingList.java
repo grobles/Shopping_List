@@ -26,7 +26,6 @@ import java.util.List;
 public class EditShoppingList extends JPanel implements MainPanel {
 
     private List<Item> ItemList;
-    private String[][] stringList;
     RecordSeeker recordSeeker;
     MainForm Mf;
 
@@ -62,8 +61,8 @@ public class EditShoppingList extends JPanel implements MainPanel {
      * @return
      */
 
-    public String[][] getStringList() {
-        return recordSeeker.setStringProductArray(ItemList);
+    public JTable getTable() {
+        return jTableShoppingProducts;
     }
 
     /**

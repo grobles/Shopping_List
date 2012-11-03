@@ -66,6 +66,7 @@ public class PrintLists implements Printable {
             g2d.setColor(Color.black);
             g2d.translate(pageFormat.getImageableX(), pageFormat.getImageableY());
             //loop over the string array drawing them as new lines
+
             for (int i = 0; i < lines.length; i++) {
                 g2d.drawString(lines[i], 5, y);
                 y += 15;

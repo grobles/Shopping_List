@@ -4,6 +4,7 @@
  */
 package com.GUI;
 
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -27,5 +28,6 @@ public interface MainPanel {
      *
      * @return
      */
-    public String[][] getStringList();
+
+    public JTable getTable();
 }

@@ -38,5 +38,10 @@ public class Shop implements Item {
         return shopName;
     }
 
+    public String toString() {
+        return String.format("%-14s", shopName);
+
+    }
+
 
 }

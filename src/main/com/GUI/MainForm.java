@@ -25,9 +25,9 @@ import java.util.List;
  */
 public class MainForm extends JFrame {
 
-    private final RecordSeeker recordSeeker;
-    private MainPanel MainPanel;
 
+    private MainPanel MainPanel;
+    private RecordSeeker recordSeeker;
 
     /**
      * Creates new form NewJFrame
@@ -42,6 +42,7 @@ public class MainForm extends JFrame {
     public RecordSeeker getRecordSeeker() {
         return recordSeeker;
     }
+
 
     /**
      * It initalizes the main components in the form
@@ -241,24 +242,36 @@ public class MainForm extends JFrame {
      * Sets the action for the SendEmail MenuItem
      */
     private void jMenuItemSendEmailActionPerformed(java.awt.event.ActionEvent evt) {
-
-        List stringToPrint = MainPanel.getItemList();
+        recordSeeker = new RecordSeeker();
+        recordSeeker.writToXml();
     }
 
     /**
      * Sets the action for the Print MenuItem
      */
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
-
         List listToPrint = MainPanel.getItemList();
         new PrintLists(listToPrint);
+
+        /*
+        JTable table = MainPanel.getTable();
+        MessageFormat headerFormat = new MessageFormat("List of Items");
+        MessageFormat footerFormat = new MessageFormat("- {0} -");
+
+
+        try {
+            table.print(JTable.PrintMode.FIT_WIDTH, headerFormat, footerFormat);
+        } catch (PrinterException pe) {
+        }
+        */
+
     }
 
     /**
      * Sets the action for the Edit/Product MenuItem
      */
     private void jMenuItemEdtProductActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditProduct(recordSeeker.getProductList(), this);
+        MainPanel = new EditProduct(this);
         setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
@@ -281,7 +294,7 @@ public class MainForm extends JFrame {
      * @param evt : event raised by editCategory action
      */
     private void jMenuItemEditCategoryActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditCategory(recordSeeker.getcategoryList(), this);
+        MainPanel = new EditCategory(this);
         setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
@@ -292,7 +305,7 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shop MenuItem
      */
     private void jMenuItemEditShopActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditShop(recordSeeker.getShopList(), this);
+        MainPanel = new EditShop(this);
         setLayout(MainPanel);
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);

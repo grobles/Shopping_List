@@ -8,7 +8,6 @@ import com.Product;
 import com.Shop;
 
 import javax.swing.*;
-import java.util.List;
 
 /**
  * Class: Product edit Form
@@ -34,10 +33,10 @@ public class EditProduct extends EditPanels {
     /**
      * Constructor
      *
-     * @param list
+     * @param
      */
-    public EditProduct(List<Item> list, MainForm mf) {
-        super(list, mf);
+    public EditProduct(MainForm mf) {
+        super(mf);
         comboUnit = recordSeeker.getUnitsList();
         comboCategory = recordSeeker.setSingleStringArray(recordSeeker.getcategoryList());
         comboShop = recordSeeker.setSingleStringArray(recordSeeker.getShopList());

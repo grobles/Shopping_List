@@ -46,8 +46,8 @@ public class ShoppingLists extends ShowLists {
             for (Item item : productslist) {
                 Product product = (Product) item;
                 list.add(product);
-                Mf.setLayout(new EditShoppingList(list, Mf));
             }
+            Mf.setLayout(new EditShoppingList(list, Mf));
         } catch (Exception ex) {
 
         }

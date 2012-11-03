@@ -154,6 +154,7 @@ class ReadXMLFile {
 
                     for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
 
+
                         Node nNode1 = ShoppingProductList.item(temp1);
                         if (nNode1.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -167,7 +168,7 @@ class ReadXMLFile {
                             } catch (Exception e) {
                             }
                             productList.add(newProduct);
-
+                            System.out.println("Algo " + newProduct.getItemName());
                         }
                     }
 

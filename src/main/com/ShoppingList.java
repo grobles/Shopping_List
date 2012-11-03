@@ -54,4 +54,9 @@ public class ShoppingList implements Item {
     public void setProductsList(List<Product> productsList) {
         ProductsList = productsList;
     }
+
+    public String toString() {
+        return String.format("%-14s", ShoppingListName);
+
+    }
 }

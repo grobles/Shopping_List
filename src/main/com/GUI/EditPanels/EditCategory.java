@@ -20,10 +20,10 @@ public class EditCategory extends EditPanels {
     /**
      * Creates new form NewJFrame
      *
-     * @param list
+     * @param
      */
-    public EditCategory(List<Item> list, MainForm mf) {
-        super(list, mf);
+    public EditCategory(MainForm mf) {
+        super(mf);
         setLayout();
     }
 

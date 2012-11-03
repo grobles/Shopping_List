@@ -1,11 +1,9 @@
 package com.GUI.EditPanels;
 
 import com.GUI.MainForm;
-import com.Item;
 import com.Shop;
 
 import javax.swing.*;
-import java.util.List;
 
 /**
  * Class:EditShop
@@ -17,11 +15,11 @@ public class EditShop extends EditPanels {
     /**
      * Creates new form EditShop
      *
-     * @param list
+     * @param mf
      */
-    public EditShop(List<Item> list, MainForm mf) {
+    public EditShop(MainForm mf) {
 
-        super(list, mf);
+        super(mf);
         setLayout();
     }
 

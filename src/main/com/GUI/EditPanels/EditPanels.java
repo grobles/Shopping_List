@@ -19,26 +19,25 @@ public abstract class EditPanels extends JPanel implements MainPanel {
 
     // They are package scope so the classes that implement this abstract class will have acces to them
 
-    List<Item> ItemList;
-    JButton jButtonClear;
-    JButton jButtonDelete;
-    JButton jButtonSave;
-    JButton jButtonSearch;
-    private JLabel jLabelName;
-    JTextField jTextFieldName;
-    JFrame frame;
-    RecordSeeker recordSeeker;
-    MainForm Mf;
+    protected List<Item> ItemList;
+    protected JButton jButtonClear;
+    protected JButton jButtonDelete;
+    protected JButton jButtonSave;
+    protected JButton jButtonSearch;
+    protected JLabel jLabelName;
+    protected JTextField jTextFieldName;
+    protected JFrame frame;
+    protected RecordSeeker recordSeeker;
+    protected MainForm Mf;
 
     /**
      * Constructor
      *
-     * @param list
+     * @param mf
      */
-    EditPanels(List<Item> list, MainForm mf) {
+    EditPanels(MainForm mf) {
         Mf = mf;
         recordSeeker = Mf.getRecordSeeker();
-        ItemList = list;
         initComponents();
     }
 
@@ -51,8 +50,8 @@ public abstract class EditPanels extends JPanel implements MainPanel {
         return ItemList;
     }
 
-    public String[][] getStringList() {
-        return recordSeeker.setTableStringArray(ItemList);
+    public JTable getTable() {
+        return null;
     }
 
     /**
