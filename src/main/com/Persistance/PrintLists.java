@@ -16,7 +16,6 @@ import java.util.List;
  */
 
 public class PrintLists implements Printable {
-    //private ArrayList data;
     String strData = "";
     private final int POINTS_PER_INCH = 72;
     private final String NEW_LINE = "\r\n";
@@ -76,20 +75,4 @@ public class PrintLists implements Printable {
             return (NO_SUCH_PAGE);
         }
     }
-
-//For Pageable
-//    @Override
-//    public int getNumberOfPages() {
-//        return 0;  //To change body of implemented methods use File | Settings | File Templates.
-//    }
-//
-//    @Override
-//    public PageFormat getPageFormat(int pageIndex) throws IndexOutOfBoundsException {
-//        return null;  //To change body of implemented methods use File | Settings | File Templates.
-//    }
-//
-//    @Override
-//    public Printable getPrintable(int pageIndex) throws IndexOutOfBoundsException {
-//        return null;  //To change body of implemented methods use File | Settings | File Templates.
-//    }
 }
