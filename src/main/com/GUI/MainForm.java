@@ -10,12 +10,13 @@ import com.GUI.ListPanels.ShopList;
 import com.GUI.ListPanels.ShoppingLists;
 import com.Item;
 import com.Persistance.EmailList;
-import com.Persistance.PrintLists;
 import com.Persistance.RecordSeeker;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.print.PrinterException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 
 /**
@@ -255,24 +256,23 @@ public class MainForm extends JFrame {
         } else {
             JOptionPane.showMessageDialog(new JFrame(), email + " is not a valid email address!");
         }
-
     }
 
     /**
      * Sets the action for the Print MenuItem
      */
     private void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
-        java.util.List listToPrint = MainPanel.getItemList();
-        new PrintLists(listToPrint);
+//        java.util.List listToPrint = MainPanel.getItemList();
+//        new PrintLists(listToPrint);
 
-//        JTable table = MainPanel.getTable();
-//        MessageFormat headerFormat = new MessageFormat("List of Items");
-//        MessageFormat footerFormat = new MessageFormat("- {0} -");
-//
-//        try {
-//            table.print(JTable.PrintMode.FIT_WIDTH, headerFormat, footerFormat);
-//        } catch (PrinterException pe) {
-//        }
+        JTable table = MainPanel.getTable();
+        MessageFormat headerFormat = new MessageFormat("List of Items");
+        MessageFormat footerFormat = new MessageFormat("- {0} -");
+
+        try {
+            table.print(JTable.PrintMode.FIT_WIDTH, headerFormat, footerFormat);
+        } catch (PrinterException pe) {
+        }
     }
 
     /**
