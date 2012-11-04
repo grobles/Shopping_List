@@ -9,6 +9,8 @@ import com.Shop;
 
 import javax.swing.*;
 
+import static org.apache.commons.lang3.StringUtils.isNumeric;
+
 /**
  * Class: Product edit Form
  * Description: In this for you can edit or add a new Product
@@ -57,7 +59,7 @@ public class EditProduct extends EditPanels {
         if (productFound == null) {
             if (ValidateInput.isText(productName)) {
                 if (jComboBoxUnits.getSelectedIndex() == 1) {
-                    if (ValidateInput.isDigit(jTextFieldQuantity.getText())) {
+                    if (isNumeric(jTextFieldQuantity.getText())) {
                         addItem(productName);
                     } else {
                         JOptionPane.showMessageDialog(frame, "Quantity must be only numeric digits (0-9).");

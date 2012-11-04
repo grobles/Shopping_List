@@ -33,26 +33,18 @@ public class ValidateInput {
 
     /**
      * @param digits String to be tested
-     * @return bool true if only digits, false otherwise
-     */
-    public static boolean isDigit(String digits) {
-        //matches        any digit 0-9
-        if (digits.matches("\\d+?") || digits.equals("")) {
-            return true;
-        }
-        return false;
-    }
-
-    //todo use common libraries don't roll your own solutions
-    // see: http://commons.apache.org/lang/api-3.1/org/apache/commons/lang3/StringUtils.html
-
-    /**
-     * @param digits String to be tested
      * @return bool true if decimal pattern is found, false otherwise
      */
     public static boolean isDecimal(String digits) {
-        Matcher matcher = VALID_DECIMAL.matcher(digits);
-        return matcher.find();
+
+        if (digits.matches("\\d+([.{0,1}]\\d+)?")) {
+            return true;
+        } else {
+            return false;
+        }
+        //causes test to fail on with non-matching input
+//        Matcher matcher = VALID_DECIMAL.matcher(digits);
+//        return matcher.find();
     }
 
     /**

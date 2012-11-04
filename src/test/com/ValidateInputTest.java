@@ -13,9 +13,10 @@ import org.junit.Test;
  */
 public class ValidateInputTest {
 
-    private String validText, invalidText, moreValidText;
-    private String validDigits, invalidDigits, moreInvalidText;
+    private String validText, invalidText;
+    private String validDigits, moreInvalidText;
     private String validDecimal, invalidDecimal;
+    private String validEmail, invalidEmail;
 
     /**
      * setup the test conditions
@@ -26,9 +27,11 @@ public class ValidateInputTest {
         invalidText = "12 Cookies";
         moreInvalidText = "peas & carrots";
         validDigits = "0123456789";
-        invalidDigits = "eighteen";
         validDecimal = "12.3";
         invalidDecimal = "12.3.2";
+        validEmail = "someone@somewhere.com";
+        invalidEmail = "bad email address";
+
     }
 
     /**
@@ -43,15 +46,6 @@ public class ValidateInputTest {
     }
 
     /**
-     * Exercise the tests for digits
-     */
-    @Test
-    public void testIsDigits() {
-        Assert.assertTrue("Valid Digits", ValidateInput.isDigit(validDigits));
-        Assert.assertFalse("Invalid Digits", ValidateInput.isDigit(invalidDigits));
-    }
-
-    /**
      * Exercise the tests for decimals
      */
     @Test
@@ -61,5 +55,12 @@ public class ValidateInputTest {
         Assert.assertFalse("Invalid Decimal", ValidateInput.isDecimal(invalidDecimal));
     }
 
-
+    /**
+     * Exercise the tests for decimals
+     */
+    @Test
+    public void testisEmail() {
+        Assert.assertTrue("Valid Email", ValidateInput.isEmail(validEmail));
+        Assert.assertFalse("Invalid Email", ValidateInput.isEmail(invalidEmail));
+    }
 }
