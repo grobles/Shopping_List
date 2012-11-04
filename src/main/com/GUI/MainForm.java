@@ -248,7 +248,7 @@ public class MainForm extends JFrame {
         recordSeeker.writToXml();
 
         String email;
-        email = JOptionPane.showInputDialog("Enter an e-mail address to send the list.");
+        email = JOptionPane.showInputDialog(new JPanel(), "Enter an e-mail address to send the list.");
 
         if (ValidateInput.isEmail(email)) {
             java.util.List listToPrint = MainPanel.getItemList();

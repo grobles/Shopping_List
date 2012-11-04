@@ -7,22 +7,32 @@ package com.Persistance;
  * Date: 10/28/12
  */
 
+import com.Product;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
 public class EmailList {
 
     public EmailList(String emailAddress, List shoppingList) {
-
         String strData = "";
         StringBuilder sb = new StringBuilder(strData);
-        //build a new string with each item on a new line
-        for (Object i : shoppingList) {
-            sb.append(i.toString() + "\n");
+
+        Iterator iterator = shoppingList.iterator();
+        while (iterator.hasNext()) {
+            Product product = (Product) iterator.next();
+            sb.append(product.getItemName() + " : ");
+            sb.append(product.getItemCategory().getItemName() + " : ");
+            sb.append(product.getItemShop().getItemName() + " : ");
+            sb.append(Integer.toString(product.getItemQuantity()));
+            sb.append(product.getItemUnit());
+            sb.append("\n");
         }
+
         strData = sb.toString();
         //setup the smtp properties
         Properties props = new Properties();
