@@ -20,6 +20,7 @@ public class EditShop extends EditPanels {
     public EditShop(MainForm mf) {
 
         super(mf);
+        ItemList = recordSeeker.getShopList();
         setLayout();
     }
 

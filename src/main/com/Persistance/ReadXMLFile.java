@@ -156,7 +156,12 @@ class ReadXMLFile {
                     String productName = Product.item(0).getTextContent();
                     Category category = new Category(Product.item(1).getTextContent());
                     Shop shop = new Shop(Product.item(2).getTextContent());
-                    newproductList.add(new Product.Builder(productName, category, shop).build());
+                    Product newProduct = new Product.Builder(productName, category, shop).build();
+                    int quantity = Integer.parseInt(Product.item(3).getTextContent());
+                    String unit = Product.item(4).getTextContent();
+                    newProduct.setItemQuantity(quantity);
+                    newProduct.setItemUnit(unit);
+                    newproductList.add(newProduct);
                 }
 
                 newshoppingLists.add(new ShoppingList(name, newproductList));

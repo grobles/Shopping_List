@@ -24,6 +24,7 @@ public class EditCategory extends EditPanels {
      */
     public EditCategory(MainForm mf) {
         super(mf);
+        ItemList = recordSeeker.getcategoryList();
         setLayout();
     }
 

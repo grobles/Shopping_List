@@ -219,13 +219,14 @@ public class MainForm extends JFrame {
      * @param panel
      */
     public void setLayout(MainPanel panel) {
+        MainPanel = panel;
         this.getContentPane().removeAll();
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent((Component) panel, javax.swing.GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent((Component) MainPanel, javax.swing.GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent((Component) panel, javax.swing.GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE));
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent((Component) MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE));
 
         pack();
     }
@@ -279,8 +280,7 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Product MenuItem
      */
     private void jMenuItemEdtProductActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditProduct(this);
-        setLayout(MainPanel);
+        setLayout(new EditProduct(this));
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
 
@@ -290,8 +290,7 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shopping MenuItem
      */
     private void jMenuItemEdtShoppingActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditShoppingList(new ArrayList<Item>(), this);
-        setLayout(MainPanel);
+        setLayout(new EditShoppingList(new ArrayList<Item>(), this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -302,8 +301,7 @@ public class MainForm extends JFrame {
      * @param evt : event raised by editCategory action
      */
     private void jMenuItemEditCategoryActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditCategory(this);
-        setLayout(MainPanel);
+        setLayout(new EditCategory(this));
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
 
@@ -313,8 +311,7 @@ public class MainForm extends JFrame {
      * Sets the action for the Edit/Shop MenuItem
      */
     private void jMenuItemEditShopActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new EditShop(this);
-        setLayout(MainPanel);
+        setLayout(new EditShop(this));
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
     }
@@ -323,8 +320,7 @@ public class MainForm extends JFrame {
      * Sets the action for the ListProduct MenuItem
      */
     private void jMenuItemListProductsActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new ProductList(this);
-        setLayout(MainPanel);
+        setLayout(new ProductList(this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
 
@@ -334,8 +330,7 @@ public class MainForm extends JFrame {
      * Sets the action for the ListCategory MenuItem
      */
     private void jMenuItemListCategoriesActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new CategoryList(this);
-        setLayout(MainPanel);
+        setLayout(new CategoryList(this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -344,8 +339,7 @@ public class MainForm extends JFrame {
      * Sets the action for the ListShop MenuItem
      */
     private void jMenuItemListShopsActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new ShopList(this);
-        setLayout(MainPanel);
+        setLayout(new ShopList(this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
@@ -354,8 +348,7 @@ public class MainForm extends JFrame {
      * Sets the action for the ListShoppingList MenuItem
      */
     private void jMenuItemListShoppinglistsActionPerformed(java.awt.event.ActionEvent evt) {
-        MainPanel = new ShoppingLists(this);
-        setLayout(MainPanel);
+        setLayout(new ShoppingLists(this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
     }
