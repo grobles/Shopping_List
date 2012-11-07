@@ -51,34 +51,34 @@
             <ProductName>Bandages</ProductName>
             <ProductCategory>medicines</ProductCategory>
             <ProductShop>Walgreens</ProductShop>
-            <ProductQuantity>0</ProductQuantity>
-            <ProductUnit/>
+            <ProductQuantity>10</ProductQuantity>
+            <ProductUnit>Pieces</ProductUnit>
         </Product>
         <Product>
             <ProductName>Lemons</ProductName>
             <ProductCategory>Fruits</ProductCategory>
             <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>0</ProductQuantity>
-            <ProductUnit/>
+            <ProductQuantity>15</ProductQuantity>
+            <ProductUnit>Pieces</ProductUnit>
         </Product>
     </Products>
     <ShoppingLists>
         <ShoppingList>
-            <ShoppingListName>First List</ShoppingListName>
+            <ShoppingListName>First</ShoppingListName>
             <ShoppingListProducts>
                 <ShoppingProduct>
                     <ProductName>Tomatoes</ProductName>
                     <ProductCategory>Vegetables</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
+                    <ProductQuantity>1</ProductQuantity>
+                    <ProductUnit>Pieces</ProductUnit>
                 </ShoppingProduct>
                 <ShoppingProduct>
                     <ProductName>Bandages</ProductName>
                     <ProductCategory>medicines</ProductCategory>
                     <ProductShop>Walgreens</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
+                    <ProductQuantity>10</ProductQuantity>
+                    <ProductUnit>Pieces</ProductUnit>
                 </ShoppingProduct>
                 <ShoppingProduct>
                     <ProductName>Beer</ProductName>
@@ -91,13 +91,13 @@
                     <ProductName>Lemons</ProductName>
                     <ProductCategory>Fruits</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
+                    <ProductQuantity>15</ProductQuantity>
+                    <ProductUnit>Pieces</ProductUnit>
                 </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>
         <ShoppingList>
-            <ShoppingListName>Second List</ShoppingListName>
+            <ShoppingListName>Second</ShoppingListName>
             <ShoppingListProducts>
                 <ShoppingProduct>
                     <ProductName>Beer</ProductName>
@@ -117,8 +117,8 @@
                     <ProductName>Lemons</ProductName>
                     <ProductCategory>Fruits</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
+                    <ProductQuantity>15</ProductQuantity>
+                    <ProductUnit>Pieces</ProductUnit>
                 </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>
