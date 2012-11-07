@@ -39,7 +39,7 @@ class WriteXMLFile {
         shopList = recordseeker.getShopList();
         categoryList = recordseeker.getcategoryList();
         productList = recordseeker.getProductList();
-        shoppingLists = recordseeker.getShoppingList();
+        shoppingLists = recordseeker.getShoppingLists();
         fileName = recordseeker.getFilename();
 
     }

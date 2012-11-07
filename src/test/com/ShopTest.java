@@ -43,4 +43,11 @@ public class ShopTest {
         Assert.assertEquals("Shop Name", "Shop2", myShop.getItemName());
 
     }
+
+    @Test
+    public void testToString() {
+        String ShopName = myShop.toString();
+        Assert.assertEquals("Shop Name", "Some Shop Name", ShopName);
+
+    }
 }

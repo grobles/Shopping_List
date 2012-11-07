@@ -1,5 +1,6 @@
 package com;
 
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -88,6 +89,13 @@ public class ProductTest {
     public void testsetItemQuantity() {
         myMasterShopProduct.setItemQuantity(10);
         assertEquals("Product Item Unit", 10, myMasterShopProduct.getItemQuantity());
+    }
+
+    @Test
+    public void testToString() {
+        String String = myMasterShopProduct.toString();
+        Assert.assertEquals("To String", "a new item" + "A Category" + "New Shop", String);
+
     }
 
 

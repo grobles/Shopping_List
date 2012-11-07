@@ -62,7 +62,7 @@ public class RecordSeeker {
         return dc.getCategoryList();
     }
 
-    public List getShoppingList() {
+    public List getShoppingLists() {
         return dc.getShoppingLists();
     }
 
@@ -76,7 +76,6 @@ public class RecordSeeker {
 
     /**
      * @param itemName
-     *
      * @return
      */
     public Item findItem(String itemName, List<Item> list) {

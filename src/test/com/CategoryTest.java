@@ -47,4 +47,12 @@ public class CategoryTest {
         assertEquals("Category Name", "Category2", aCategory.getItemName());
 
     }
+
+    @Test
+    public void testToString() {
+        String CategoryName = aCategory.toString();
+        assertEquals("Category Name", "Category 1", CategoryName);
+
+    }
+
 }

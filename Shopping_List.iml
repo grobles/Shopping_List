@@ -29,6 +29,8 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="common-lang3" level="project" />
+    <orderEntry type="library" name="mail" level="project" />
   </component>
 </module>
 

@@ -26,7 +26,7 @@ public class ShoppingLists extends ShowLists {
     public ShoppingLists(MainForm mf) {
         super(mf);
         jButtonOpen.setVisible(true);
-        ItemList = recordSeeker.getShoppingList();
+        ItemList = recordSeeker.getShoppingLists();
         setTable();
 
     }
@@ -40,7 +40,7 @@ public class ShoppingLists extends ShowLists {
     public void jButtonOpenActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             int row = jTableShoppingProducts.getSelectedRow();
-            ShoppingList shoppinglist = (ShoppingList) recordSeeker.getShoppingList().get(row);
+            ShoppingList shoppinglist = (ShoppingList) recordSeeker.getShoppingLists().get(row);
             List<Product> productslist = shoppinglist.getProductsList();
             List<Item> list = new ArrayList<Item>();
             for (Item item : productslist) {

@@ -259,7 +259,7 @@ public class EditShoppingList extends JPanel implements MainPanel {
             if (name == null) {
             } else if (name.equals("")) {
                 JOptionPane.showMessageDialog(new JFrame(), "Enter a valid name for the Shopping List");
-            } else if (recordSeeker.findItem(name, recordSeeker.getShoppingList()) != null) {
+            } else if (recordSeeker.findItem(name, recordSeeker.getShoppingLists()) != null) {
                 JOptionPane.showMessageDialog(new JFrame(), "That name already exists");
             } else {
                 Iterator iterator = ItemList.iterator();
@@ -269,7 +269,7 @@ public class EditShoppingList extends JPanel implements MainPanel {
                     newList.add(product);
                 }
                 ShoppingList ShoppingList = new ShoppingList(name, newList);
-                recordSeeker.getShoppingList().add(ShoppingList);
+                recordSeeker.getShoppingLists().add(ShoppingList);
                 recordSeeker.writToXml();
             }
         } else {

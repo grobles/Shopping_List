@@ -62,7 +62,7 @@ class ReadXMLFile {
 
             dc.setShopList(shopList);
         } catch (FileNotFoundException e) {
-
+            dc.setShopList(new ArrayList<Shop>());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -134,51 +134,36 @@ class ReadXMLFile {
     }
 
     private static void readShoppingLists() {
+        List<ShoppingList> newshoppingLists = new ArrayList<ShoppingList>();
 
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList SHL = doc.getElementsByTagName("ShoppingList");
-            List<ShoppingList> shoppingLists = new ArrayList<ShoppingList>();
+
             for (int temp = 0; temp < SHL.getLength(); temp++) {
 
-
-                Node nNode = SHL.item(temp);
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                    Element eElement = (Element) nNode;
-                    String name = getTagValue("ShoppingListName", eElement);
-
-                    NodeList ShoppingProductList = doc.getElementsByTagName("ShoppingProduct");
-                    List<Product> productList = new ArrayList<Product>();
-
-                    for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
+                NodeList nodes = SHL.item(temp).getChildNodes();
+                String name = nodes.item(0).getTextContent();
 
 
-                        Node nNode1 = ShoppingProductList.item(temp1);
-                        if (nNode1.getNodeType() == Node.ELEMENT_NODE) {
+                NodeList ShoppingProductList = nodes.item(1).getChildNodes();
 
-                            Element eElement1 = (Element) nNode;
-                            Category category = new Category(getTagValue("ProductCategory", eElement1));
-                            Shop shop = new Shop(getTagValue("ProductShop", eElement1));
-                            Product newProduct = new Product.Builder(getTagValue("ProductName", eElement1), category, shop).build();
-                            try {
-                                newProduct.setItemQuantity(Integer.parseInt(getTagValue("ProductQuantity", eElement1)));
-                                newProduct.setItemUnit(getTagValue("ProductUnit", eElement1));
-                            } catch (Exception e) {
-                            }
-                            productList.add(newProduct);
-                            System.out.println("Algo " + newProduct.getItemName());
-                        }
-                    }
+                List<Product> newproductList = new ArrayList<Product>();
+                for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
 
-                    ShoppingList newList = new ShoppingList(name, productList);
-                    shoppingLists.add(newList);
-
+                    NodeList Product = ShoppingProductList.item(temp1).getChildNodes();
+                    String productName = Product.item(0).getTextContent();
+                    Category category = new Category(Product.item(1).getTextContent());
+                    Shop shop = new Shop(Product.item(2).getTextContent());
+                    newproductList.add(new Product.Builder(productName, category, shop).build());
                 }
+
+                newshoppingLists.add(new ShoppingList(name, newproductList));
+
             }
 
-            dc.setShoppingLists(shoppingLists);
+            dc.setShoppingLists(newshoppingLists);
         } catch (FileNotFoundException e) {
             dc.setShoppingLists(new ArrayList<ShoppingList>());
 
@@ -190,9 +175,7 @@ class ReadXMLFile {
 
     private static String getTagValue(String sTag, Element eElement) {
         NodeList nlList = eElement.getElementsByTagName(sTag).item(0).getChildNodes();
-
         Node nValue = nlList.item(0);
-
         return nValue.getNodeValue();
     }
 
@@ -205,7 +188,6 @@ class ReadXMLFile {
         readCategories();
         readProducts();
         readShoppingLists();
-
         return dc;
     }
 }

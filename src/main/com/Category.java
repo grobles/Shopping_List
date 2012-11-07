@@ -36,7 +36,7 @@ public class Category implements Item, Serializable {
     }
 
     public String toString() {
-        return String.format("%-14s", categoryName);
+        return String.format(categoryName);
 
     }
 }

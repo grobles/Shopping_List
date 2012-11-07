@@ -8,7 +8,7 @@
             <ShopName>Walgreens</ShopName>
         </Shop>
         <Shop>
-            <ShopName>Home Depot</ShopName>
+            <ShopName>Home depot</ShopName>
         </Shop>
     </Shops>
     <Categories>
@@ -16,16 +16,13 @@
             <CategoryName>Vegetables</CategoryName>
         </Category>
         <Category>
-            <CategoryName>Fruit</CategoryName>
+            <CategoryName>medicines</CategoryName>
         </Category>
         <Category>
             <CategoryName>Drinks</CategoryName>
         </Category>
         <Category>
-            <CategoryName>Medicines</CategoryName>
-        </Category>
-        <Category>
-            <CategoryName>Bakery</CategoryName>
+            <CategoryName>Fruits</CategoryName>
         </Category>
     </Categories>
     <Products>
@@ -33,47 +30,33 @@
             <ProductName>Tomatoes</ProductName>
             <ProductCategory>Vegetables</ProductCategory>
             <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>5</ProductQuantity>
-            <ProductUnit>Pieces</ProductUnit>
-        </Product>
-        <Product>
-            <ProductName>Lemons</ProductName>
-            <ProductCategory>Vegetables</ProductCategory>
-            <ProductShop>Walmart</ProductShop>
             <ProductQuantity>1</ProductQuantity>
-            <ProductUnit>lb</ProductUnit>
-        </Product>
-        <Product>
-            <ProductName>Coca Cola</ProductName>
-            <ProductCategory>Drinks</ProductCategory>
-            <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>5</ProductQuantity>
-            <ProductUnit/>
+            <ProductUnit>Pieces</ProductUnit>
         </Product>
         <Product>
             <ProductName>Beer</ProductName>
             <ProductCategory>Drinks</ProductCategory>
             <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>12</ProductQuantity>
-            <ProductUnit>Pieces</ProductUnit>
+            <ProductQuantity>0</ProductQuantity>
+            <ProductUnit/>
+        </Product>
+        <Product>
+            <ProductName>Coke</ProductName>
+            <ProductCategory>Drinks</ProductCategory>
+            <ProductShop>Walmart</ProductShop>
+            <ProductQuantity>0</ProductQuantity>
+            <ProductUnit/>
         </Product>
         <Product>
             <ProductName>Bandages</ProductName>
-            <ProductCategory>Medicines</ProductCategory>
+            <ProductCategory>medicines</ProductCategory>
             <ProductShop>Walgreens</ProductShop>
-            <ProductQuantity>12</ProductQuantity>
-            <ProductUnit>Pieces</ProductUnit>
+            <ProductQuantity>0</ProductQuantity>
+            <ProductUnit/>
         </Product>
         <Product>
-            <ProductName>Bread</ProductName>
-            <ProductCategory>Bakery</ProductCategory>
-            <ProductShop>Walmart</ProductShop>
-            <ProductQuantity>10</ProductQuantity>
-            <ProductUnit>Pieces</ProductUnit>
-        </Product>
-        <Product>
-            <ProductName>melons</ProductName>
-            <ProductCategory>Vegetables</ProductCategory>
+            <ProductName>Lemons</ProductName>
+            <ProductCategory>Fruits</ProductCategory>
             <ProductShop>Walmart</ProductShop>
             <ProductQuantity>0</ProductQuantity>
             <ProductUnit/>
@@ -87,55 +70,55 @@
                     <ProductName>Tomatoes</ProductName>
                     <ProductCategory>Vegetables</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
                 </ShoppingProduct>
                 <ShoppingProduct>
-                    <ProductName>Tomatoes</ProductName>
-                    <ProductCategory>Vegetables</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Tomatoes</ProductName>
-                    <ProductCategory>Vegetables</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Tomatoes</ProductName>
-                    <ProductCategory>Vegetables</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
-            </ShoppingListProducts>
-        </ShoppingList>
-        <ShoppingList>
-            <ShoppingListName>Second</ShoppingListName>
-            <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>Tomatoes</ProductName>
-                    <ProductCategory>Vegetables</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Coca Cola</ProductName>
-                    <ProductCategory>Drinks</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>5</ProductQuantity>
+                    <ProductName>Bandages</ProductName>
+                    <ProductCategory>medicines</ProductCategory>
+                    <ProductShop>Walgreens</ProductShop>
+                    <ProductQuantity>0</ProductQuantity>
                     <ProductUnit/>
                 </ShoppingProduct>
                 <ShoppingProduct>
                     <ProductName>Beer</ProductName>
                     <ProductCategory>Drinks</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>12</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
+                </ShoppingProduct>
+                <ShoppingProduct>
+                    <ProductName>Lemons</ProductName>
+                    <ProductCategory>Fruits</ProductCategory>
+                    <ProductShop>Walmart</ProductShop>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
+                </ShoppingProduct>
+            </ShoppingListProducts>
+        </ShoppingList>
+        <ShoppingList>
+            <ShoppingListName>Second List</ShoppingListName>
+            <ShoppingListProducts>
+                <ShoppingProduct>
+                    <ProductName>Beer</ProductName>
+                    <ProductCategory>Drinks</ProductCategory>
+                    <ProductShop>Walmart</ProductShop>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
+                </ShoppingProduct>
+                <ShoppingProduct>
+                    <ProductName>Coke</ProductName>
+                    <ProductCategory>Drinks</ProductCategory>
+                    <ProductShop>Walmart</ProductShop>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
+                </ShoppingProduct>
+                <ShoppingProduct>
+                    <ProductName>Lemons</ProductName>
+                    <ProductCategory>Fruits</ProductCategory>
+                    <ProductShop>Walmart</ProductShop>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
                 </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>

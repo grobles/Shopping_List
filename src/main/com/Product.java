@@ -165,9 +165,9 @@ public class Product implements Item, Serializable {
     }
 
     public String toString() {
-        return String.format("%-14s", itemName) +
-                String.format("%-14s", itemCategory.getItemName()) +
-                String.format("%-14s", itemShop.getItemName());
+        return String.format(itemName) +
+                String.format(itemCategory.getItemName()) +
+                String.format(itemShop.getItemName());
 
     }
 }
