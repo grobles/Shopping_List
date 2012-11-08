@@ -54,8 +54,12 @@ public class EmailList {
         } else {
             throw new ClassNotFoundException("");
         }
-
         strData = sb.toString();
+
+        sendMsg(strData, subject, emailAddress);
+    }
+
+    public void sendMsg(String body, String subject, String destinationAddress) {
         //setup the smtp properties
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -75,9 +79,9 @@ public class EmailList {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("UMLEffectiveJava@gmail.com"));
             message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse("brianarnold789@gmail.com"));
+                    InternetAddress.parse(destinationAddress));
             message.setSubject(subject);
-            message.setText(strData);
+            message.setText(body);
 
             Transport.send(message);
 

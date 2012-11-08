@@ -22,11 +22,11 @@ import java.util.ArrayList;
 /**
  * Class: MainForm
  * Description: MainForm to present all the application. The Jpanels will be presented through this Frame
- * Author: Brian Arnold & Guadalupe Robles Gil Date:
- * 24/10/12 Time: 10:09 AM *
+ * Author: Brian Arnold & Guadalupe Robles Gil
+ * Date:24/10/12
+ * Time: 10:09 AM
  */
 public class MainForm extends JFrame {
-
 
     private MainPanel MainPanel;
     private RecordSeeker recordSeeker;
@@ -38,19 +38,16 @@ public class MainForm extends JFrame {
         recordSeeker = new RecordSeeker();
         MainPanel = new EditShoppingList(new ArrayList<Item>(), this);
         initComponents();
-
     }
 
     public RecordSeeker getRecordSeeker() {
         return recordSeeker;
     }
 
-
     /**
      * It initalizes the main components in the form
      */
     private void initComponents() {
-
 
         jMenuBar = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
@@ -282,6 +279,9 @@ public class MainForm extends JFrame {
         try {
             table.print(JTable.PrintMode.FIT_WIDTH, headerFormat, footerFormat);
         } catch (PrinterException pe) {
+            JOptionPane.showMessageDialog(new JFrame(), JOptionPane.OK_OPTION, "The list was not printed.",
+                    JOptionPane.ERROR_MESSAGE);
+            pe.printStackTrace();
         }
     }
 
@@ -312,7 +312,6 @@ public class MainForm extends JFrame {
         setLayout(new EditCategory(this));
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
-
     }
 
     /**
@@ -331,7 +330,6 @@ public class MainForm extends JFrame {
         setLayout(new ProductList(this));
         jMenuItemPrint.setEnabled(true);
         jMenuItemSendEmail.setEnabled(true);
-
     }
 
     /**
