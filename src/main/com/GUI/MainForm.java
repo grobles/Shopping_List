@@ -253,7 +253,16 @@ public class MainForm extends JFrame {
 
         if (ValidateInput.isEmail(email)) {
             java.util.List listToPrint = MainPanel.getItemList();
-            new EmailList(email, listToPrint);
+            //EmailList class will throw a classNotFound exception if we somehow pass an unrecognized class type
+            try {
+                new EmailList(email, listToPrint);
+            } catch (ClassNotFoundException e) {
+                JOptionPane.showMessageDialog(new JFrame(), JOptionPane.OK_OPTION,
+                        "List error, list contains objects of an unexpected type.\n"
+                                + "Expected: 'Category' or 'Product'\nReceived: " + listToPrint.toString(),
+                        JOptionPane.ERROR_MESSAGE);
+                e.printStackTrace();
+            }
         } else {
             JOptionPane.showMessageDialog(new JFrame(), email + " is not a valid email address!");
         }
@@ -283,7 +292,6 @@ public class MainForm extends JFrame {
         setLayout(new EditProduct(this));
         jMenuItemPrint.setEnabled(false);
         jMenuItemSendEmail.setEnabled(false);
-
     }
 
     /**

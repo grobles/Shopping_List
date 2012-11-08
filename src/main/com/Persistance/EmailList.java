@@ -1,12 +1,7 @@
 package com.Persistance;
 
-/**
- * Class: ShoppingLists
- * Description: Displays all the Shopping Lists created
- * Author: Brian Arnold & Guadalupe Robles Gil
- * Date: 10/28/12
- */
 
+import com.Category;
 import com.Product;
 
 import javax.mail.*;
@@ -16,21 +11,48 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * Class: ShoppingLists
+ * Description: Displays all the Shopping Lists created
+ * Author: Brian Arnold & Guadalupe Robles Gil
+ * Date: 10/28/12
+ */
+
 public class EmailList {
 
-    public EmailList(String emailAddress, List shoppingList) {
+    /**
+     * Constructor for EmailList class
+     *
+     * @throws ClassNotFoundException if an unrecognized class is passed in
+     */
+    public EmailList(String emailAddress, List myList) throws ClassNotFoundException {
         String strData = "";
+        String subject;
         StringBuilder sb = new StringBuilder(strData);
 
-        Iterator iterator = shoppingList.iterator();
-        while (iterator.hasNext()) {
-            Product product = (Product) iterator.next();
-            sb.append(product.getItemName() + " : ");
-            sb.append(product.getItemCategory().getItemName() + " : ");
-            sb.append(product.getItemShop().getItemName() + " : ");
-            sb.append(Integer.toString(product.getItemQuantity()));
-            sb.append(product.getItemUnit());
-            sb.append("\n");
+        // test the lists and iterate over the appropriate class to create a StringBuilder containing
+        // the contents of the list
+        if (myList.contains(Product.class)) {
+            subject = "Product List";
+            Iterator iterator = myList.iterator();
+            while (iterator.hasNext()) {
+                Product product = (Product) iterator.next();
+                sb.append(product.getItemName() + " : ");
+                sb.append(product.getItemCategory().getItemName() + " : ");
+                sb.append(product.getItemShop().getItemName() + " : ");
+                sb.append(Integer.toString(product.getItemQuantity()) + " ");
+                sb.append(product.getItemUnit());
+                sb.append("\n");
+            }
+        } else if (myList.contains(Category.class)) {
+            subject = "Category List";
+            Iterator iterator = myList.iterator();
+            while (iterator.hasNext()) {
+                Category category = (Category) iterator.next();
+                sb.append(category.getItemName() + "\n");
+            }
+        } else {
+            throw new ClassNotFoundException("");
         }
 
         strData = sb.toString();
@@ -54,13 +76,14 @@ public class EmailList {
             message.setFrom(new InternetAddress("UMLEffectiveJava@gmail.com"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("brianarnold789@gmail.com"));
-            message.setSubject("Shopping List");
+            message.setSubject(subject);
             message.setText(strData);
 
             Transport.send(message);
 
             System.out.println("e-mail sent");
         } catch (MessagingException e) {
+            System.out.println("e-mail NOT sent\n\n");
             e.printStackTrace();
         }
     }
