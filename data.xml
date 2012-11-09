@@ -87,34 +87,20 @@
                     <ProductQuantity>0</ProductQuantity>
                     <ProductUnit/>
                 </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Lemons</ProductName>
-                    <ProductCategory>Fruits</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>15</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>
         <ShoppingList>
             <ShoppingListName>Second List</ShoppingListName>
             <ShoppingListProducts>
                 <ShoppingProduct>
-                    <ProductName>Lemons</ProductName>
-                    <ProductCategory>Fruits</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>15</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Beer</ProductName>
+                    <ProductName>Coke</ProductName>
                     <ProductCategory>Drinks</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
                     <ProductQuantity>0</ProductQuantity>
                     <ProductUnit/>
                 </ShoppingProduct>
                 <ShoppingProduct>
-                    <ProductName>Coke</ProductName>
+                    <ProductName>Beer</ProductName>
                     <ProductCategory>Drinks</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
                     <ProductQuantity>0</ProductQuantity>
