@@ -3,6 +3,7 @@ package com.Persistance;
 
 import com.Category;
 import com.Product;
+import com.Shop;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -50,6 +51,13 @@ public class EmailList {
             while (iterator.hasNext()) {
                 Category category = (Category) iterator.next();
                 sb.append(category.getItemName() + "\n");
+            }
+        } else if (myList.contains(Shop.class)) {
+            subject = "Shop List";
+            Iterator iterator = myList.iterator();
+            while (iterator.hasNext()) {
+                Shop shop = (Shop) iterator.next();
+                sb.append(shop.getItemName() + "\n");
             }
         } else {
             throw new ClassNotFoundException("");
