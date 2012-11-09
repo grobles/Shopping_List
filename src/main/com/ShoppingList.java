@@ -56,7 +56,7 @@ public class ShoppingList implements Item {
     }
 
     public String toString() {
-        return String.format("%-14s", ShoppingListName);
+        return String.format(ShoppingListName);
 
     }
 }

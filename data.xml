@@ -64,7 +64,7 @@
     </Products>
     <ShoppingLists>
         <ShoppingList>
-            <ShoppingListName>First</ShoppingListName>
+            <ShoppingListName>First List</ShoppingListName>
             <ShoppingListProducts>
                 <ShoppingProduct>
                     <ProductName>Tomatoes</ProductName>
@@ -87,25 +87,11 @@
                     <ProductQuantity>0</ProductQuantity>
                     <ProductUnit/>
                 </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>Lemons</ProductName>
-                    <ProductCategory>Fruits</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>15</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
-                </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>
         <ShoppingList>
-            <ShoppingListName>Second</ShoppingListName>
+            <ShoppingListName>Second List</ShoppingListName>
             <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>Beer</ProductName>
-                    <ProductCategory>Drinks</ProductCategory>
-                    <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
                 <ShoppingProduct>
                     <ProductName>Coke</ProductName>
                     <ProductCategory>Drinks</ProductCategory>
@@ -114,11 +100,11 @@
                     <ProductUnit/>
                 </ShoppingProduct>
                 <ShoppingProduct>
-                    <ProductName>Lemons</ProductName>
-                    <ProductCategory>Fruits</ProductCategory>
+                    <ProductName>Beer</ProductName>
+                    <ProductCategory>Drinks</ProductCategory>
                     <ProductShop>Walmart</ProductShop>
-                    <ProductQuantity>15</ProductQuantity>
-                    <ProductUnit>Pieces</ProductUnit>
+                    <ProductQuantity>0</ProductQuantity>
+                    <ProductUnit/>
                 </ShoppingProduct>
             </ShoppingListProducts>
         </ShoppingList>

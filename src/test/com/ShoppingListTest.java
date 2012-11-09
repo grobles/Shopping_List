@@ -66,4 +66,11 @@ public class ShoppingListTest {
         Assert.assertEquals("Product size", size, 3);
 
     }
+
+    @Test
+    public void testToString() {
+        String ShoppingListName = newList.toString();
+        Assert.assertEquals("ShoppingList Name", "newShoppingList", ShoppingListName);
+
+    }
 }

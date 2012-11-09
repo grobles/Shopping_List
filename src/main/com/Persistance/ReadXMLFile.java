@@ -140,10 +140,11 @@ class ReadXMLFile {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList SHL = doc.getElementsByTagName("ShoppingList");
-
+            System.out.println("SHL: " + SHL.getLength());
             for (int temp = 0; temp < SHL.getLength(); temp++) {
 
                 NodeList nodes = SHL.item(temp).getChildNodes();
+
                 String name = nodes.item(0).getTextContent();
 
 
@@ -153,7 +154,7 @@ class ReadXMLFile {
                 for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
 
                     NodeList Product = ShoppingProductList.item(temp1).getChildNodes();
-                    String productName = Product.item(0).getTextContent();
+                    String productName = Product.item(0).getNodeValue();
                     Category category = new Category(Product.item(1).getTextContent());
                     Shop shop = new Shop(Product.item(2).getTextContent());
                     Product newProduct = new Product.Builder(productName, category, shop).build();
