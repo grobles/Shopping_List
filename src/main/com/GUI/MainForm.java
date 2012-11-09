@@ -242,8 +242,6 @@ public class MainForm extends JFrame {
      * Sets the action for the SendEmail MenuItem
      */
     private void jMenuItemSendEmailActionPerformed(ActionEvent evt) {
-        recordSeeker = new RecordSeeker();
-        recordSeeker.writToXml();
 
         String email;
         email = JOptionPane.showInputDialog(new JPanel(), "Enter an e-mail address to send the list.");

@@ -134,39 +134,49 @@ class ReadXMLFile {
     }
 
     private static void readShoppingLists() {
-        List<ShoppingList> newshoppingLists = new ArrayList<ShoppingList>();
 
+        String name = "Nada";
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
             NodeList SHL = doc.getElementsByTagName("ShoppingList");
-            System.out.println("SHL: " + SHL.getLength());
+            List<ShoppingList> newshoppingLists = new ArrayList<ShoppingList>();
             for (int temp = 0; temp < SHL.getLength(); temp++) {
 
-                NodeList nodes = SHL.item(temp).getChildNodes();
+                Node nNode = SHL.item(temp);
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) nNode;
+                    name = getTagValue("ShoppingListName", eElement);
 
-                String name = nodes.item(0).getTextContent();
+                    NodeList ShoppingProductList = eElement.getElementsByTagName("ShoppingProduct");
 
+                    List<Product> newProductList = new ArrayList<Product>();
+                    for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
+                        Element product = (Element) ShoppingProductList.item(temp1).getChildNodes();
+                        NodeList Name = product.getElementsByTagName("ProductName");
+                        String productName = Name.item(0).getTextContent();
 
-                NodeList ShoppingProductList = nodes.item(1).getChildNodes();
+                        NodeList CatName = product.getElementsByTagName("ProductCategory");
+                        Category category = new Category(CatName.item(0).getTextContent());
+                        NodeList SHName = product.getElementsByTagName("ProductShop");
+                        Shop shop = new Shop(SHName.item(0).getTextContent());
+                        Product newProduct = new Product.Builder(productName, category, shop).build();
+                        try {
+                            NodeList Quan = product.getElementsByTagName("ProductQuantity");
+                            int quantity = Integer.parseInt(Quan.item(0).getTextContent());
+                            NodeList Un = product.getElementsByTagName("ProductUnit");
+                            String unit = Un.item(0).getTextContent();
+                            newProduct.setItemQuantity(quantity);
+                            newProduct.setItemUnit(unit);
+                        } catch (Exception ex) {
 
-                List<Product> newproductList = new ArrayList<Product>();
-                for (int temp1 = 0; temp1 < ShoppingProductList.getLength(); temp1++) {
+                        }
+                        newProductList.add(newProduct);
+                    }
 
-                    NodeList Product = ShoppingProductList.item(temp1).getChildNodes();
-                    String productName = Product.item(0).getNodeValue();
-                    Category category = new Category(Product.item(1).getTextContent());
-                    Shop shop = new Shop(Product.item(2).getTextContent());
-                    Product newProduct = new Product.Builder(productName, category, shop).build();
-                    int quantity = Integer.parseInt(Product.item(3).getTextContent());
-                    String unit = Product.item(4).getTextContent();
-                    newProduct.setItemQuantity(quantity);
-                    newProduct.setItemUnit(unit);
-                    newproductList.add(newProduct);
+                    newshoppingLists.add(new ShoppingList(name, newProductList));
+
                 }
-
-                newshoppingLists.add(new ShoppingList(name, newproductList));
-
             }
 
             dc.setShoppingLists(newshoppingLists);
