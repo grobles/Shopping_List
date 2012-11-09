@@ -64,86 +64,16 @@
         <Shop>
             <ShopName>Beta</ShopName>
         </Shop>
+        <Shop>
+            <ShopName>Alpha</ShopName>
+        </Shop>
+        <Shop>
+            <ShopName>Beta</ShopName>
+        </Shop>
     </Shops>
     <Categories/>
     <Products/>
     <ShoppingLists>
-        <ShoppingList>
-            <ShoppingListName>list1</ShoppingListName>
-            <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>ProductName</ProductName>
-                    <ProductCategory>CategoryName</ProductCategory>
-                    <ProductShop>ShopName</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>ProductName2</ProductName>
-                    <ProductCategory>CategoryName2</ProductCategory>
-                    <ProductShop>ShopName2</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-            </ShoppingListProducts>
-        </ShoppingList>
-        <ShoppingList>
-            <ShoppingListName>list2</ShoppingListName>
-            <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>ProductName</ProductName>
-                    <ProductCategory>CategoryName</ProductCategory>
-                    <ProductShop>ShopName</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>ProductName2</ProductName>
-                    <ProductCategory>CategoryName2</ProductCategory>
-                    <ProductShop>ShopName2</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-            </ShoppingListProducts>
-        </ShoppingList>
-        <ShoppingList>
-            <ShoppingListName>list1</ShoppingListName>
-            <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>ProductName</ProductName>
-                    <ProductCategory>CategoryName</ProductCategory>
-                    <ProductShop>ShopName</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>ProductName2</ProductName>
-                    <ProductCategory>CategoryName2</ProductCategory>
-                    <ProductShop>ShopName2</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-            </ShoppingListProducts>
-        </ShoppingList>
-        <ShoppingList>
-            <ShoppingListName>list2</ShoppingListName>
-            <ShoppingListProducts>
-                <ShoppingProduct>
-                    <ProductName>ProductName</ProductName>
-                    <ProductCategory>CategoryName</ProductCategory>
-                    <ProductShop>ShopName</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-                <ShoppingProduct>
-                    <ProductName>ProductName2</ProductName>
-                    <ProductCategory>CategoryName2</ProductCategory>
-                    <ProductShop>ShopName2</ProductShop>
-                    <ProductQuantity>0</ProductQuantity>
-                    <ProductUnit/>
-                </ShoppingProduct>
-            </ShoppingListProducts>
-        </ShoppingList>
         <ShoppingList>
             <ShoppingListName>list1</ShoppingListName>
             <ShoppingListProducts>
